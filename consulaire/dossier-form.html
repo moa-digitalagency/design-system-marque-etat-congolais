@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traiter un dossier — Consulaire Portail Numérique RDC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=EB+Garamond:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../_tailwind-config.js"></script>
+  <link rel="stylesheet" href="../_shared.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="theme-consulaire font-inter" style="background: var(--bg-app);">
+
+<!-- Sidebar -->
+<aside class="sidebar fixed left-0 top-0 h-screen overflow-y-auto z-20 flex flex-col" id="sidebar" aria-label="Navigation Consulaire">
+  <div class="p-5 border-b border-gray-100 shrink-0">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl btn-primary flex items-center justify-center shrink-0">
+        <i data-lucide="briefcase" class="w-5 h-5 text-white" aria-hidden="true"></i>
+      </div>
+      <div>
+        <p class="font-cooper font-bold text-gray-900 text-sm leading-tight">Portail Numérique RDC</p>
+        <p class="text-xs font-semibold" style="color: var(--primary)">Espace Consulaire</p>
+      </div>
+    </div>
+  </div>
+  <nav class="p-3 flex-1 overflow-y-auto" aria-label="Menu principal">
+    <p class="px-3 text-xs text-gray-400 uppercase tracking-widest mt-4 mb-2 font-semibold select-none">Principal</p>
+    <a href="dashboard.html" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl">
+      <i data-lucide="layout-dashboard" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+      <span class="text-sm font-medium">Dashboard</span>
+    </a>
+    <a href="demandes.html" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl">
+      <i data-lucide="folder-open" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+      <span class="text-sm font-medium">Demandes</span>
+      <span class="ml-auto badge badge-error text-xs">12</span>
+    </a>
+    <a href="dossier-form.html" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl active" aria-current="page">
+      <i data-lucide="file-plus" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+      <span class="text-sm font-medium">Traiter un dossier</span>
+    </a>
+    <a href="messagerie.html" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl">
+      <i data-lucide="message-square" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+      <span class="text-sm font-medium">Messagerie</span>
+      <span class="ml-auto badge badge-error text-xs">3</span>
+    </a>
+    <p class="px-3 text-xs text-gray-400 uppercase tracking-widest mt-6 mb-2 font-semibold select-none">Compte</p>
+    <a href="../login.html" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl" style="color: #ef4444 !important">
+      <i data-lucide="log-out" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+      <span class="text-sm font-medium">Déconnexion</span>
+    </a>
+  </nav>
+  <div class="p-4 border-t border-gray-100 shrink-0">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-full btn-primary flex items-center justify-center text-white font-semibold text-sm shrink-0" aria-hidden="true">FM</div>
+      <div class="flex-1 min-w-0">
+        <p class="text-sm font-semibold text-gray-900 truncate">Fatima Mwamba</p>
+        <p class="text-xs text-gray-500 truncate">Agent Consulaire</p>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- Main content -->
+<div class="main-content p-6">
+  <!-- Topbar -->
+  <header class="flex items-center justify-between mb-8">
+    <div class="flex items-center gap-4">
+      <button id="menuToggle" class="md:hidden w-9 h-9 rounded-xl border border-gray-200 bg-white flex items-center justify-center hover:bg-gray-50 transition" aria-label="Ouvrir le menu">
+        <i data-lucide="menu" class="w-4 h-4 text-gray-600" aria-hidden="true"></i>
+      </button>
+      <div>
+        <h1 class="font-cooper font-bold text-gray-900 text-xl leading-tight">Traitement de dossier</h1>
+        <p class="text-sm text-gray-500 mt-0.5">Dossier #REF-2026-0847 — Jean Kabila</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <button class="w-9 h-9 rounded-xl border border-gray-200 bg-white flex items-center justify-center hover:bg-gray-50 transition relative" aria-label="Notifications">
+        <i data-lucide="bell" class="w-4 h-4 text-gray-600" aria-hidden="true"></i>
+        <span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-red-500" aria-hidden="true"></span>
+      </button>
+      <div class="w-9 h-9 rounded-full btn-primary flex items-center justify-center text-white font-semibold text-sm" aria-label="Profil Fatima Mwamba">FM</div>
+    </div>
+  </header>
+
+  <!-- Two-column content -->
+  <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+
+    <!-- Left: Dossier info (40%) -->
+    <div class="lg:col-span-2">
+      <div class="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
+        <h2 class="font-cooper font-semibold text-gray-900 mb-4">Informations du dossier</h2>
+        <dl class="space-y-3 text-sm">
+          <div class="flex justify-between">
+            <dt class="text-gray-500">Référence</dt>
+            <dd class="font-semibold text-gray-900">#REF-2026-0847</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-gray-500">Type</dt>
+            <dd class="font-medium text-gray-800">Demande de passeport</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-gray-500">Citoyen</dt>
+            <dd class="font-medium text-gray-800">Jean Kabila</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-gray-500">Date soumission</dt>
+            <dd class="text-gray-700">07 mars 2026</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-gray-500">Statut actuel</dt>
+            <dd><span class="badge badge-pending">En attente</span></dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-gray-500">Priorité</dt>
+            <dd><span class="badge badge-error">Urgent</span></dd>
+          </div>
+        </dl>
+        <hr class="my-4 border-gray-100">
+        <h3 class="font-semibold text-gray-800 text-sm mb-3">Documents fournis</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center gap-2 text-sm text-gray-700">
+            <i data-lucide="file" class="w-4 h-4 text-blue-500 shrink-0" aria-hidden="true"></i>
+            <span>Carte d'identité nationale</span>
+            <span class="badge badge-success ml-auto text-xs">Vérifié</span>
+          </li>
+          <li class="flex items-center gap-2 text-sm text-gray-700">
+            <i data-lucide="file" class="w-4 h-4 text-blue-500 shrink-0" aria-hidden="true"></i>
+            <span>Acte de naissance</span>
+            <span class="badge badge-success ml-auto text-xs">Vérifié</span>
+          </li>
+          <li class="flex items-center gap-2 text-sm text-gray-700">
+            <i data-lucide="file" class="w-4 h-4 text-yellow-500 shrink-0" aria-hidden="true"></i>
+            <span>Photo d'identité</span>
+            <span class="badge badge-pending ml-auto text-xs">À vérifier</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right: Decision form (60%) -->
+    <div class="lg:col-span-3">
+      <div class="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
+        <h2 class="font-cooper font-semibold text-gray-900 mb-5">Décision de traitement</h2>
+
+        <!-- Radio decision -->
+        <fieldset class="space-y-3 mb-5">
+          <legend class="text-sm font-medium text-gray-700 mb-3">Décision</legend>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 cursor-pointer hover:border-green-300 hover:bg-green-50 transition has-[:checked]:border-green-400 has-[:checked]:bg-green-50">
+            <input type="radio" name="decision" value="valider" class="accent-green-600">
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Valider le dossier</p>
+              <p class="text-xs text-gray-500">Le dossier est complet et conforme</p>
+            </div>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 cursor-pointer hover:border-red-300 hover:bg-red-50 transition has-[:checked]:border-red-400 has-[:checked]:bg-red-50">
+            <input type="radio" name="decision" value="rejeter" class="accent-red-600">
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Rejeter la demande</p>
+              <p class="text-xs text-gray-500">Des informations sont manquantes ou incorrectes</p>
+            </div>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 cursor-pointer hover:border-yellow-300 hover:bg-yellow-50 transition has-[:checked]:border-yellow-400 has-[:checked]:bg-yellow-50">
+            <input type="radio" name="decision" value="complements" class="accent-yellow-600">
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Demander des compléments</p>
+              <p class="text-xs text-gray-500">Des documents supplémentaires sont requis</p>
+            </div>
+          </label>
+        </fieldset>
+
+        <!-- Comment -->
+        <div class="mb-5">
+          <label class="block text-sm font-medium text-gray-700 mb-1.5" for="commentaire">Commentaire interne</label>
+          <textarea id="commentaire" class="input-base resize-none" rows="4" placeholder="Ajoutez vos observations (visible par les agents uniquement)..."></textarea>
+        </div>
+
+        <!-- Notification citoyen -->
+        <div class="mb-5">
+          <label class="block text-sm font-medium text-gray-700 mb-1.5" for="notifCitoyen">Message au citoyen</label>
+          <textarea id="notifCitoyen" class="input-base resize-none" rows="3" placeholder="Ce message sera envoyé par e-mail au citoyen..."></textarea>
+        </div>
+
+        <!-- Submit buttons -->
+        <div class="flex gap-3">
+          <a href="demandes.html" class="border border-gray-200 bg-white hover:bg-gray-50 rounded-xl px-5 py-2.5 text-sm font-medium text-gray-700 transition flex items-center gap-1.5">
+            <i data-lucide="arrow-left" class="w-4 h-4" aria-hidden="true"></i>
+            Retour
+          </a>
+          <button class="btn-primary px-5 py-2.5 text-sm flex items-center gap-2 flex-1 justify-center">
+            <i data-lucide="send" class="w-4 h-4" aria-hidden="true"></i>
+            Soumettre la décision
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+document.getElementById('menuToggle')?.addEventListener('click', () => {
+  document.getElementById('sidebar').classList.toggle('open');
+});
+lucide.createIcons();
+</script>
+
+</body>
+</html>

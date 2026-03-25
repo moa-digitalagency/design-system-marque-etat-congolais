@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation — Design System Marque État Congolais
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=EB+Garamond:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./_tailwind-config.js"></script>
+  <link rel="stylesheet" href="./_shared.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .doc-nav-link { transition: all 0.15s ease; }
+    .doc-nav-link.active { background: #F3F4F6; color: #111827; font-weight: 500; }
+    pre code { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+    section { scroll-margin-top: 24px; }
+  </style>
+</head>
+<body class="theme-citoyen font-cooper bg-white" style="font-family: 'Cooper Hewitt', Inter, sans-serif">
+
+<div class="flex min-h-screen">
+
+  <!-- Left sticky nav -->
+  <nav class="w-60 shrink-0 sticky top-0 h-screen overflow-y-auto border-r border-gray-100 bg-white p-5 hidden md:block" aria-label="Navigation documentation">
+    <div class="mb-5">
+      <a href="landing.html" class="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-800 transition mb-4">
+        <i data-lucide="arrow-left" class="w-3.5 h-3.5" aria-hidden="true"></i>
+        Retour au portail
+      </a>
+      <h1 class="font-cooper font-bold text-gray-900 text-base">Documentation</h1>
+      <p class="text-xs text-gray-400 mt-0.5">Design System Marque État Congolais</p>
+    </div>
+    <div class="space-y-0.5 text-sm">
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mt-2 mb-2 px-2">Introduction</p>
+      <a href="#principes" class="doc-nav-link block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900">Principes de design</a>
+      <a href="#tokens" class="doc-nav-link block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900">Tokens CSS</a>
+
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mt-4 mb-2 px-2">Composants</p>
+      <a href="#boutons" class="doc-nav-link block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900">Boutons</a>
+      <a href="#inputs" class="doc-nav-link block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900">Champs de formulaire</a>
+      <a href="#cards" class="doc-nav-link block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900">Cards</a>
+      <a href="#badges" class="doc-nav-link block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900">Badges & Tags</a>
+      <a href="#navigation" class="doc-nav-link block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900">Navigation</a>
+
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mt-4 mb-2 px-2">Guides</p>
+      <a href="#lottie" class="doc-nav-link block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900">Animations Lottie</a>
+      <a href="#integration" class="doc-nav-link block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900">Intégration Flask</a>
+      <a href="#accessibilite" class="doc-nav-link block px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900">Accessibilité</a>
+    </div>
+    <div class="mt-8 pt-6 border-t border-gray-100">
+      <a href="design-system.html" class="flex items-center gap-2 text-xs font-medium text-gray-500 hover:text-gray-800 transition">
+        <i data-lucide="layout-grid" class="w-3.5 h-3.5" aria-hidden="true"></i>
+        Voir le design system
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="flex-1 px-8 md:px-14 py-12 max-w-3xl">
+
+    <!-- Hero -->
+    <div class="mb-14">
+      <span class="badge badge-info text-xs mb-3 inline-block">v1.0 · 2026</span>
+      <h1 class="text-4xl font-cooper font-bold text-gray-900 mb-3">Design System<br><span style="color: var(--primary)">Marque État Congolais</span></h1>
+      <p class="text-lg text-gray-500 mb-5">Guide de référence complet pour concevoir et développer des interfaces cohérentes pour le portail gouvernemental de la République Démocratique du Congo.</p>
+      <div class="flex gap-3 flex-wrap">
+        <a href="design-system.html" class="btn-primary px-5 py-2.5 text-sm flex items-center gap-2">
+          <i data-lucide="layout-grid" class="w-4 h-4" aria-hidden="true"></i>
+          Voir les composants
+        </a>
+        <a href="landing.html" class="border border-gray-200 bg-white hover:bg-gray-50 rounded-xl px-5 py-2.5 text-sm font-medium text-gray-700 transition flex items-center gap-2">
+          <i data-lucide="globe" class="w-4 h-4" aria-hidden="true"></i>
+          Portail public
+        </a>
+      </div>
+    </div>
+
+    <!-- Section: Principes -->
+    <section id="principes" class="mb-16">
+      <h2 class="text-2xl font-cooper font-bold text-gray-900 mb-2">Principes de design</h2>
+      <p class="text-gray-500 mb-6">Les valeurs fondamentales qui guident toutes les décisions visuelles du système.</p>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="p-5 bg-blue-50 rounded-2xl border border-blue-100">
+          <i data-lucide="layers" class="w-6 h-6 text-blue-600 mb-3" aria-hidden="true"></i>
+          <h3 class="font-semibold text-gray-900 mb-2">Cohérence</h3>
+          <p class="text-sm text-gray-600">Chaque interface partage les mêmes tokens, composants et comportements. Seule la couleur primaire change selon le rôle.</p>
+        </div>
+        <div class="p-5 bg-green-50 rounded-2xl border border-green-100">
+          <i data-lucide="smartphone" class="w-6 h-6 text-green-600 mb-3" aria-hidden="true"></i>
+          <h3 class="font-semibold text-gray-900 mb-2">Mobile-first</h3>
+          <p class="text-sm text-gray-600">Construire d'abord pour 375px, puis adapter progressivement vers 1280px via les breakpoints Tailwind (sm/md/lg/xl).</p>
+        </div>
+        <div class="p-5 bg-purple-50 rounded-2xl border border-purple-100">
+          <i data-lucide="shield-check" class="w-6 h-6 text-purple-600 mb-3" aria-hidden="true"></i>
+          <h3 class="font-semibold text-gray-900 mb-2">Accessibilité</h3>
+          <p class="text-sm text-gray-600">Contrastes WCAG AA minimum, aria-labels sur tous les éléments interactifs, navigation clavier complète.</p>
+        </div>
+      </div>
+      <div class="mt-4 grid md:grid-cols-2 gap-4">
+        <div class="p-5 bg-yellow-50 rounded-2xl border border-yellow-100">
+          <i data-lucide="zap" class="w-6 h-6 text-yellow-600 mb-3" aria-hidden="true"></i>
+          <h3 class="font-semibold text-gray-900 mb-2">Performance</h3>
+          <p class="text-sm text-gray-600">Pas d'images lourdes, SVG et CSS-only autant que possible. Tailwind via CDN pour simplifier le déploiement.</p>
+        </div>
+        <div class="p-5 bg-red-50 rounded-2xl border border-red-100">
+          <i data-lucide="palette" class="w-6 h-6 text-red-600 mb-3" aria-hidden="true"></i>
+          <h3 class="font-semibold text-gray-900 mb-2">Identité RDC</h3>
+          <p class="text-sm text-gray-600">Inspiré des couleurs du drapeau (bleu, rouge, jaune/or) dans un univers premium, épuré et institutionnel.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Tokens -->
+    <section id="tokens" class="mb-16">
+      <h2 class="text-2xl font-cooper font-bold text-gray-900 mb-2">Tokens CSS</h2>
+      <p class="text-gray-500 mb-6">Variables CSS définies dans <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">_shared.css</code> et surchargées par les classes de thème sur <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">&lt;body&gt;</code>.</p>
+
+      <div class="overflow-auto rounded-2xl border border-gray-100 mb-5">
+        <table class="w-full text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-4 py-3 text-left font-semibold text-gray-600 text-xs">Token</th>
+              <th class="px-4 py-3 text-left font-semibold text-gray-600 text-xs">SuperAdmin</th>
+              <th class="px-4 py-3 text-left font-semibold text-gray-600 text-xs">Consulaire</th>
+              <th class="px-4 py-3 text-left font-semibold text-gray-600 text-xs">Citoyen</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-50">
+            <tr class="table-row">
+              <td class="px-4 py-3 font-mono text-xs text-gray-700">--primary</td>
+              <td class="px-4 py-3"><span class="flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-red-600 inline-block shrink-0"></span><span class="font-mono text-xs">#C0392B</span></span></td>
+              <td class="px-4 py-3"><span class="flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-yellow-500 inline-block shrink-0"></span><span class="font-mono text-xs">#F0A500</span></span></td>
+              <td class="px-4 py-3"><span class="flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-blue-900 inline-block shrink-0"></span><span class="font-mono text-xs">#0095C9</span></span></td>
+            </tr>
+            <tr class="table-row">
+              <td class="px-4 py-3 font-mono text-xs text-gray-700">--primary-to</td>
+              <td class="px-4 py-3 font-mono text-xs text-gray-600">#8B0000</td>
+              <td class="px-4 py-3 font-mono text-xs text-gray-600">#C77D00</td>
+              <td class="px-4 py-3 font-mono text-xs text-gray-600">#17418A</td>
+            </tr>
+            <tr class="table-row">
+              <td class="px-4 py-3 font-mono text-xs text-gray-700">--bg-app</td>
+              <td class="px-4 py-3 font-mono text-xs text-gray-500" colspan="3">#F8FAFC (global, tous thèmes)</td>
+            </tr>
+            <tr class="table-row">
+              <td class="px-4 py-3 font-mono text-xs text-gray-700">--surface-glass</td>
+              <td class="px-4 py-3 font-mono text-xs text-gray-500" colspan="3">rgba(255,255,255,0.65)</td>
+            </tr>
+            <tr class="table-row">
+              <td class="px-4 py-3 font-mono text-xs text-gray-700">--border-glass</td>
+              <td class="px-4 py-3 font-mono text-xs text-gray-500" colspan="3">rgba(255,255,255,0.35)</td>
+            </tr>
+            <tr class="table-row">
+              <td class="px-4 py-3 font-mono text-xs text-gray-700">--shadow-glass</td>
+              <td class="px-4 py-3 font-mono text-xs text-gray-500" colspan="3">0 8px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6)</td>
+            </tr>
+            <tr class="table-row">
+              <td class="px-4 py-3 font-mono text-xs text-gray-700">--sidebar-width</td>
+              <td class="px-4 py-3 font-mono text-xs text-gray-500" colspan="3">280px (collapsed: 72px)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="p-4 bg-blue-50 border border-blue-100 rounded-xl text-sm text-blue-800">
+        <strong>Usage :</strong> Appliquer <code class="bg-blue-100 px-1 rounded font-mono text-xs">theme-superadmin</code>, <code class="bg-blue-100 px-1 rounded font-mono text-xs">theme-consulaire</code> ou <code class="bg-blue-100 px-1 rounded font-mono text-xs">theme-citoyen</code> sur <code class="bg-blue-100 px-1 rounded font-mono text-xs">&lt;body&gt;</code> — tous les tokens se mettent à jour automatiquement en cascade.
+      </div>
+    </section>
+
+    <!-- Section: Boutons -->
+    <section id="boutons" class="mb-16">
+      <h2 class="text-2xl font-cooper font-bold text-gray-900 mb-2">Boutons</h2>
+      <p class="text-gray-500 mb-6">Classe <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">btn-primary</code> définie dans <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">_shared.css</code>. Les autres variantes utilisent les utilitaires Tailwind.</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-5">
+        <div class="p-5 bg-green-50 border border-green-200 rounded-2xl">
+          <p class="text-xs font-bold text-green-700 uppercase mb-3 flex items-center gap-1.5">
+            <i data-lucide="check-circle" class="w-3.5 h-3.5" aria-hidden="true"></i> À faire
+          </p>
+          <ul class="text-sm text-green-800 space-y-1.5">
+            <li>✓ Utiliser <code class="bg-green-100 px-1 rounded font-mono text-xs">btn-primary</code> pour l'action principale</li>
+            <li>✓ Une seule action primaire par section visible</li>
+            <li>✓ <code class="bg-green-100 px-1 rounded font-mono text-xs">aria-label</code> sur tous les boutons icône-only</li>
+            <li>✓ Ajouter <code class="bg-green-100 px-1 rounded font-mono text-xs">opacity-40 cursor-not-allowed</code> sur disabled</li>
+          </ul>
+        </div>
+        <div class="p-5 bg-red-50 border border-red-200 rounded-2xl">
+          <p class="text-xs font-bold text-red-700 uppercase mb-3 flex items-center gap-1.5">
+            <i data-lucide="x-circle" class="w-3.5 h-3.5" aria-hidden="true"></i> À éviter
+          </p>
+          <ul class="text-sm text-red-800 space-y-1.5">
+            <li>✗ Couleurs hardcodées — toujours utiliser les tokens CSS</li>
+            <li>✗ Plusieurs boutons primaires côte à côte</li>
+            <li>✗ Boutons icône-only sans texte accessible</li>
+            <li>✗ Modifier <code class="bg-red-100 px-1 rounded font-mono text-xs">btn-primary</code> en inline style</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-gray-900 rounded-2xl p-5">
+        <p class="text-xs text-gray-400 mb-3 font-mono">Exemples d'usage</p>
+        <pre class="text-sm text-green-400 overflow-x-auto leading-relaxed"><code>&lt;!-- Action principale --&gt;
+&lt;button class="btn-primary px-5 py-2.5 text-sm"&gt;Valider&lt;/button&gt;
+
+&lt;!-- Secondaire --&gt;
+&lt;button class="border border-gray-200 bg-white hover:bg-gray-50
+               rounded-xl px-5 py-2.5 text-sm font-medium
+               text-gray-700 transition"&gt;Annuler&lt;/button&gt;
+
+&lt;!-- Icône-only avec aria-label obligatoire --&gt;
+&lt;button class="btn-primary w-10 h-10 flex items-center
+               justify-center rounded-xl"
+        aria-label="Ajouter un utilisateur"&gt;
+  &lt;i data-lucide="plus" class="w-4 h-4" aria-hidden="true"&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Section: Inputs -->
+    <section id="inputs" class="mb-16">
+      <h2 class="text-2xl font-cooper font-bold text-gray-900 mb-2">Champs de formulaire</h2>
+      <p class="text-gray-500 mb-6">Classe <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">input-base</code> dans <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">_shared.css</code>. Modifiée avec <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">input-error</code> ou <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">input-success</code>.</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-5">
+        <div class="p-5 bg-green-50 border border-green-200 rounded-2xl">
+          <p class="text-xs font-bold text-green-700 uppercase mb-3">À faire</p>
+          <ul class="text-sm text-green-800 space-y-1.5">
+            <li>✓ Associer chaque input à un <code class="bg-green-100 px-1 rounded font-mono text-xs">&lt;label for="id"&gt;</code></li>
+            <li>✓ Afficher le message d'erreur sous le champ</li>
+            <li>✓ Utiliser <code class="bg-green-100 px-1 rounded font-mono text-xs">autocomplete</code> approprié</li>
+            <li>✓ Marquer les champs requis avec <code class="bg-green-100 px-1 rounded font-mono text-xs">aria-required="true"</code></li>
+          </ul>
+        </div>
+        <div class="p-5 bg-red-50 border border-red-200 rounded-2xl">
+          <p class="text-xs font-bold text-red-700 uppercase mb-3">À éviter</p>
+          <ul class="text-sm text-red-800 space-y-1.5">
+            <li>✗ Inputs sans label associé</li>
+            <li>✗ Styliser les inputs sans <code class="bg-red-100 px-1 rounded font-mono text-xs">input-base</code></li>
+            <li>✗ Couleurs de focus hardcodées (ex: <code class="bg-red-100 px-1 rounded font-mono text-xs">focus:border-blue-400</code>)</li>
+            <li>✗ Placeholder comme substitut au label</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-gray-900 rounded-2xl p-5">
+        <pre class="text-sm text-green-400 overflow-x-auto leading-relaxed"><code>&lt;!-- Input standard --&gt;
+&lt;div class="mb-4"&gt;
+  &lt;label for="email" class="block text-sm font-medium text-gray-700 mb-1.5"&gt;
+    Adresse e-mail
+  &lt;/label&gt;
+  &lt;input type="email" id="email" class="input-base"
+         placeholder="nom@exemple.cd" autocomplete="email"
+         aria-required="true"&gt;
+&lt;/div&gt;
+
+&lt;!-- État erreur --&gt;
+&lt;input type="email" class="input-base input-error" aria-invalid="true"
+       aria-describedby="email-error"&gt;
+&lt;p id="email-error" class="text-xs text-red-500 mt-1"&gt;Email invalide&lt;/p&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Section: Cards -->
+    <section id="cards" class="mb-16">
+      <h2 class="text-2xl font-cooper font-bold text-gray-900 mb-2">Cards</h2>
+      <p class="text-gray-500 mb-6">Quatre variantes. <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">.glass-card</code> et <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">.stat-card</code> sont dans <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">_shared.css</code>.</p>
+
+      <div class="overflow-auto rounded-2xl border border-gray-100 mb-5">
+        <table class="w-full text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-4 py-3 text-left font-semibold text-gray-600 text-xs">Variante</th>
+              <th class="px-4 py-3 text-left font-semibold text-gray-600 text-xs">Classe / Structure</th>
+              <th class="px-4 py-3 text-left font-semibold text-gray-600 text-xs">Usage</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-50 text-sm">
+            <tr class="table-row"><td class="px-4 py-3 font-medium">Simple</td><td class="px-4 py-3 font-mono text-xs text-gray-600">bg-white border border-gray-100 rounded-2xl p-6 shadow-sm</td><td class="px-4 py-3 text-gray-600">Contenu général, formulaires</td></tr>
+            <tr class="table-row"><td class="px-4 py-3 font-medium">Stat</td><td class="px-4 py-3 font-mono text-xs text-gray-600">.stat-card p-5</td><td class="px-4 py-3 text-gray-600">KPIs, métriques chiffrées</td></tr>
+            <tr class="table-row"><td class="px-4 py-3 font-medium">Action</td><td class="px-4 py-3 font-mono text-xs text-gray-600">Simple + bouton interne</td><td class="px-4 py-3 text-gray-600">Liens rapides, CTA contextuels</td></tr>
+            <tr class="table-row"><td class="px-4 py-3 font-medium">Glass</td><td class="px-4 py-3 font-mono text-xs text-gray-600">.glass-card rounded-2xl p-6</td><td class="px-4 py-3 text-gray-600">Login, hero, sur fond coloré uniquement</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="p-4 bg-yellow-50 border border-yellow-200 rounded-xl text-sm text-yellow-800 mb-4">
+        <strong>⚠️ Important :</strong> <code class="bg-yellow-100 px-1 rounded font-mono text-xs">.glass-card</code> nécessite un fond non-blanc pour que l'effet <code class="bg-yellow-100 px-1 rounded font-mono text-xs">backdrop-filter: blur</code> soit visible. Sur fond blanc, l'effet est imperceptible.
+      </div>
+    </section>
+
+    <!-- Section: Badges -->
+    <section id="badges" class="mb-16">
+      <h2 class="text-2xl font-cooper font-bold text-gray-900 mb-2">Badges & Tags</h2>
+      <p class="text-gray-500 mb-6">Toujours utiliser <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">badge badge-[variante]</code>. Ne jamais hardcoder les couleurs de statut.</p>
+
+      <div class="overflow-auto rounded-2xl border border-gray-100 mb-5">
+        <table class="w-full text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-4 py-3 text-left font-semibold text-gray-600 text-xs">Classe</th>
+              <th class="px-4 py-3 text-left font-semibold text-gray-600 text-xs">Aperçu</th>
+              <th class="px-4 py-3 text-left font-semibold text-gray-600 text-xs">Utilisation</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-50">
+            <tr class="table-row"><td class="px-4 py-3 font-mono text-xs">badge-pending</td><td class="px-4 py-3"><span class="badge badge-pending">En attente</span></td><td class="px-4 py-3 text-sm text-gray-600">En attente, à traiter, soumis</td></tr>
+            <tr class="table-row"><td class="px-4 py-3 font-mono text-xs">badge-success</td><td class="px-4 py-3"><span class="badge badge-success">Validé</span></td><td class="px-4 py-3 text-sm text-gray-600">Validé, actif, disponible, succès</td></tr>
+            <tr class="table-row"><td class="px-4 py-3 font-mono text-xs">badge-error</td><td class="px-4 py-3"><span class="badge badge-error">Rejeté</span></td><td class="px-4 py-3 text-sm text-gray-600">Rejeté, erreur, urgent, suspendu</td></tr>
+            <tr class="table-row"><td class="px-4 py-3 font-mono text-xs">badge-info</td><td class="px-4 py-3"><span class="badge badge-info">En cours</span></td><td class="px-4 py-3 text-sm text-gray-600">En cours, en traitement, information</td></tr>
+            <tr class="table-row"><td class="px-4 py-3 font-mono text-xs">badge-gray</td><td class="px-4 py-3"><span class="badge badge-gray">Archivé</span></td><td class="px-4 py-3 text-sm text-gray-600">Archivé, inactif, neutre</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section: Navigation -->
+    <section id="navigation" class="mb-16">
+      <h2 class="text-2xl font-cooper font-bold text-gray-900 mb-2">Navigation</h2>
+      <p class="text-gray-500 mb-6">Structure sidebar basée sur <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">.sidebar</code> et <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">.sidebar-link</code> de <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">_shared.css</code>.</p>
+
+      <div class="p-4 bg-blue-50 border border-blue-100 rounded-xl text-sm text-blue-800 mb-5">
+        <strong>Règle :</strong> Toujours ajouter <code class="bg-blue-100 px-1 rounded font-mono text-xs">active</code> + <code class="bg-blue-100 px-1 rounded font-mono text-xs">aria-current="page"</code> sur le lien correspondant à la page actuelle.
+      </div>
+
+      <div class="bg-gray-900 rounded-2xl p-5">
+        <pre class="text-sm text-green-400 overflow-x-auto leading-relaxed"><code>&lt;!-- Lien actif --&gt;
+&lt;a href="dashboard.html"
+   class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl active"
+   aria-current="page"&gt;
+  &lt;i data-lucide="layout-dashboard" class="w-4 h-4" aria-hidden="true"&gt;&lt;/i&gt;
+  &lt;span class="text-sm font-medium"&gt;Dashboard&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- Lien inactif --&gt;
+&lt;a href="utilisateurs.html"
+   class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl"&gt;
+  &lt;i data-lucide="users" class="w-4 h-4" aria-hidden="true"&gt;&lt;/i&gt;
+  &lt;span class="text-sm font-medium"&gt;Utilisateurs&lt;/span&gt;
+  &lt;span class="ml-auto badge badge-info"&gt;248&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Section: Lottie -->
+    <section id="lottie" class="mb-16">
+      <h2 class="text-2xl font-cooper font-bold text-gray-900 mb-2">Animations Lottie</h2>
+      <p class="text-gray-500 mb-6">Intégration via CDN <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono">lottie-web</code> pour les états vides, succès et chargement.</p>
+
+      <div class="bg-gray-900 rounded-2xl p-5 mb-5">
+        <pre class="text-sm text-green-400 overflow-x-auto leading-relaxed"><code>&lt;!-- 1. CDN dans &lt;head&gt; --&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- 2. Conteneur HTML --&gt;
+&lt;div id="lottie-empty" class="w-40 h-40 mx-auto" aria-hidden="true"&gt;&lt;/div&gt;
+
+&lt;!-- 3. Initialisation JS --&gt;
+&lt;script&gt;
+lottie.loadAnimation({
+  container: document.getElementById('lottie-empty'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'https://assets9.lottiefiles.com/packages/lf20_wnqlfojb.json'
+});
+&lt;/script&gt;</code></pre>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-100">
+          <i data-lucide="search-x" class="w-8 h-8 text-gray-400 mx-auto mb-2" aria-hidden="true"></i>
+          <p class="text-sm font-semibold text-gray-700 mb-1">Empty state</p>
+          <p class="text-xs text-gray-500 font-mono">lf20_wnqlfojb.json</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-100">
+          <i data-lucide="check-circle" class="w-8 h-8 text-green-500 mx-auto mb-2" aria-hidden="true"></i>
+          <p class="text-sm font-semibold text-gray-700 mb-1">Success</p>
+          <p class="text-xs text-gray-500 font-mono">lf20_lk80fpsm.json</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-100">
+          <i data-lucide="loader" class="w-8 h-8 text-blue-500 mx-auto mb-2 animate-spin" aria-hidden="true"></i>
+          <p class="text-sm font-semibold text-gray-700 mb-1">Loading</p>
+          <p class="text-xs text-gray-500 font-mono">lf20_usmfx6bp.json</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Intégration Flask -->
+    <section id="integration" class="mb-16">
+      <h2 class="text-2xl font-cooper font-bold text-gray-900 mb-2">Intégration Flask</h2>
+      <p class="text-gray-500 mb-6">Comment adapter les pages standalone vers les templates Jinja2 de l'application ConsulConnect.</p>
+
+      <div class="space-y-4">
+        <div class="p-5 border border-gray-100 rounded-2xl">
+          <h3 class="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full btn-primary flex items-center justify-center text-white text-xs font-bold shrink-0">1</span>
+            Remplacer les chemins statiques
+          </h3>
+          <div class="grid md:grid-cols-2 gap-3">
+            <div class="bg-red-50 rounded-xl p-3">
+              <p class="text-xs font-bold text-red-600 mb-1.5">Standalone</p>
+              <code class="text-xs text-red-800 font-mono">href="../_shared.css"</code>
+            </div>
+            <div class="bg-green-50 rounded-xl p-3">
+              <p class="text-xs font-bold text-green-600 mb-1.5">Flask</p>
+              <code class="text-xs text-green-800 font-mono">href="{{ url_for('static', filename='css/shared.css') }}"</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 border border-gray-100 rounded-2xl">
+          <h3 class="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full btn-primary flex items-center justify-center text-white text-xs font-bold shrink-0">2</span>
+            Remplacer les données statiques par Jinja2
+          </h3>
+          <div class="grid md:grid-cols-2 gap-3">
+            <div class="bg-red-50 rounded-xl p-3">
+              <p class="text-xs font-bold text-red-600 mb-1.5">Standalone</p>
+              <code class="text-xs text-red-800 font-mono">&lt;p&gt;Jean Kabila&lt;/p&gt;</code>
+            </div>
+            <div class="bg-green-50 rounded-xl p-3">
+              <p class="text-xs font-bold text-green-600 mb-1.5">Flask</p>
+              <code class="text-xs text-green-800 font-mono">&lt;p&gt;{{ current_user.full_name }}&lt;/p&gt;</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 border border-gray-100 rounded-2xl">
+          <h3 class="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full btn-primary flex items-center justify-center text-white text-xs font-bold shrink-0">3</span>
+            Extraire la sidebar dans un template de base
+          </h3>
+          <p class="text-sm text-gray-600 mb-3">Créer <code class="bg-gray-100 px-1 rounded font-mono text-xs">base_superadmin.html</code> avec la sidebar complète, puis :</p>
+          <div class="bg-gray-900 rounded-xl p-4">
+            <pre class="text-xs text-green-400 overflow-x-auto"><code>{% extends "superadmin/base_superadmin.html" %}
+{% block title %}Utilisateurs{% endblock %}
+{% block content %}
+  &lt;!-- Contenu spécifique à la page --&gt;
+{% endblock %}</code></pre>
+          </div>
+        </div>
+
+        <div class="p-5 border border-gray-100 rounded-2xl">
+          <h3 class="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full btn-primary flex items-center justify-center text-white text-xs font-bold shrink-0">4</span>
+            Activer le bon thème selon le rôle
+          </h3>
+          <div class="bg-gray-900 rounded-xl p-4">
+            <pre class="text-xs text-green-400 overflow-x-auto"><code>&lt;body class="font-inter
+  {% if current_user.role == 'superviseur' %}theme-superadmin
+  {% elif current_user.role == 'agent' %}theme-consulaire
+  {% else %}theme-citoyen{% endif %}"
+  style="background: var(--bg-app)"&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Accessibilité -->
+    <section id="accessibilite" class="mb-16">
+      <h2 class="text-2xl font-cooper font-bold text-gray-900 mb-2">Accessibilité</h2>
+      <p class="text-gray-500 mb-6">Règles minimales WCAG AA à respecter sur toutes les pages du portail.</p>
+
+      <ul class="space-y-3" role="list">
+        <li class="flex items-start gap-3 p-4 bg-green-50 border border-green-100 rounded-2xl">
+          <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-0.5" aria-hidden="true"></i>
+          <div>
+            <p class="text-sm font-semibold text-gray-900">aria-label sur les boutons icône-only</p>
+            <p class="text-xs text-gray-600 mt-0.5">Tout bouton sans texte visible doit avoir un <code class="bg-gray-100 px-1 rounded font-mono">aria-label</code> descriptif en français.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3 p-4 bg-green-50 border border-green-100 rounded-2xl">
+          <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-0.5" aria-hidden="true"></i>
+          <div>
+            <p class="text-sm font-semibold text-gray-900">aria-hidden sur les icônes décoratives</p>
+            <p class="text-xs text-gray-600 mt-0.5">Ajouter <code class="bg-gray-100 px-1 rounded font-mono">aria-hidden="true"</code> sur tous les <code class="bg-gray-100 px-1 rounded font-mono">&lt;i data-lucide&gt;</code> — les lecteurs d'écran les ignoreront.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3 p-4 bg-green-50 border border-green-100 rounded-2xl">
+          <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-0.5" aria-hidden="true"></i>
+          <div>
+            <p class="text-sm font-semibold text-gray-900">aria-current="page" sur le lien actif</p>
+            <p class="text-xs text-gray-600 mt-0.5">Le lien de navigation correspondant à la page actuelle doit avoir <code class="bg-gray-100 px-1 rounded font-mono">aria-current="page"</code> en plus de la classe <code class="bg-gray-100 px-1 rounded font-mono">active</code>.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3 p-4 bg-green-50 border border-green-100 rounded-2xl">
+          <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-0.5" aria-hidden="true"></i>
+          <div>
+            <p class="text-sm font-semibold text-gray-900">Labels associés aux champs de formulaire</p>
+            <p class="text-xs text-gray-600 mt-0.5">Chaque <code class="bg-gray-100 px-1 rounded font-mono">&lt;input&gt;</code> doit avoir un <code class="bg-gray-100 px-1 rounded font-mono">&lt;label for="id"&gt;</code> avec le même identifiant.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3 p-4 bg-green-50 border border-green-100 rounded-2xl">
+          <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-0.5" aria-hidden="true"></i>
+          <div>
+            <p class="text-sm font-semibold text-gray-900">Landmarks sémantiques</p>
+            <p class="text-xs text-gray-600 mt-0.5">Utiliser <code class="bg-gray-100 px-1 rounded font-mono">&lt;main&gt;</code>, <code class="bg-gray-100 px-1 rounded font-mono">&lt;nav aria-label="..."&gt;</code>, <code class="bg-gray-100 px-1 rounded font-mono">&lt;header&gt;</code>, <code class="bg-gray-100 px-1 rounded font-mono">&lt;aside&gt;</code> correctement pour la navigation clavier.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3 p-4 bg-green-50 border border-green-100 rounded-2xl">
+          <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-0.5" aria-hidden="true"></i>
+          <div>
+            <p class="text-sm font-semibold text-gray-900">Contraste WCAG AA minimum</p>
+            <p class="text-xs text-gray-600 mt-0.5">Ratio de contraste ≥ 4.5:1 pour le texte normal, ≥ 3:1 pour les grands textes et les éléments UI. Ne jamais utiliser <code class="bg-gray-100 px-1 rounded font-mono">text-gray-300</code> sur fond blanc.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-8 border-t border-gray-100">
+      <div class="flex items-center justify-between flex-wrap gap-4">
+        <p class="text-sm text-gray-400">© 2026 Marque État Congolais · Design System v1.0</p>
+        <div class="flex gap-4">
+          <a href="design-system.html" class="text-sm font-medium hover:underline" style="color: var(--primary)">
+            Composants →
+          </a>
+          <a href="landing.html" class="text-sm font-medium text-gray-500 hover:text-gray-800 transition">
+            Portail public →
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+// Scroll-spy
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      document.querySelectorAll('.doc-nav-link').forEach(a => {
+        const isActive = a.getAttribute('href') === '#' + entry.target.id;
+        a.classList.toggle('active', isActive);
+      });
+    }
+  });
+}, { threshold: 0.2, rootMargin: '-60px 0px -60% 0px' });
+
+document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+lucide.createIcons();
+</script>
+</body>
+</html>

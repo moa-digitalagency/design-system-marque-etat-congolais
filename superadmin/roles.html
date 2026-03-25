@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rôles & Permissions — Super Administration Portail Numérique RDC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=EB+Garamond:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../_tailwind-config.js"></script>
+  <link rel="stylesheet" href="../_shared.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="theme-superadmin font-inter" style="background: var(--bg-app);">
+
+  <!-- ═══════════════════════════════════════════
+       SIDEBAR — 280px fixed left
+  ════════════════════════════════════════════ -->
+  <aside class="sidebar fixed left-0 top-0 h-screen overflow-y-auto z-20 flex flex-col" id="sidebar" aria-label="Navigation SuperAdmin">
+
+    <!-- Header / Logo -->
+    <div class="p-5 border-b border-gray-100 shrink-0">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl btn-primary flex items-center justify-center shrink-0">
+          <i data-lucide="shield" class="w-5 h-5 text-white" aria-hidden="true"></i>
+        </div>
+        <div>
+          <p class="font-cooper font-bold text-gray-900 text-sm leading-tight">Portail Numérique RDC</p>
+          <p class="text-xs font-semibold" style="color: var(--primary)">Super Administration</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="p-3 flex-1 overflow-y-auto" aria-label="Menu principal">
+      <p class="px-3 text-xs text-gray-400 uppercase tracking-widest mt-4 mb-2 font-semibold select-none">Principal</p>
+
+      <a href="dashboard.html" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl">
+        <i data-lucide="layout-dashboard" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+        <span class="text-sm font-medium">Dashboard</span>
+      </a>
+
+      <a href="utilisateurs.html" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl">
+        <i data-lucide="users" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+        <span class="text-sm font-medium">Utilisateurs</span>
+        <span class="ml-auto badge badge-info text-xs">248</span>
+      </a>
+
+      <a href="roles.html" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl active" aria-current="page">
+        <i data-lucide="key" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+        <span class="text-sm font-medium">Rôles &amp; Permissions</span>
+      </a>
+
+      <a href="logs.html" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl">
+        <i data-lucide="file-text" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+        <span class="text-sm font-medium">Logs &amp; Audit</span>
+        <span class="ml-auto w-2 h-2 bg-red-500 rounded-full" aria-label="Alertes non lues"></span>
+      </a>
+
+      <p class="px-3 text-xs text-gray-400 uppercase tracking-widest mt-6 mb-2 font-semibold select-none">Configuration</p>
+
+      <a href="parametres.html" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl">
+        <i data-lucide="settings" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+        <span class="text-sm font-medium">Paramètres système</span>
+      </a>
+
+      <a href="../login.html" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl" style="color: #ef4444 !important">
+        <i data-lucide="log-out" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+        <span class="text-sm font-medium">Déconnexion</span>
+      </a>
+    </nav>
+
+    <!-- User info footer -->
+    <div class="p-4 border-t border-gray-100 shrink-0">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full btn-primary flex items-center justify-center text-white font-semibold text-sm shrink-0" aria-hidden="true">AK</div>
+        <div class="flex-1 min-w-0">
+          <p class="text-sm font-semibold text-gray-900 truncate">Aisance Kalonji</p>
+          <p class="text-xs text-gray-500 truncate">Super Administrateur</p>
+        </div>
+        <button class="text-gray-400 hover:text-gray-600 transition shrink-0" aria-label="Options du compte">
+          <i data-lucide="more-vertical" class="w-4 h-4" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════ -->
+  <main class="main-content p-8" id="mainContent">
+
+    <!-- ── TOPBAR ── -->
+    <header class="flex items-center justify-between mb-8">
+      <div class="flex items-center">
+        <button id="menuToggle" class="lg:hidden w-10 h-10 rounded-xl bg-white border border-gray-100 flex items-center justify-center text-gray-500 mr-3 shadow-sm" aria-label="Ouvrir le menu">
+          <i data-lucide="menu" class="w-4 h-4" aria-hidden="true"></i>
+        </button>
+        <div>
+          <nav aria-label="Fil d'Ariane" class="flex items-center gap-1.5 text-xs text-gray-400 mb-1">
+            <span>Administration</span>
+            <i data-lucide="chevron-right" class="w-3 h-3" aria-hidden="true"></i>
+            <span class="text-gray-600 font-medium">Rôles &amp; Permissions</span>
+          </nav>
+          <h1 class="text-2xl font-cooper font-bold text-gray-900">Rôles &amp; Permissions</h1>
+          <p class="text-sm text-gray-500 mt-0.5">Configurez les permissions pour chaque rôle du système.</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <button class="relative w-10 h-10 rounded-xl bg-white border border-gray-100 flex items-center justify-center text-gray-500 hover:bg-gray-50 transition shadow-sm" aria-label="Notifications (3 non lues)">
+          <i data-lucide="bell" class="w-4 h-4" aria-hidden="true"></i>
+          <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full" aria-hidden="true"></span>
+        </button>
+        <button class="w-10 h-10 rounded-xl btn-primary flex items-center justify-center text-white font-semibold text-sm" aria-label="Profil de Aisance Kalonji">AK</button>
+      </div>
+    </header>
+
+    <!-- ── PERMISSIONS MATRIX ── -->
+    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-6">
+      <div class="p-6 border-b border-gray-100">
+        <h2 class="font-cooper font-semibold text-gray-900">Matrice des permissions</h2>
+        <p class="text-sm text-gray-500 mt-1">Cochez ou décochez les permissions pour chaque rôle. Les modifications ne seront appliquées qu'après enregistrement.</p>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm" aria-label="Matrice des permissions par rôle">
+          <thead>
+            <tr class="bg-gray-50 border-b border-gray-100">
+              <th class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wide w-48">Rôle</th>
+              <th class="px-4 py-3 text-center text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                <div class="flex flex-col items-center gap-1">
+                  <i data-lucide="eye" class="w-4 h-4 text-gray-400" aria-hidden="true"></i>
+                  Lecture
+                </div>
+              </th>
+              <th class="px-4 py-3 text-center text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                <div class="flex flex-col items-center gap-1">
+                  <i data-lucide="plus-circle" class="w-4 h-4 text-gray-400" aria-hidden="true"></i>
+                  Création
+                </div>
+              </th>
+              <th class="px-4 py-3 text-center text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                <div class="flex flex-col items-center gap-1">
+                  <i data-lucide="pencil" class="w-4 h-4 text-gray-400" aria-hidden="true"></i>
+                  Modification
+                </div>
+              </th>
+              <th class="px-4 py-3 text-center text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                <div class="flex flex-col items-center gap-1">
+                  <i data-lucide="trash-2" class="w-4 h-4 text-gray-400" aria-hidden="true"></i>
+                  Suppression
+                </div>
+              </th>
+              <th class="px-4 py-3 text-center text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                <div class="flex flex-col items-center gap-1">
+                  <i data-lucide="download" class="w-4 h-4 text-gray-400" aria-hidden="true"></i>
+                  Export
+                </div>
+              </th>
+              <th class="px-4 py-3 text-center text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                <div class="flex flex-col items-center gap-1">
+                  <i data-lucide="file-search" class="w-4 h-4 text-gray-400" aria-hidden="true"></i>
+                  Audit
+                </div>
+              </th>
+              <th class="px-4 py-3 text-center text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                <div class="flex flex-col items-center gap-1">
+                  <i data-lucide="settings" class="w-4 h-4 text-gray-400" aria-hidden="true"></i>
+                  Configuration
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-50">
+
+            <!-- SuperAdmin -->
+            <tr class="hover:bg-red-50/30 transition">
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-3">
+                  <span class="badge text-xs px-2 py-1 rounded-full font-semibold bg-red-100 text-red-700">SuperAdmin</span>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded accent-red-600" checked aria-label="SuperAdmin — Lecture"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded accent-red-600" checked aria-label="SuperAdmin — Création"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded accent-red-600" checked aria-label="SuperAdmin — Modification"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded accent-red-600" checked aria-label="SuperAdmin — Suppression"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded accent-red-600" checked aria-label="SuperAdmin — Export"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded accent-red-600" checked aria-label="SuperAdmin — Audit"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded accent-red-600" checked aria-label="SuperAdmin — Configuration"></td>
+            </tr>
+
+            <!-- Superviseur -->
+            <tr class="hover:bg-yellow-50/40 transition">
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-3">
+                  <span class="badge text-xs px-2 py-1 rounded-full font-semibold bg-yellow-100 text-yellow-700">Superviseur</span>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" checked aria-label="Superviseur — Lecture"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" checked aria-label="Superviseur — Création"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" checked aria-label="Superviseur — Modification"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" aria-label="Superviseur — Suppression"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" checked aria-label="Superviseur — Export"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" checked aria-label="Superviseur — Audit"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" aria-label="Superviseur — Configuration"></td>
+            </tr>
+
+            <!-- Agent Consulaire -->
+            <tr class="hover:bg-blue-50/30 transition">
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-3">
+                  <span class="badge text-xs px-2 py-1 rounded-full font-semibold bg-blue-100 text-blue-700">Agent Consulaire</span>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" checked aria-label="Agent — Lecture"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" checked aria-label="Agent — Création"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" checked aria-label="Agent — Modification"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" aria-label="Agent — Suppression"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" aria-label="Agent — Export"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" aria-label="Agent — Audit"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" aria-label="Agent — Configuration"></td>
+            </tr>
+
+            <!-- Citoyen -->
+            <tr class="hover:bg-gray-50 transition">
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-3">
+                  <span class="badge text-xs px-2 py-1 rounded-full font-semibold bg-gray-100 text-gray-600">Citoyen</span>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" checked aria-label="Citoyen — Lecture"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" aria-label="Citoyen — Création"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" aria-label="Citoyen — Modification"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" aria-label="Citoyen — Suppression"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" aria-label="Citoyen — Export"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" aria-label="Citoyen — Audit"></td>
+              <td class="px-4 py-4 text-center"><input type="checkbox" class="w-4 h-4 rounded" aria-label="Citoyen — Configuration"></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Save / Reset buttons -->
+      <div class="p-6 border-t border-gray-100 flex items-center gap-3">
+        <button class="btn-primary flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold">
+          <i data-lucide="save" class="w-4 h-4" aria-hidden="true"></i>
+          Enregistrer les modifications
+        </button>
+        <button class="px-4 py-2 rounded-xl border border-gray-200 text-sm font-semibold text-gray-600 hover:bg-gray-50 transition flex items-center gap-2">
+          <i data-lucide="rotate-ccw" class="w-4 h-4" aria-hidden="true"></i>
+          Réinitialiser
+        </button>
+      </div>
+    </div>
+
+    <!-- ── CUSTOM ROLES ── -->
+    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 class="font-cooper font-semibold text-gray-900">Rôles personnalisés</h2>
+          <p class="text-sm text-gray-500 mt-0.5">Rôles créés manuellement avec des permissions sur mesure.</p>
+        </div>
+        <button class="btn-primary flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-semibold">
+          <i data-lucide="plus" class="w-4 h-4" aria-hidden="true"></i>
+          Nouveau rôle
+        </button>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-4">
+
+        <!-- Custom role 1 -->
+        <div class="border border-gray-100 rounded-xl p-4 hover:border-gray-200 transition">
+          <div class="flex items-start justify-between mb-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-purple-50 flex items-center justify-center">
+                <i data-lucide="shield-check" class="w-4 h-4 text-purple-600" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 text-sm">Superviseur régional</p>
+                <p class="text-xs text-gray-400">Basé sur le rôle Superviseur</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <button class="w-8 h-8 rounded-lg text-gray-400 hover:text-gray-700 hover:bg-gray-100 flex items-center justify-center transition" aria-label="Modifier Superviseur régional">
+                <i data-lucide="pencil" class="w-3.5 h-3.5" aria-hidden="true"></i>
+              </button>
+              <button class="w-8 h-8 rounded-lg text-red-400 hover:text-red-600 hover:bg-red-50 flex items-center justify-center transition" aria-label="Supprimer Superviseur régional">
+                <i data-lucide="trash-2" class="w-3.5 h-3.5" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Lecture</span>
+            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Création</span>
+            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Modification</span>
+            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Export</span>
+            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Audit</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-3">4 utilisateurs assignés · Créé le 12/01/2026</p>
+        </div>
+
+        <!-- Custom role 2 -->
+        <div class="border border-gray-100 rounded-xl p-4 hover:border-gray-200 transition">
+          <div class="flex items-start justify-between mb-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-orange-50 flex items-center justify-center">
+                <i data-lucide="clock" class="w-4 h-4 text-orange-500" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 text-sm">Agent temporaire</p>
+                <p class="text-xs text-gray-400">Basé sur le rôle Agent</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <button class="w-8 h-8 rounded-lg text-gray-400 hover:text-gray-700 hover:bg-gray-100 flex items-center justify-center transition" aria-label="Modifier Agent temporaire">
+                <i data-lucide="pencil" class="w-3.5 h-3.5" aria-hidden="true"></i>
+              </button>
+              <button class="w-8 h-8 rounded-lg text-red-400 hover:text-red-600 hover:bg-red-50 flex items-center justify-center transition" aria-label="Supprimer Agent temporaire">
+                <i data-lucide="trash-2" class="w-3.5 h-3.5" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Lecture</span>
+            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Création</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-3">2 utilisateurs assignés · Créé le 05/02/2026</p>
+        </div>
+
+      </div>
+    </div>
+
+  </main><!-- /main -->
+
+  <!-- ═══════════════════════════════════════════
+       SCRIPTS
+  ════════════════════════════════════════════ -->
+  <script>
+    // Mobile sidebar toggle
+    const menuToggle = document.getElementById('menuToggle');
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        document.getElementById('sidebar').classList.toggle('open');
+      });
+    }
+
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>
