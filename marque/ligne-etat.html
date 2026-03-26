@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ligne d'&Eacute;tat — Design System Marque &Eacute;tat Congolais</title>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="../tailwind.config.js"></script>
   <link rel="stylesheet" href="../css/tokens.css">
@@ -19,46 +18,55 @@
     <!-- ══════════ SIDEBAR ══════════ -->
     <aside class="sidebar">
       <div class="sidebar-header">
-        <div class="logo-officiel" style="gap:8px">
-          <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="32" cy="32" r="30" stroke="#0095C9" stroke-width="2" fill="#EFF6FF"/>
-            <text x="32" y="37" text-anchor="middle" font-family="Cooper Hewitt, Inter, sans-serif" font-size="14" font-weight="700" fill="#17418A">RDC</text>
-          </svg>
-          <span class="ligne-etat ligne-etat--sm" style="min-height:32px"></span>
-          <div class="intitule-officiel" style="max-width:none">
-            <span class="sous-intitule" style="font-size:11px">Design System</span>
-            <span style="font-size:9px;display:block;color:var(--text-muted)">Marque &Eacute;tat Congolais</span>
+        <a href="../index.html" style="text-decoration:none;">
+          <div style="display:flex;align-items:center;gap:var(--space-3);">
+            <div style="width:32px;height:32px;background:var(--rdc-bleu-inst);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;">
+              <i data-lucide="shield" style="width:18px;height:18px;color:white;"></i>
+            </div>
+            <div>
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);">Design System RDC</div>
+              <div class="ligne-etat-h ligne-etat-h--sm" style="width:48px;margin-top:4px;border-radius:2px;"></div>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
 
       <nav>
         <div class="sidebar-section">
-          <div class="sidebar-section-title">Fondations</div>
-          <a href="../tokens/couleurs.html" class="sidebar-link"><i data-lucide="palette" style="width:16px;height:16px"></i> Couleurs</a>
-          <a href="../tokens/typographie.html" class="sidebar-link"><i data-lucide="type" style="width:16px;height:16px"></i> Typographie</a>
-          <a href="../tokens/espacement.html" class="sidebar-link"><i data-lucide="ruler" style="width:16px;height:16px"></i> Espacement</a>
-          <a href="../tokens/grilles.html" class="sidebar-link"><i data-lucide="layout-grid" style="width:16px;height:16px"></i> Grilles</a>
+          <div class="sidebar-section-title">Accueil</div>
+          <a href="../index.html" class="sidebar-link"><i data-lucide="home" style="width:16px;height:16px;"></i> Home</a>
         </div>
+
         <div class="sidebar-section">
-          <div class="sidebar-section-title">Identit&eacute; / Marque</div>
-          <a href="logo.html" class="sidebar-link"><i data-lucide="shield" style="width:16px;height:16px"></i> Logo & Identit&eacute;</a>
-          <a href="ligne-etat.html" class="sidebar-link active"><i data-lucide="minus" style="width:16px;height:16px"></i> Ligne d'&Eacute;tat</a>
+          <div class="sidebar-section-title">Tokens</div>
+          <a href="../tokens/couleurs.html" class="sidebar-link"><i data-lucide="palette" style="width:16px;height:16px;"></i> Couleurs</a>
+          <a href="../tokens/typographie.html" class="sidebar-link"><i data-lucide="type" style="width:16px;height:16px;"></i> Typographie</a>
+          <a href="../tokens/espacements.html" class="sidebar-link"><i data-lucide="ruler" style="width:16px;height:16px;"></i> Espacements</a>
+          <a href="../tokens/ombres-elevations.html" class="sidebar-link"><i data-lucide="layers" style="width:16px;height:16px;"></i> Ombres</a>
         </div>
+
         <div class="sidebar-section">
           <div class="sidebar-section-title">Composants</div>
-          <a href="../composants/boutons.html" class="sidebar-link"><i data-lucide="mouse-pointer-click" style="width:16px;height:16px"></i> Boutons</a>
-          <a href="../composants/formulaires.html" class="sidebar-link"><i data-lucide="text-cursor-input" style="width:16px;height:16px"></i> Formulaires</a>
-          <a href="../composants/cartes.html" class="sidebar-link"><i data-lucide="square" style="width:16px;height:16px"></i> Cartes</a>
-          <a href="../composants/alertes.html" class="sidebar-link"><i data-lucide="alert-triangle" style="width:16px;height:16px"></i> Alertes</a>
-          <a href="../composants/tableaux.html" class="sidebar-link"><i data-lucide="table" style="width:16px;height:16px"></i> Tableaux</a>
-          <a href="../composants/navigation.html" class="sidebar-link"><i data-lucide="menu" style="width:16px;height:16px"></i> Navigation</a>
+          <a href="../composants/boutons.html" class="sidebar-link"><i data-lucide="mouse-pointer-click" style="width:16px;height:16px;"></i> Boutons</a>
+          <a href="../composants/formulaires.html" class="sidebar-link"><i data-lucide="text-cursor-input" style="width:16px;height:16px;"></i> Formulaires</a>
+          <a href="../composants/cartes.html" class="sidebar-link"><i data-lucide="square" style="width:16px;height:16px;"></i> Cartes</a>
+          <a href="../composants/navigation.html" class="sidebar-link"><i data-lucide="compass" style="width:16px;height:16px;"></i> Navigation</a>
+          <a href="../composants/tableaux.html" class="sidebar-link"><i data-lucide="table" style="width:16px;height:16px;"></i> Tableaux</a>
+          <a href="../composants/badges-alertes.html" class="sidebar-link"><i data-lucide="bell" style="width:16px;height:16px;"></i> Badges &amp; Alertes</a>
+          <a href="../composants/en-tete-officiel.html" class="sidebar-link"><i data-lucide="landmark" style="width:16px;height:16px;"></i> En-t&ecirc;te Officiel</a>
         </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Marque</div>
+          <a href="logo.html" class="sidebar-link"><i data-lucide="image" style="width:16px;height:16px;"></i> Logo</a>
+          <a href="ligne-etat.html" class="sidebar-link active"><i data-lucide="minus" style="width:16px;height:16px;"></i> Ligne d'&Eacute;tat</a>
+        </div>
+
         <div class="sidebar-section">
           <div class="sidebar-section-title">Mod&egrave;les</div>
-          <a href="../modeles/page-accueil.html" class="sidebar-link"><i data-lucide="home" style="width:16px;height:16px"></i> Page d'accueil</a>
-          <a href="../modeles/page-interieure.html" class="sidebar-link"><i data-lucide="file-text" style="width:16px;height:16px"></i> Page int&eacute;rieure</a>
-          <a href="../modeles/page-service.html" class="sidebar-link"><i data-lucide="briefcase" style="width:16px;height:16px"></i> Page service</a>
+          <a href="../modeles/page-accueil.html" class="sidebar-link"><i data-lucide="layout-dashboard" style="width:16px;height:16px;"></i> Page d'Accueil</a>
+          <a href="../modeles/page-interieure.html" class="sidebar-link"><i data-lucide="file-text" style="width:16px;height:16px;"></i> Page Int&eacute;rieure</a>
+          <a href="../modeles/page-service.html" class="sidebar-link"><i data-lucide="settings" style="width:16px;height:16px;"></i> Page Service</a>
         </div>
       </nav>
     </aside>
@@ -82,7 +90,7 @@
           <span class="ligne-etat ligne-etat--xl" style="min-height:120px;border-radius:2px"></span>
           <div>
             <p style="font-family:var(--font-complement);font-size:var(--text-lg);color:var(--text-primary);margin-bottom:var(--space-4);line-height:1.7">
-              La <strong>Ligne d'&Eacute;tat</strong> est la barre tricolore verticale reprenant les couleurs du drapeau de la R&eacute;publique D&eacute;mocratique du Congo. Elle symbolise la rigueur, la d&eacute;termination et l'unit&eacute; nationale.
+              La <strong>Ligne d'&Eacute;tat</strong> est la barre tricolore verticale reprenant les couleurs du drapeau national. Elle symbolise la rigueur, la d&eacute;termination et l'unit&eacute; nationale.
             </p>
             <p style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary);line-height:1.7">
               Pr&eacute;sente dans le logo officiel comme s&eacute;parateur entre le Bloc-armoirie et l'Intitul&eacute;, elle s'utilise &eacute;galement de mani&egrave;re autonome comme &eacute;l&eacute;ment d&eacute;coratif et identitaire sur tous les supports de communication gouvernementaux.
@@ -308,9 +316,9 @@
             <div class="card" style="padding:0;overflow:hidden">
               <div style="background:white;padding:var(--space-4) var(--space-6);display:flex;align-items:center;justify-content:space-between">
                 <div style="display:flex;align-items:center;gap:var(--space-3)">
-                  <svg width="28" height="28" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#17418A" stroke-width="2" fill="#EFF6FF"/><text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#17418A">RDC</text></svg>
+                  <img src="../logo_assets/armoiries.png" alt="Armoiries RDC" style="object-fit:contain;">
                   <span class="ligne-etat ligne-etat--sm" style="min-height:28px"></span>
-                  <span style="font-family:var(--font-principale);font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--text-primary)">R&eacute;publique D&eacute;mocratique du Congo</span>
+                  <span style="font-family:var(--font-principale);font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--text-primary)">Minist&egrave;re du Num&eacute;rique</span>
                 </div>
                 <div style="display:flex;gap:var(--space-6)">
                   <span style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">Accueil</span>
@@ -346,7 +354,7 @@
             <h3 style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);margin-bottom:var(--space-3);color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em">S&eacute;parateur de sections</h3>
             <div class="card" style="max-width:600px">
               <p style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary);margin-bottom:var(--space-4)">
-                Le Gouvernement de la R&eacute;publique D&eacute;mocratique du Congo s'engage &agrave; moderniser ses services publics.
+                Le Gouvernement s'engage &agrave; moderniser ses services publics.
               </p>
               <span class="ligne-etat-h ligne-etat-h--md" style="margin:var(--space-4) 0;border-radius:2px"></span>
               <p style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary);margin-top:var(--space-4)">
@@ -355,6 +363,162 @@
             </div>
           </div>
 
+        </div>
+      </section>
+
+      <!-- ─── 8. Implémentation avec image assets ─── -->
+      <section class="section">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-6)">Implémentation avec image assets</h2>
+
+        <div class="alert alert-info" style="margin-bottom:var(--space-6)">
+          <i data-lucide="info" style="width:18px;height:18px;flex-shrink:0;margin-top:2px"></i>
+          <span>La Ligne d'État en tant qu'<strong>logo officiel</strong> doit utiliser des <strong>assets image</strong> pour les pages de production. Le CSS-gradient ci-dessus est réservé à la <strong>documentation</strong> de ce design system.</span>
+        </div>
+
+        <div class="grid grid-2">
+          <!-- Image verticale -->
+          <div class="card">
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);margin-bottom:var(--space-4)">Image verticale (production)</h3>
+            <pre style="background:#F3F4F6;padding:var(--space-4);border-radius:var(--radius-md);font-size:11px;line-height:1.6;overflow-x:auto;margin-bottom:var(--space-4)"><code>&lt;!-- Fond clair --&gt;
+&lt;img src="ligne_etat.png"
+     alt="Ligne d'État"
+     style="width:4px;
+             height:50px;
+             object-fit:contain;
+             flex-shrink:0;"&gt;
+
+&lt;!-- Fond sombre --&gt;
+&lt;img src="ligne_etat_white.png"
+     alt="Ligne d'État"
+     style="width:4px;
+             height:50px;
+             object-fit:contain;
+             flex-shrink:0;"&gt;</code></pre>
+            <span class="badge badge-success">Production</span>
+          </div>
+
+          <!-- Image horizontale -->
+          <div class="card">
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);margin-bottom:var(--space-4)">Image horizontale (séparateurs)</h3>
+            <pre style="background:#F3F4F6;padding:var(--space-4);border-radius:var(--radius-md);font-size:11px;line-height:1.6;overflow-x:auto;margin-bottom:var(--space-4)"><code>&lt;!-- Séparateur de sections --&gt;
+&lt;div style="height:4px;
+            width:100%;
+            background:url('ligne-etat-h.png');
+            object-fit:contain;"&gt;&lt;/div&gt;
+
+&lt;!-- Alternative: CSS gradient (doc) --&gt;
+&lt;div style="height:4px;
+            background:linear-gradient(
+              90deg,
+              #0095C9 33.33%,
+              #FFF24B 33.33%,
+              #FFF24B 66.66%,
+              #DB3832 66.66%)"&gt;&lt;/div&gt;</code></pre>
+            <span class="badge badge-warning">Documentation</span>
+          </div>
+        </div>
+
+        <div class="card" style="background:#F0FDFB;border:1px solid #CCFBF1;padding:var(--space-6);margin-top:var(--space-8)">
+          <h3 style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);color:#0D7377;margin-bottom:var(--space-3)">Propriétés CSS obligatoires</h3>
+          <ul style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.8;padding-left:20px">
+            <li><code style="background:rgba(0,0,0,0.05);padding:2px 6px">object-fit: contain</code> — Prévient la déformation</li>
+            <li><code style="background:rgba(0,0,0,0.05);padding:2px 6px">flex-shrink: 0</code> — Maintient les proportions (en flexbox)</li>
+            <li><code style="background:rgba(0,0,0,0.05);padding:2px 6px">alt="Ligne d'État"</code> — Accessibilité WCAG</li>
+            <li><strong>Width:</strong> 4px (vertical) | <strong>Height:</strong> 4px (horizontal)</li>
+            <li><strong>Min-height:</strong> 53px minimum pour usage autonome</li>
+            <li><strong>Pas de:</strong> ombres, rotations, opacité, filtres</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ─── 9. Checklist de conformité ─── -->
+      <section class="section">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-6)">Checklist de conformité</h2>
+        <p style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary);margin-bottom:var(--space-8)">Avant d'utiliser la Ligne d'État dans votre implémentation, assurez-vous que tous ces critères sont respectés.</p>
+
+        <div class="grid grid-2" style="max-width:900px">
+          <!-- Composition des couleurs -->
+          <div class="card">
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);margin-bottom:var(--space-4);display:flex;align-items:center;gap:8px">
+              <i data-lucide="palette" style="width:18px;height:18px;color:var(--primary)"></i> Couleurs
+            </h3>
+            <ul style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.8;padding-left:20px">
+              <li>☐ Ordre: Bleu (haut) → Jaune (milieu) → Rouge (bas)</li>
+              <li>☐ Chaque couleur occupe 33.33% exactement</li>
+              <li>☐ #0095C9 (Bleu) | #FFF24B (Jaune) | #DB3832 (Rouge)</li>
+              <li>☐ Jamais d'inversion ou de réordonner les couleurs</li>
+            </ul>
+          </div>
+
+          <!-- Orientations -->
+          <div class="card">
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);margin-bottom:var(--space-4);display:flex;align-items:center;gap:8px">
+              <i data-lucide="rotate-cw" style="width:18px;height:18px;color:var(--primary)"></i> Orientations
+            </h3>
+            <ul style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.8;padding-left:20px">
+              <li>☐ Verticale: Logo, séparateur vertical (standard)</li>
+              <li>☐ Horizontale: Header border, séparateur section</li>
+              <li>☐ Jamais de rotation à 45°, 90°, etc.</li>
+              <li>☐ Toujours perpendiculaire (0° ou 90°)</li>
+            </ul>
+          </div>
+
+          <!-- Tailles -->
+          <div class="card">
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);margin-bottom:var(--space-4);display:flex;align-items:center;gap:8px">
+              <i data-lucide="ruler" style="width:18px;height:18px;color:var(--primary)"></i> Proportions
+            </h3>
+            <ul style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.8;padding-left:20px">
+              <li>☐ Width: 4px (digital) | 1mm (print)</li>
+              <li>☐ Min-height: 53px (autonome)</li>
+              <li>☐ Jamais d'aspect ratio déformé</li>
+              <li>☐ Height = Armoirie height (dans logo)</li>
+            </ul>
+          </div>
+
+          <!-- Usages autorisés -->
+          <div class="card">
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);margin-bottom:var(--space-4);display:flex;align-items:center;gap:8px">
+              <i data-lucide="check-circle" style="width:18px;height:18px;color:var(--primary)"></i> Usages autorisés
+            </h3>
+            <ul style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.8;padding-left:20px">
+              <li>☐ Séparateur dans le logo officiel</li>
+              <li>☐ Bordure de header/footer</li>
+              <li>☐ Séparateur de sections de contenu</li>
+              <li>☐ Élément décoratif dans sidebars</li>
+            </ul>
+          </div>
+
+          <!-- Assets corrects -->
+          <div class="card">
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);margin-bottom:var(--space-4);display:flex;align-items:center;gap:8px">
+              <i data-lucide="image" style="width:18px;height:18px;color:var(--primary)"></i> Assets
+            </h3>
+            <ul style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.8;padding-left:20px">
+              <li>☐ Fond clair: <code style="background:#FFF9E6;padding:1px 4px">ligne_etat.png</code></li>
+              <li>☐ Fond sombre: <code style="background:#E6E6E6;padding:1px 4px">ligne_etat_white.png</code></li>
+              <li>☐ Jamais mélanger les assets</li>
+              <li>☐ Assets en <code style="background:rgba(0,0,0,0.05);padding:1px 4px">logo_assets/</code></li>
+            </ul>
+          </div>
+
+          <!-- Accessibilité -->
+          <div class="card">
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);margin-bottom:var(--space-4);display:flex;align-items:center;gap:8px">
+              <i data-lucide="accessibility" style="width:18px;height:18px;color:var(--primary)"></i> Accessibilité
+            </h3>
+            <ul style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.8;padding-left:20px">
+              <li>☐ <code style="background:rgba(0,0,0,0.05);padding:1px 4px">alt="Ligne d'État"</code> sur les images</li>
+              <li>☐ Contraste ≥ 4.5:1 (WCAG AA)</li>
+              <li>☐ Pas d'opacité réduisant le contraste</li>
+              <li>☐ <code style="background:rgba(0,0,0,0.05);padding:1px 4px">object-fit:contain</code></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="alert alert-success" style="margin-top:var(--space-8)">
+          <i data-lucide="check-circle" style="width:18px;height:18px;flex-shrink:0;margin-top:2px"></i>
+          <span><strong>Document de référence:</strong> Pour plus de détails complets, consultez <a href="../.claude/branding-guidelines.md" style="color:var(--primary);text-decoration:underline">branding-guidelines.md</a> dans le dossier <code style="background:rgba(0,0,0,0.05);padding:2px 6px">.claude/</code>.</span>
         </div>
       </section>
 
