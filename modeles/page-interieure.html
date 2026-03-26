@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Int&eacute;rieure — Design System Marque &Eacute;tat Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body style="background:var(--bg-app)">
+
+  <!-- ══════════ HEADER OFFICIEL ══════════ -->
+  <header style="background:var(--bg-white);box-shadow:var(--shadow-soft);position:sticky;top:0;z-index:30">
+    <div style="max-width:1920px;margin:0 auto;padding:0 var(--space-8);height:72px;display:flex;align-items:center;justify-content:space-between">
+      <div class="logo-officiel" style="gap:10px">
+        <svg width="40" height="40" viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="28" stroke="#17418A" stroke-width="2" fill="#EFF6FF"/>
+          <text x="32" y="37" text-anchor="middle" font-family="Cooper Hewitt, Inter, sans-serif" font-size="12" font-weight="700" fill="#17418A">RDC</text>
+        </svg>
+        <span class="ligne-etat" style="min-height:40px;width:3px"></span>
+        <div class="intitule-officiel" style="max-width:none">
+          <span class="sous-intitule" style="font-size:10px">R&eacute;publique D&eacute;mocratique du Congo</span>
+          <span style="font-size:9px;display:block">Minist&egrave;re du Num&eacute;rique</span>
+          <span style="font-size:8px;display:block;color:var(--text-muted);font-weight:400;text-transform:none;letter-spacing:0">Le Gouvernement</span>
+        </div>
+      </div>
+      <nav style="display:flex;align-items:center;gap:var(--space-8)">
+        <a href="page-accueil.html" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:var(--text-secondary);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-secondary)'">Accueil</a>
+        <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--primary);text-decoration:none">Services</a>
+        <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:var(--text-secondary);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-secondary)'">Actualit&eacute;s</a>
+        <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:var(--text-secondary);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-secondary)'">Contact</a>
+      </nav>
+    </div>
+    <span class="ligne-etat-h ligne-etat-h--md"></span>
+  </header>
+
+  <!-- ══════════ BREADCRUMB ══════════ -->
+  <div style="max-width:1920px;margin:0 auto;padding:var(--space-4) var(--space-8)">
+    <ul class="breadcrumb">
+      <li><a href="page-accueil.html">Accueil</a></li>
+      <li><a href="#">Services</a></li>
+      <li><span class="current">D&eacute;tail du service</span></li>
+    </ul>
+  </div>
+
+  <!-- ══════════ TWO-COLUMN LAYOUT ══════════ -->
+  <div style="max-width:1920px;margin:0 auto;padding:0 var(--space-8) var(--space-16);display:flex;gap:var(--space-8);align-items:flex-start">
+
+    <!-- ── Left Sidebar (Section Navigation) ── -->
+    <aside style="width:260px;flex-shrink:0;position:sticky;top:100px">
+      <div class="card" style="padding:var(--space-4)">
+        <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);padding:var(--space-2) var(--space-3);margin-bottom:var(--space-2)">Navigation</div>
+        <nav style="display:flex;flex-direction:column;gap:2px">
+          <a href="#presentation" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-2) var(--space-3);border-radius:var(--radius-md);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--primary);background:var(--primary-light);text-decoration:none;border-left:3px solid var(--primary)">
+            <i data-lucide="info" style="width:15px;height:15px"></i> Pr&eacute;sentation
+          </a>
+          <a href="#conditions" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-2) var(--space-3);border-radius:var(--radius-md);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all 0.2s" onmouseover="this.style.background='var(--primary-light)';this.style.color='var(--primary)'" onmouseout="this.style.background='transparent';this.style.color='var(--text-secondary)'">
+            <i data-lucide="check-circle" style="width:15px;height:15px"></i> Conditions
+          </a>
+          <a href="#tarifs" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-2) var(--space-3);border-radius:var(--radius-md);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all 0.2s" onmouseover="this.style.background='var(--primary-light)';this.style.color='var(--primary)'" onmouseout="this.style.background='transparent';this.style.color='var(--text-secondary)'">
+            <i data-lucide="credit-card" style="width:15px;height:15px"></i> Tarifs
+          </a>
+          <a href="#documents" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-2) var(--space-3);border-radius:var(--radius-md);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all 0.2s" onmouseover="this.style.background='var(--primary-light)';this.style.color='var(--primary)'" onmouseout="this.style.background='transparent';this.style.color='var(--text-secondary)'">
+            <i data-lucide="folder-open" style="width:15px;height:15px"></i> Documents requis
+          </a>
+          <a href="#faq" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-2) var(--space-3);border-radius:var(--radius-md);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all 0.2s" onmouseover="this.style.background='var(--primary-light)';this.style.color='var(--primary)'" onmouseout="this.style.background='transparent';this.style.color='var(--text-secondary)'">
+            <i data-lucide="help-circle" style="width:15px;height:15px"></i> FAQ
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- ── Main Content Area ── -->
+    <main style="flex:1;min-width:0">
+
+      <!-- Page Title -->
+      <div style="margin-bottom:var(--space-8);padding-bottom:var(--space-6);border-bottom:1px solid var(--border-soft)">
+        <h1 style="font-family:var(--font-principale);font-size:var(--text-3xl);font-weight:700;color:var(--text-primary);line-height:var(--leading-tight);margin-bottom:var(--space-2)">
+          Service de D&eacute;livrance du Passeport Biom&eacute;trique
+        </h1>
+        <p style="font-family:var(--font-complement);font-size:var(--text-lg);color:var(--text-secondary);line-height:1.7">
+          Informations compl&egrave;tes sur la proc&eacute;dure de demande, les conditions requises et les d&eacute;lais de traitement pour l'obtention de votre passeport biom&eacute;trique.
+        </p>
+      </div>
+
+      <!-- Section: Pr&eacute;sentation -->
+      <section id="presentation" style="margin-bottom:var(--space-10)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;color:var(--text-primary);margin-bottom:var(--space-4)">Pr&eacute;sentation</h2>
+        <div style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary);line-height:1.8">
+          <p style="margin-bottom:var(--space-4)">
+            Le passeport biom&eacute;trique de la R&eacute;publique D&eacute;mocratique du Congo est un document de voyage conforme aux normes internationales de l'Organisation de l'Aviation Civile Internationale (OACI). Il int&egrave;gre une puce &eacute;lectronique contenant les donn&eacute;es biom&eacute;triques du titulaire.
+          </p>
+          <p>
+            Ce service est accessible &agrave; tout citoyen congolais r&eacute;sidant sur le territoire national ou &agrave; l'&eacute;tranger. La demande peut &ecirc;tre initi&eacute;e en ligne, puis compl&eacute;t&eacute;e dans l'un des centres d'enr&ocirc;lement agr&eacute;&eacute;s.
+          </p>
+        </div>
+      </section>
+
+      <!-- Alert Box -->
+      <div class="alert alert-info" style="margin-bottom:var(--space-10)">
+        <i data-lucide="info" style="width:20px;height:20px;flex-shrink:0;margin-top:2px"></i>
+        <div>
+          <strong style="font-family:var(--font-principale);font-weight:700">Important :</strong>
+          <span>Les demandes effectu&eacute;es en ligne b&eacute;n&eacute;ficient d'un traitement prioritaire. Le d&eacute;lai moyen est r&eacute;duit &agrave; 10 jours ouvrables contre 21 jours pour les demandes classiques.</span>
+        </div>
+      </div>
+
+      <!-- Section: Data Table -->
+      <section id="tarifs" style="margin-bottom:var(--space-10)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;color:var(--text-primary);margin-bottom:var(--space-4)">Tarifs et d&eacute;lais</h2>
+        <div class="card" style="padding:0;overflow:hidden">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Type de passeport</th>
+                <th>Validit&eacute;</th>
+                <th>Pages</th>
+                <th>Tarif (USD)</th>
+                <th>D&eacute;lai</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight:600">Ordinaire</td>
+                <td>5 ans</td>
+                <td>32 pages</td>
+                <td><span class="badge badge-info">185 $</span></td>
+                <td>21 jours</td>
+              </tr>
+              <tr>
+                <td style="font-weight:600">Ordinaire (express)</td>
+                <td>5 ans</td>
+                <td>32 pages</td>
+                <td><span class="badge badge-warning">350 $</span></td>
+                <td>7 jours</td>
+              </tr>
+              <tr>
+                <td style="font-weight:600">Service</td>
+                <td>5 ans</td>
+                <td>48 pages</td>
+                <td><span class="badge badge-neutral">Gratuit</span></td>
+                <td>14 jours</td>
+              </tr>
+              <tr>
+                <td style="font-weight:600">Diplomatique</td>
+                <td>5 ans</td>
+                <td>48 pages</td>
+                <td><span class="badge badge-neutral">Gratuit</span></td>
+                <td>10 jours</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section: Documents requis (list with bullets) -->
+      <section id="documents" style="margin-bottom:var(--space-10)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;color:var(--text-primary);margin-bottom:var(--space-4)">Documents requis</h2>
+        <div class="card">
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-3)">
+            <li style="display:flex;align-items:flex-start;gap:var(--space-3)">
+              <div style="width:24px;height:24px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px">
+                <i data-lucide="check" style="width:14px;height:14px;color:var(--primary)"></i>
+              </div>
+              <span style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary)">Formulaire de demande d&ucirc;ment rempli et sign&eacute;</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-3)">
+              <div style="width:24px;height:24px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px">
+                <i data-lucide="check" style="width:14px;height:14px;color:var(--primary)"></i>
+              </div>
+              <span style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary)">Copie certifi&eacute;e conforme de l'acte de naissance ou jugement suppl&eacute;tif</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-3)">
+              <div style="width:24px;height:24px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px">
+                <i data-lucide="check" style="width:14px;height:14px;color:var(--primary)"></i>
+              </div>
+              <span style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary)">Carte d'identit&eacute; nationale en cours de validit&eacute;</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-3)">
+              <div style="width:24px;height:24px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px">
+                <i data-lucide="check" style="width:14px;height:14px;color:var(--primary)"></i>
+              </div>
+              <span style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary)">Quatre (4) photos d'identit&eacute; r&eacute;centes format passeport (35&times;45 mm)</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-3)">
+              <div style="width:24px;height:24px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px">
+                <i data-lucide="check" style="width:14px;height:14px;color:var(--primary)"></i>
+              </div>
+              <span style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary)">Attestation de r&eacute;sidence ou justificatif de domicile de moins de 3 mois</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-3)">
+              <div style="width:24px;height:24px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px">
+                <i data-lucide="check" style="width:14px;height:14px;color:var(--primary)"></i>
+              </div>
+              <span style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary)">Re&ccedil;u de paiement des frais de passeport</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-3)">
+              <div style="width:24px;height:24px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px">
+                <i data-lucide="check" style="width:14px;height:14px;color:var(--primary)"></i>
+              </div>
+              <span style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary)">Ancien passeport (en cas de renouvellement)</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Alert Warning -->
+      <div class="alert alert-warning" style="margin-bottom:var(--space-10)">
+        <i data-lucide="alert-triangle" style="width:20px;height:20px;flex-shrink:0;margin-top:2px"></i>
+        <div>
+          <strong style="font-family:var(--font-principale);font-weight:700">Attention :</strong>
+          <span>Tout dossier incomplet sera rejet&eacute;. Assurez-vous de fournir l'ensemble des pi&egrave;ces demand&eacute;es avant de vous pr&eacute;senter au centre d'enr&ocirc;lement.</span>
+        </div>
+      </div>
+
+      <!-- Section: FAQ -->
+      <section id="faq" style="margin-bottom:var(--space-10)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;color:var(--text-primary);margin-bottom:var(--space-4)">Questions fr&eacute;quentes</h2>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+          <div class="card">
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);margin-bottom:var(--space-2)">Quel est le d&eacute;lai de traitement ?</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.7">Le d&eacute;lai standard est de 21 jours ouvrables. La proc&eacute;dure express permet d'obtenir le passeport en 7 jours ouvrables moyennant un suppl&eacute;ment.</p>
+          </div>
+          <div class="card">
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);margin-bottom:var(--space-2)">Puis-je suivre ma demande en ligne ?</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.7">Oui, un num&eacute;ro de suivi vous est attribu&eacute; lors du d&eacute;p&ocirc;t de votre dossier. Vous pouvez consulter l'&eacute;tat d'avancement sur le portail.</p>
+          </div>
+          <div class="card">
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);margin-bottom:var(--space-2)">Comment payer les frais ?</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.7">Le paiement peut s'effectuer par virement bancaire, mobile money (M-Pesa, Airtel Money) ou directement au guichet du centre d'enr&ocirc;lement.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ══════════ FOOTER OFFICIEL ══════════ -->
+  <footer>
+    <span class="ligne-etat-h ligne-etat-h--md"></span>
+    <div style="background:#174899;padding:var(--space-12) 0">
+      <div style="max-width:1920px;margin:0 auto;padding:0 var(--space-8)">
+        <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:var(--space-10);margin-bottom:var(--space-10)">
+          <div>
+            <div class="logo-officiel marque--mono" style="gap:10px;margin-bottom:var(--space-4)">
+              <svg width="36" height="36" viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="32" r="28" stroke="white" stroke-width="2" fill="rgba(255,255,255,0.1)"/>
+                <text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="white">RDC</text>
+              </svg>
+              <span style="display:block;width:3px;min-height:36px;background:white;flex-shrink:0"></span>
+              <div style="font-family:var(--font-principale);font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:white;line-height:1.3">
+                <span style="font-weight:700;font-size:11px;display:block">R&eacute;publique D&eacute;mocratique du Congo</span>
+                Minist&egrave;re du Num&eacute;rique
+              </div>
+            </div>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);line-height:1.7;max-width:350px">
+              Au service des citoyens, pour une administration moderne, transparente et efficace.
+            </p>
+          </div>
+          <div>
+            <h4 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:white;margin-bottom:var(--space-4)">Liens utiles</h4>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-2)">
+              <li><a href="page-accueil.html" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none">Accueil</a></li>
+              <li><a href="#" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none">Services</a></li>
+              <li><a href="#" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none">Actualit&eacute;s</a></li>
+              <li><a href="#" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:white;margin-bottom:var(--space-4)">Services</h4>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-2)">
+              <li><a href="#" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none">Carte d'identit&eacute;</a></li>
+              <li><a href="#" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none">Passeport</a></li>
+              <li><a href="#" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none">Acte de naissance</a></li>
+              <li><a href="#" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none">Entreprise</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:white;margin-bottom:var(--space-4)">Contact</h4>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-2)">
+              <li style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7)">Kinshasa, Gombe</li>
+              <li style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7)">info@numerique.gouv.cd</li>
+              <li style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7)">+243 81 000 0000</li>
+            </ul>
+          </div>
+        </div>
+        <div style="border-top:1px solid rgba(255,255,255,0.15);padding-top:var(--space-6);text-align:center">
+          <p style="font-family:var(--font-principale);font-size:var(--text-xs);color:rgba(255,255,255,0.5)">&copy; 2024 R&eacute;publique D&eacute;mocratique du Congo. Tous droits r&eacute;serv&eacute;s.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

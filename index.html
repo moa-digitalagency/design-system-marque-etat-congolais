@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System — Marque État Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layouts.css">
+  <link rel="stylesheet" href="css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body style="background:var(--bg-app);">
+
+  <!-- Hero Header -->
+  <header style="background:linear-gradient(135deg,var(--rdc-bleu-inst) 0%,#0D2B5E 100%);color:white;position:relative;overflow:hidden;">
+    <!-- Decorative ligne d'état -->
+    <div style="position:absolute;top:0;left:60px;width:6px;height:100%;opacity:0.15;">
+      <div class="ligne-etat" style="width:6px;min-height:100%;height:100%;"></div>
+    </div>
+    <div style="position:absolute;top:0;right:120px;width:4px;height:100%;opacity:0.08;">
+      <div class="ligne-etat" style="width:4px;min-height:100%;height:100%;"></div>
+    </div>
+
+    <div style="max-width:1200px;margin:0 auto;padding:var(--space-12) var(--space-8) var(--space-16);">
+      <!-- Top bar -->
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-16);">
+        <div style="display:flex;align-items:center;gap:var(--space-4);">
+          <div style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);">
+            <span style="font-family:var(--font-principale);font-weight:700;font-size:13px;">RDC</span>
+          </div>
+          <div style="width:4px;min-height:48px;background:rgba(255,255,255,0.2);border-radius:2px;"></div>
+          <div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);letter-spacing:0.02em;">République Démocratique du Congo</div>
+            <div style="font-family:var(--font-principale);font-size:11px;opacity:0.6;">Gouvernement</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:var(--space-3);">
+          <span class="badge" style="background:rgba(255,255,255,0.1);color:white;backdrop-filter:blur(8px);">v1.0</span>
+          <span class="badge" style="background:rgba(101,179,46,0.2);color:#86EFAC;">Fév 2022</span>
+        </div>
+      </div>
+
+      <!-- Main title -->
+      <div style="max-width:700px;">
+        <div class="ligne-etat-h--lg" style="width:80px;border-radius:4px;margin-bottom:var(--space-6);"></div>
+        <h1 style="font-family:var(--font-principale);font-weight:700;font-size:clamp(2rem,5vw,3.5rem);line-height:1.15;margin-bottom:var(--space-4);">
+          Système de Design<br>
+          <span style="background:linear-gradient(90deg,var(--rdc-bleu),var(--rdc-jaune),var(--rdc-rouge));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Marque État Congolais</span>
+        </h1>
+        <p style="font-family:var(--font-complement);font-size:var(--text-lg);opacity:0.75;line-height:1.7;margin-bottom:var(--space-8);">
+          Kit d'interface officiel basé sur la Charte Graphique du Gouvernement de la RDC.
+          Couleurs, typographie, composants et modèles de pages prêts à l'emploi pour construire
+          des sites web gouvernementaux conformes à la marque de l'État.
+        </p>
+        <div style="display:flex;gap:var(--space-4);flex-wrap:wrap;">
+          <a href="tokens/couleurs.html" class="btn btn-primary btn-lg" style="background:linear-gradient(135deg,var(--rdc-bleu),#0077A3);border:none;">
+            <i data-lucide="palette" style="width:18px;height:18px;"></i> Explorer les tokens
+          </a>
+          <a href="composants/boutons.html" class="btn btn-lg" style="background:rgba(255,255,255,0.1);color:white;border:1px solid rgba(255,255,255,0.2);backdrop-filter:blur(8px);">
+            <i data-lucide="layout-grid" style="width:18px;height:18px;"></i> Voir les composants
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Quick Stats -->
+  <div style="max-width:1200px;margin:-48px auto 0;padding:0 var(--space-8);position:relative;z-index:1;">
+    <div class="grid grid-4">
+      <div class="card card-hover" style="text-align:center;padding:var(--space-6);">
+        <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-3xl);color:var(--rdc-bleu);">30+</div>
+        <div style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary);">Couleurs officielles</div>
+      </div>
+      <div class="card card-hover" style="text-align:center;padding:var(--space-6);">
+        <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-3xl);color:var(--rdc-rouge);">3</div>
+        <div style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary);">Familles typographiques</div>
+      </div>
+      <div class="card card-hover" style="text-align:center;padding:var(--space-6);">
+        <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-3xl);color:var(--rdc-vert);">20+</div>
+        <div style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary);">Composants UI</div>
+      </div>
+      <div class="card card-hover" style="text-align:center;padding:var(--space-6);">
+        <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-3xl);color:var(--rdc-or);">3</div>
+        <div style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary);">Modèles de pages</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOKENS Section -->
+  <section style="max-width:1200px;margin:0 auto;padding:var(--space-16) var(--space-8) 0;">
+    <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
+      <div class="ligne-etat" style="min-height:24px;width:4px;border-radius:2px;"></div>
+      <h2 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);">Tokens</h2>
+    </div>
+    <p style="font-family:var(--font-complement);color:var(--text-secondary);margin-bottom:var(--space-8);max-width:560px;">Les valeurs fondamentales qui définissent l'identité visuelle : couleurs, typographie, espacements et élévations.</p>
+
+    <div class="grid grid-4">
+      <!-- Couleurs -->
+      <a href="tokens/couleurs.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:0;overflow:hidden;">
+        <div style="height:120px;background:linear-gradient(135deg,var(--rdc-bleu) 33%,var(--rdc-jaune) 33%,var(--rdc-jaune) 66%,var(--rdc-rouge) 66%);"></div>
+        <div style="padding:var(--space-5);">
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:4px;">Couleurs</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Palette tricolore + 27 complémentaires</p>
+        </div>
+      </a>
+
+      <!-- Typographie -->
+      <a href="tokens/typographie.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:0;overflow:hidden;">
+        <div style="height:120px;background:var(--rdc-bleu-inst);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:var(--font-principale);font-weight:700;font-size:42px;color:white;opacity:0.9;">Aa</span>
+        </div>
+        <div style="padding:var(--space-5);">
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:4px;">Typographie</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Cooper Hewitt, Garamond, Great Vibes</p>
+        </div>
+      </a>
+
+      <!-- Espacements -->
+      <a href="tokens/espacements.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:0;overflow:hidden;">
+        <div style="height:120px;background:#F8FAFC;display:flex;align-items:end;padding:20px;gap:6px;">
+          <div style="width:20px;height:16px;background:var(--rdc-bleu);border-radius:2px;opacity:0.3;"></div>
+          <div style="width:20px;height:32px;background:var(--rdc-bleu);border-radius:2px;opacity:0.4;"></div>
+          <div style="width:20px;height:48px;background:var(--rdc-bleu);border-radius:2px;opacity:0.5;"></div>
+          <div style="width:20px;height:64px;background:var(--rdc-bleu);border-radius:2px;opacity:0.6;"></div>
+          <div style="width:20px;height:80px;background:var(--rdc-bleu);border-radius:2px;opacity:0.8;"></div>
+        </div>
+        <div style="padding:var(--space-5);">
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:4px;">Espacements</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Grille 4px, mesures de la charte</p>
+        </div>
+      </a>
+
+      <!-- Ombres -->
+      <a href="tokens/ombres-elevations.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:0;overflow:hidden;">
+        <div style="height:120px;background:#F8FAFC;display:flex;align-items:center;justify-content:center;gap:12px;">
+          <div style="width:40px;height:40px;background:white;border-radius:8px;box-shadow:var(--shadow-soft);"></div>
+          <div style="width:40px;height:40px;background:white;border-radius:8px;box-shadow:var(--shadow-md);"></div>
+          <div style="width:40px;height:40px;background:white;border-radius:8px;box-shadow:var(--shadow-lg);"></div>
+        </div>
+        <div style="padding:var(--space-5);">
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:4px;">Ombres & Élévations</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">5 niveaux d'élévation</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- COMPOSANTS Section -->
+  <section style="max-width:1200px;margin:0 auto;padding:var(--space-16) var(--space-8) 0;">
+    <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
+      <div class="ligne-etat" style="min-height:24px;width:4px;border-radius:2px;"></div>
+      <h2 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);">Composants</h2>
+    </div>
+    <p style="font-family:var(--font-complement);color:var(--text-secondary);margin-bottom:var(--space-8);max-width:560px;">Éléments d'interface réutilisables, conformes à la charte graphique, prêts à intégrer dans vos projets.</p>
+
+    <div class="grid grid-4">
+      <a href="composants/boutons.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:var(--space-6);">
+        <div style="margin-bottom:var(--space-4);display:flex;gap:8px;">
+          <span style="display:inline-block;padding:6px 16px;background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));border-radius:8px;font-family:var(--font-principale);font-size:12px;color:white;font-weight:600;">Bouton</span>
+          <span style="display:inline-block;padding:6px 16px;border:1px solid var(--rdc-bleu);border-radius:8px;font-family:var(--font-principale);font-size:12px;color:var(--rdc-bleu);font-weight:600;">Outline</span>
+        </div>
+        <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:4px;">Boutons</h3>
+        <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Primary, secondary, outline, ghost, danger</p>
+      </a>
+
+      <a href="composants/formulaires.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:var(--space-6);">
+        <div style="margin-bottom:var(--space-4);">
+          <div style="height:32px;border:1px solid #D1D5DB;border-radius:8px;background:white;display:flex;align-items:center;padding:0 12px;">
+            <span style="font-size:12px;color:var(--text-muted);">Saisissez...</span>
+          </div>
+        </div>
+        <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:4px;">Formulaires</h3>
+        <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Inputs, selects, checkboxes, radios</p>
+      </a>
+
+      <a href="composants/cartes.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:var(--space-6);">
+        <div style="margin-bottom:var(--space-4);">
+          <div style="height:36px;border:1px solid var(--border-soft);border-radius:8px;box-shadow:var(--shadow-soft);background:white;"></div>
+        </div>
+        <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:4px;">Cartes</h3>
+        <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Default, hover, glass, stat, service</p>
+      </a>
+
+      <a href="composants/navigation.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:var(--space-6);">
+        <div style="margin-bottom:var(--space-4);display:flex;gap:12px;font-family:var(--font-principale);font-size:11px;">
+          <span style="color:var(--rdc-bleu);font-weight:600;border-bottom:2px solid var(--rdc-bleu);padding-bottom:4px;">Accueil</span>
+          <span style="color:var(--text-muted);">Services</span>
+          <span style="color:var(--text-muted);">Contact</span>
+        </div>
+        <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:4px;">Navigation</h3>
+        <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Header, sidebar, breadcrumb, tabs</p>
+      </a>
+
+      <a href="composants/tableaux.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:var(--space-6);">
+        <div style="margin-bottom:var(--space-4);">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;">
+            <div style="height:8px;background:#E5E7EB;border-radius:2px;"></div>
+            <div style="height:8px;background:#E5E7EB;border-radius:2px;"></div>
+            <div style="height:8px;background:#E5E7EB;border-radius:2px;"></div>
+            <div style="height:6px;background:#F3F4F6;border-radius:2px;"></div>
+            <div style="height:6px;background:#F3F4F6;border-radius:2px;"></div>
+            <div style="height:6px;background:#F3F4F6;border-radius:2px;"></div>
+            <div style="height:6px;background:#FAFBFC;border-radius:2px;"></div>
+            <div style="height:6px;background:#FAFBFC;border-radius:2px;"></div>
+            <div style="height:6px;background:#FAFBFC;border-radius:2px;"></div>
+          </div>
+        </div>
+        <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:4px;">Tableaux</h3>
+        <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Simple, striped, compact, responsive</p>
+      </a>
+
+      <a href="composants/badges-alertes.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:var(--space-6);">
+        <div style="margin-bottom:var(--space-4);display:flex;gap:6px;flex-wrap:wrap;">
+          <span class="badge badge-success" style="font-size:10px;">Approuvé</span>
+          <span class="badge badge-warning" style="font-size:10px;">En attente</span>
+          <span class="badge badge-danger" style="font-size:10px;">Rejeté</span>
+        </div>
+        <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:4px;">Badges & Alertes</h3>
+        <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Badges, alertes, toasts, notifications</p>
+      </a>
+
+      <a href="composants/en-tete-officiel.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:var(--space-6);border:2px solid var(--primary-border);">
+        <div style="margin-bottom:var(--space-4);display:flex;align-items:center;gap:8px;">
+          <div style="width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));display:flex;align-items:center;justify-content:center;">
+            <span style="color:white;font-size:6px;font-family:var(--font-principale);font-weight:700;">RDC</span>
+          </div>
+          <div class="ligne-etat" style="width:2px;min-height:24px;"></div>
+          <div style="font-family:var(--font-principale);font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;line-height:1.2;">Rép. Dém.<br>du Congo</div>
+        </div>
+        <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:4px;">En-tête Officiel</h3>
+        <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Logo, composition, zone de sécurité</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- MARQUE Section -->
+  <section style="max-width:1200px;margin:0 auto;padding:var(--space-16) var(--space-8) 0;">
+    <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
+      <div class="ligne-etat" style="min-height:24px;width:4px;border-radius:2px;"></div>
+      <h2 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);">Marque</h2>
+    </div>
+    <p style="font-family:var(--font-complement);color:var(--text-secondary);margin-bottom:var(--space-8);max-width:560px;">Règles d'usage de l'identité visuelle de l'État congolais : logo, Ligne d'État et applications.</p>
+
+    <div class="grid grid-2">
+      <a href="marque/logo.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:var(--space-8);display:flex;align-items:center;gap:var(--space-8);">
+        <div style="display:flex;align-items:center;gap:var(--space-4);flex-shrink:0;">
+          <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));display:flex;align-items:center;justify-content:center;">
+            <span style="color:white;font-family:var(--font-principale);font-weight:700;font-size:14px;">RDC</span>
+          </div>
+          <div class="ligne-etat" style="min-height:56px;width:4px;"></div>
+        </div>
+        <div>
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);margin-bottom:4px;">Logo & Identité</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Architecture du logo, règles de composition, zone de sécurité, versions autorisées et interdits.</p>
+        </div>
+      </a>
+
+      <a href="marque/ligne-etat.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:var(--space-8);display:flex;align-items:center;gap:var(--space-8);">
+        <div style="display:flex;gap:var(--space-3);flex-shrink:0;">
+          <div class="ligne-etat" style="min-height:56px;width:3px;"></div>
+          <div class="ligne-etat" style="min-height:56px;width:6px;"></div>
+          <div class="ligne-etat" style="min-height:56px;width:10px;border-radius:3px;"></div>
+        </div>
+        <div>
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);margin-bottom:4px;">Ligne d'État</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">La barre tricolore : composition, orientations, tailles et usages réglementaires.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- MODÈLES Section -->
+  <section style="max-width:1200px;margin:0 auto;padding:var(--space-16) var(--space-8) 0;">
+    <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
+      <div class="ligne-etat" style="min-height:24px;width:4px;border-radius:2px;"></div>
+      <h2 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);">Modèles de pages</h2>
+    </div>
+    <p style="font-family:var(--font-complement);color:var(--text-secondary);margin-bottom:var(--space-8);max-width:560px;">Templates complets prêts à l'emploi pour construire des sites web gouvernementaux.</p>
+
+    <div class="grid grid-3">
+      <a href="modeles/page-accueil.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:0;overflow:hidden;">
+        <div style="height:160px;background:linear-gradient(135deg,var(--rdc-bleu-inst),#0D2B5E);display:flex;flex-direction:column;padding:var(--space-4);">
+          <div style="height:8px;background:rgba(255,255,255,0.15);border-radius:4px;margin-bottom:8px;"></div>
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;">
+              <div style="height:6px;width:120px;background:rgba(255,255,255,0.4);border-radius:3px;margin:0 auto 6px;"></div>
+              <div style="height:4px;width:80px;background:rgba(255,255,255,0.2);border-radius:2px;margin:0 auto;"></div>
+            </div>
+          </div>
+          <div style="display:flex;gap:6px;">
+            <div style="flex:1;height:24px;background:rgba(255,255,255,0.08);border-radius:4px;"></div>
+            <div style="flex:1;height:24px;background:rgba(255,255,255,0.08);border-radius:4px;"></div>
+            <div style="flex:1;height:24px;background:rgba(255,255,255,0.08);border-radius:4px;"></div>
+          </div>
+        </div>
+        <div style="padding:var(--space-5);">
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:4px;">Page d'Accueil</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Hero, stats, services, actualités, footer</p>
+        </div>
+      </a>
+
+      <a href="modeles/page-interieure.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:0;overflow:hidden;">
+        <div style="height:160px;background:#F8FAFC;display:flex;padding:var(--space-4);gap:8px;">
+          <div style="width:40px;background:white;border-radius:4px;box-shadow:var(--shadow-soft);"></div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
+            <div style="height:6px;width:60%;background:#E5E7EB;border-radius:3px;"></div>
+            <div style="height:4px;width:100%;background:#F3F4F6;border-radius:2px;"></div>
+            <div style="height:4px;width:90%;background:#F3F4F6;border-radius:2px;"></div>
+            <div style="height:4px;width:95%;background:#F3F4F6;border-radius:2px;"></div>
+            <div style="flex:1;background:white;border-radius:4px;box-shadow:var(--shadow-soft);margin-top:4px;"></div>
+          </div>
+        </div>
+        <div style="padding:var(--space-5);">
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:4px;">Page Intérieure</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Sidebar, contenu, tableau, fil d'Ariane</p>
+        </div>
+      </a>
+
+      <a href="modeles/page-service.html" class="card card-hover" style="text-decoration:none;color:inherit;padding:0;overflow:hidden;">
+        <div style="height:160px;background:#F8FAFC;display:flex;flex-direction:column;padding:var(--space-4);gap:6px;">
+          <div style="height:8px;background:white;border-radius:4px;box-shadow:var(--shadow-soft);"></div>
+          <div style="display:flex;gap:8px;align-items:center;">
+            <div style="width:28px;height:28px;border-radius:6px;background:var(--rdc-bleu);opacity:0.3;"></div>
+            <div style="height:5px;width:60%;background:#E5E7EB;border-radius:3px;"></div>
+          </div>
+          <div style="display:flex;gap:16px;justify-content:center;padding:8px 0;">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--rdc-bleu);"></div>
+            <div style="width:8px;height:8px;border-radius:50%;background:#D1D5DB;"></div>
+            <div style="width:8px;height:8px;border-radius:50%;background:#D1D5DB;"></div>
+            <div style="width:8px;height:8px;border-radius:50%;background:#D1D5DB;"></div>
+          </div>
+          <div style="flex:1;background:white;border-radius:4px;box-shadow:var(--shadow-soft);display:flex;flex-direction:column;gap:4px;padding:8px;">
+            <div style="height:4px;width:30%;background:#E5E7EB;border-radius:2px;"></div>
+            <div style="height:20px;border:1px solid #E5E7EB;border-radius:4px;"></div>
+          </div>
+        </div>
+        <div style="padding:var(--space-5);">
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:4px;">Page Service</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Stepper, formulaire, services connexes</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Quick Start -->
+  <section style="max-width:1200px;margin:0 auto;padding:var(--space-16) var(--space-8);">
+    <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
+      <div class="ligne-etat" style="min-height:24px;width:4px;border-radius:2px;"></div>
+      <h2 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);">Démarrage rapide</h2>
+    </div>
+    <p style="font-family:var(--font-complement);color:var(--text-secondary);margin-bottom:var(--space-8);max-width:560px;">Intégrez le design system dans votre projet en quelques lignes.</p>
+
+    <div class="card" style="padding:0;overflow:hidden;">
+      <div style="background:#1E293B;padding:var(--space-6);overflow-x:auto;">
+        <pre style="font-family:monospace;font-size:13px;color:#E2E8F0;line-height:1.7;margin:0;"><code><span style="color:#94A3B8;">&lt;!-- 1. Polices --&gt;</span>
+&lt;link href="<span style="color:#7DD3FC;">https://cdn.jsdelivr.net/npm/cooper-hewitt@latest/cooper-hewitt.min.css</span>" rel="stylesheet"&gt;
+&lt;link href="<span style="color:#7DD3FC;">https://fonts.googleapis.com/css2?family=EB+Garamond&family=Great+Vibes</span>" rel="stylesheet"&gt;
+
+<span style="color:#94A3B8;">&lt;!-- 2. Tailwind (optionnel) --&gt;</span>
+&lt;script src="<span style="color:#7DD3FC;">https://cdn.tailwindcss.com</span>"&gt;&lt;/script&gt;
+&lt;script src="<span style="color:#7DD3FC;">tailwind.config.js</span>"&gt;&lt;/script&gt;
+
+<span style="color:#94A3B8;">&lt;!-- 3. CSS du Design System --&gt;</span>
+&lt;link rel="stylesheet" href="<span style="color:#86EFAC;">css/tokens.css</span>"&gt;
+&lt;link rel="stylesheet" href="<span style="color:#86EFAC;">css/components.css</span>"&gt;
+&lt;link rel="stylesheet" href="<span style="color:#86EFAC;">css/layouts.css</span>"&gt;
+&lt;link rel="stylesheet" href="<span style="color:#86EFAC;">css/marque.css</span>"&gt;</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:var(--rdc-bleu-inst);color:white;">
+    <div class="ligne-etat-h--lg"></div>
+    <div style="max-width:1200px;margin:0 auto;padding:var(--space-8);display:flex;align-items:center;justify-content:space-between;">
+      <div style="display:flex;align-items:center;gap:var(--space-3);">
+        <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:var(--font-principale);font-weight:700;font-size:8px;">RDC</span>
+        </div>
+        <span style="font-family:var(--font-principale);font-size:var(--text-sm);opacity:0.7;">Système de Design — Marque État Congolais</span>
+      </div>
+      <div style="font-family:var(--font-complement);font-size:var(--text-xs);opacity:0.5;">
+        Basé sur la Charte Graphique du Gouvernement de la RDC, Février 2022
+      </div>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

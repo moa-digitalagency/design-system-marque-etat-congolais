@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation — Design System Marque État Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .demo-box {
+      background: var(--bg-white);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      margin-bottom: var(--space-2);
+    }
+    .section-title {
+      font-family: var(--font-principale);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--space-4);
+      margin-top: var(--space-8);
+    }
+    .section-title:first-of-type { margin-top: 0; }
+    .subsection-desc {
+      font-family: var(--font-complement);
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      margin-bottom: var(--space-4);
+    }
+  </style>
+</head>
+<body>
+  <div class="layout-sidebar">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" style="text-decoration:none;">
+          <div style="display:flex;align-items:center;gap:var(--space-3);">
+            <div style="width:32px;height:32px;background:var(--rdc-bleu-inst);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;">
+              <i data-lucide="shield" style="width:18px;height:18px;color:white;"></i>
+            </div>
+            <div>
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);">Design System RDC</div>
+              <div class="ligne-etat-h ligne-etat-h--sm" style="width:48px;margin-top:4px;border-radius:2px;"></div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <nav>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Tokens</div>
+          <a href="../tokens/couleurs.html" class="sidebar-link"><i data-lucide="palette" style="width:16px;height:16px;"></i> Couleurs</a>
+          <a href="../tokens/typographie.html" class="sidebar-link"><i data-lucide="type" style="width:16px;height:16px;"></i> Typographie</a>
+          <a href="../tokens/espacements.html" class="sidebar-link"><i data-lucide="ruler" style="width:16px;height:16px;"></i> Espacements</a>
+          <a href="../tokens/ombres-elevations.html" class="sidebar-link"><i data-lucide="layers" style="width:16px;height:16px;"></i> Ombres</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Composants</div>
+          <a href="boutons.html" class="sidebar-link"><i data-lucide="mouse-pointer-click" style="width:16px;height:16px;"></i> Boutons</a>
+          <a href="formulaires.html" class="sidebar-link"><i data-lucide="text-cursor-input" style="width:16px;height:16px;"></i> Formulaires</a>
+          <a href="cartes.html" class="sidebar-link"><i data-lucide="square" style="width:16px;height:16px;"></i> Cartes</a>
+          <a href="navigation.html" class="sidebar-link active"><i data-lucide="compass" style="width:16px;height:16px;"></i> Navigation</a>
+          <a href="tableaux.html" class="sidebar-link"><i data-lucide="table" style="width:16px;height:16px;"></i> Tableaux</a>
+          <a href="badges-alertes.html" class="sidebar-link"><i data-lucide="bell" style="width:16px;height:16px;"></i> Badges &amp; Alertes</a>
+          <a href="en-tete-officiel.html" class="sidebar-link"><i data-lucide="landmark" style="width:16px;height:16px;"></i> En-t&ecirc;te Officiel</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Marque</div>
+          <a href="../marque/logo.html" class="sidebar-link"><i data-lucide="image" style="width:16px;height:16px;"></i> Logo</a>
+          <a href="../marque/ligne-etat.html" class="sidebar-link"><i data-lucide="minus" style="width:16px;height:16px;"></i> Ligne d'&Eacute;tat</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Mod&egrave;les</div>
+          <a href="../modeles/page-accueil.html" class="sidebar-link"><i data-lucide="layout-dashboard" style="width:16px;height:16px;"></i> Page d'Accueil</a>
+          <a href="../modeles/page-interieure.html" class="sidebar-link"><i data-lucide="file-text" style="width:16px;height:16px;"></i> Page Int&eacute;rieure</a>
+          <a href="../modeles/page-service.html" class="sidebar-link"><i data-lucide="settings" style="width:16px;height:16px;"></i> Page Service</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="page-hero">
+        <h1 class="page-title">Navigation</h1>
+        <p class="page-subtitle">Composants de navigation pour guider les utilisateurs &agrave; travers les sites gouvernementaux : en-t&ecirc;tes, barres lat&eacute;rales, fil d'Ariane, onglets et pagination.</p>
+      </div>
+
+      <!-- Section 1: En-tête officiel -->
+      <h2 class="section-title">En-t&ecirc;te officiel (Header)</h2>
+      <p class="subsection-desc">Barre sup&eacute;rieure standard pour tous les sites gouvernementaux. Hauteur 108px, avec logo, navigation et barre tricolore.</p>
+
+      <!-- White variant -->
+      <div class="demo-box" style="padding:0;overflow:hidden;border:none;">
+        <div style="background:var(--bg-white);border:1px solid var(--border-soft);border-radius:var(--radius-xl);overflow:hidden;">
+          <div style="display:flex;align-items:center;height:108px;padding:0 var(--space-8);justify-content:space-between;">
+            <!-- Left: Logo composition -->
+            <div style="display:flex;align-items:center;gap:var(--zone-securite);">
+              <div style="width:50px;height:50px;border-radius:50%;background:var(--rdc-bleu-inst);display:flex;align-items:center;justify-content:center;color:white;font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);">RDC</div>
+              <div class="ligne-etat" style="min-height:50px;"></div>
+              <div class="intitule-officiel">
+                <span class="sous-intitule">R&Eacute;PUBLIQUE D&Eacute;MOCRATIQUE</span>
+                DU CONGO
+              </div>
+            </div>
+            <!-- Right: Nav links -->
+            <div style="display:flex;align-items:center;gap:var(--space-6);">
+              <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--primary);text-decoration:none;">Accueil</a>
+              <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:var(--text-secondary);text-decoration:none;">Services</a>
+              <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:var(--text-secondary);text-decoration:none;">Actualit&eacute;s</a>
+              <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:var(--text-secondary);text-decoration:none;">Contact</a>
+              <button class="btn btn-ghost btn-icon btn-sm"><i data-lucide="search" style="width:16px;height:16px;"></i></button>
+            </div>
+          </div>
+          <div class="ligne-etat-h"></div>
+        </div>
+      </div>
+
+      <!-- Blue variant -->
+      <p class="subsection-desc" style="margin-top:var(--space-6);">Variante bleue (<code>.entete-officiel--bleu</code>) pour les pages int&eacute;rieures, avec texte blanc sur fond bleu institutionnel.</p>
+      <div class="demo-box" style="padding:0;overflow:hidden;border:none;">
+        <div style="border-radius:var(--radius-xl);overflow:hidden;">
+          <div style="display:flex;align-items:center;height:108px;padding:0 var(--space-8);justify-content:space-between;background:var(--rdc-bleu-inst);">
+            <!-- Left: Logo composition -->
+            <div style="display:flex;align-items:center;gap:var(--zone-securite);">
+              <div style="width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:white;font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);">RDC</div>
+              <div class="ligne-etat" style="min-height:50px;"></div>
+              <div class="intitule-officiel" style="color:white;">
+                <span class="sous-intitule" style="color:white;">R&Eacute;PUBLIQUE D&Eacute;MOCRATIQUE</span>
+                DU CONGO
+              </div>
+            </div>
+            <!-- Right: Nav links -->
+            <div style="display:flex;align-items:center;gap:var(--space-6);">
+              <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:white;text-decoration:none;">Accueil</a>
+              <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:rgba(255,255,255,0.75);text-decoration:none;">Services</a>
+              <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:rgba(255,255,255,0.75);text-decoration:none;">Actualit&eacute;s</a>
+              <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:rgba(255,255,255,0.75);text-decoration:none;">Contact</a>
+              <button class="btn btn-ghost btn-icon btn-sm" style="color:white;"><i data-lucide="search" style="width:16px;height:16px;"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Sidebar -->
+      <h2 class="section-title">Sidebar (Barre lat&eacute;rale)</h2>
+      <p class="subsection-desc">Navigation lat&eacute;rale avec sections, liens et &eacute;tat actif. Utilis&eacute;e dans les pages d'administration et de documentation.</p>
+      <div class="demo-box">
+        <div style="width:280px;border:1px solid var(--border-soft);border-radius:var(--radius-xl);overflow:hidden;background:linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);">
+          <!-- Sidebar header -->
+          <div style="padding:var(--space-5);border-bottom:1px solid var(--border-soft);">
+            <div style="display:flex;align-items:center;gap:var(--space-3);">
+              <div style="width:32px;height:32px;background:var(--rdc-bleu-inst);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;">
+                <i data-lucide="shield" style="width:18px;height:18px;color:white;"></i>
+              </div>
+              <div>
+                <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);">Portail Gov</div>
+                <div class="ligne-etat-h ligne-etat-h--sm" style="width:48px;margin-top:4px;border-radius:2px;"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Section: Menu principal -->
+          <div style="padding:var(--space-4) var(--space-3);">
+            <div class="sidebar-section-title">Menu Principal</div>
+            <a href="#" class="sidebar-link"><i data-lucide="home" style="width:16px;height:16px;"></i> Tableau de bord</a>
+            <a href="#" class="sidebar-link active"><i data-lucide="file-text" style="width:16px;height:16px;"></i> Documents</a>
+            <a href="#" class="sidebar-link"><i data-lucide="users" style="width:16px;height:16px;"></i> Citoyens</a>
+            <a href="#" class="sidebar-link"><i data-lucide="bar-chart-3" style="width:16px;height:16px;"></i> Statistiques</a>
+            <a href="#" class="sidebar-link"><i data-lucide="message-square" style="width:16px;height:16px;"></i> Messages</a>
+          </div>
+          <!-- Section: Administration -->
+          <div style="padding:var(--space-4) var(--space-3);border-top:1px solid var(--border-soft);">
+            <div class="sidebar-section-title">Administration</div>
+            <a href="#" class="sidebar-link"><i data-lucide="settings" style="width:16px;height:16px;"></i> Param&egrave;tres</a>
+            <a href="#" class="sidebar-link"><i data-lucide="shield" style="width:16px;height:16px;"></i> S&eacute;curit&eacute;</a>
+            <a href="#" class="sidebar-link"><i data-lucide="help-circle" style="width:16px;height:16px;"></i> Aide</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Fil d'Ariane (Breadcrumb) -->
+      <h2 class="section-title">Fil d'Ariane (Breadcrumb)</h2>
+      <p class="subsection-desc">Indique la position de l'utilisateur dans la hi&eacute;rarchie du site. S&eacute;parateur &laquo; / &raquo; automatique via CSS.</p>
+      <div class="demo-box" style="display:flex;flex-direction:column;gap:var(--space-6);">
+        <!-- Simple breadcrumb -->
+        <div>
+          <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-2);text-transform:uppercase;letter-spacing:0.05em;">Simple</div>
+          <ul class="breadcrumb">
+            <li><a href="#">Accueil</a></li>
+            <li><span class="current">Services</span></li>
+          </ul>
+        </div>
+        <!-- Deep breadcrumb -->
+        <div>
+          <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-2);text-transform:uppercase;letter-spacing:0.05em;">Profond</div>
+          <ul class="breadcrumb">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Minist&egrave;res</a></li>
+            <li><a href="#">Num&eacute;rique</a></li>
+            <li><span class="current">Services en ligne</span></li>
+          </ul>
+        </div>
+        <!-- With current page highlighted -->
+        <div>
+          <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-2);text-transform:uppercase;letter-spacing:0.05em;">Page courante mise en &eacute;vidence</div>
+          <ul class="breadcrumb">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Administration</a></li>
+            <li><a href="#">Gestion</a></li>
+            <li><span class="current" style="color:var(--primary);font-weight:700;">Utilisateurs</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 4: Onglets (Tabs) -->
+      <h2 class="section-title">Onglets (Tabs)</h2>
+      <p class="subsection-desc">Permettent de basculer entre diff&eacute;rentes vues dans un m&ecirc;me contexte. L'onglet actif est soulign&eacute; en bleu.</p>
+      <div class="demo-box">
+        <div class="tabs">
+          <button class="tab active">Vue d'ensemble</button>
+          <button class="tab">Documents</button>
+          <button class="tab">Historique</button>
+          <button class="tab">Param&egrave;tres</button>
+        </div>
+        <div style="padding:var(--space-6);border:1px solid var(--border-soft);border-top:none;border-radius:0 0 var(--radius-lg) var(--radius-lg);background:var(--bg-white);">
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);color:var(--text-primary);margin-bottom:var(--space-3);">Vue d'ensemble</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:var(--leading-relaxed);">Ceci est le contenu de l'onglet &laquo; Vue d'ensemble &raquo;. Les onglets permettent d'organiser l'information en sections logiques sans changer de page. Le contenu s'affiche dynamiquement sous la barre d'onglets.</p>
+        </div>
+      </div>
+
+      <!-- Section 5: Pagination -->
+      <h2 class="section-title">Pagination</h2>
+      <p class="subsection-desc">Permet la navigation entre les pages de r&eacute;sultats. La page courante est mise en &eacute;vidence avec un fond bleu.</p>
+      <div class="demo-box">
+        <ul class="pagination">
+          <li><a href="#">&laquo; Pr&eacute;c&eacute;dent</a></li>
+          <li><a href="#">1</a></li>
+          <li class="active"><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><span>...</span></li>
+          <li><a href="#">12</a></li>
+          <li><a href="#">Suivant &raquo;</a></li>
+        </ul>
+      </div>
+
+    </main>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

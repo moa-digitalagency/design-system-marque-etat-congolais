@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo & Identit&eacute; — Design System Marque &Eacute;tat Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="layout-sidebar">
+
+    <!-- ══════════ SIDEBAR ══════════ -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-officiel" style="gap:8px">
+          <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="30" stroke="#0095C9" stroke-width="2" fill="#EFF6FF"/>
+            <text x="32" y="37" text-anchor="middle" font-family="Cooper Hewitt, Inter, sans-serif" font-size="14" font-weight="700" fill="#17418A">RDC</text>
+          </svg>
+          <span class="ligne-etat ligne-etat--sm" style="min-height:32px"></span>
+          <div class="intitule-officiel" style="max-width:none">
+            <span class="sous-intitule" style="font-size:11px">Design System</span>
+            <span style="font-size:9px;display:block;color:var(--text-muted)">Marque &Eacute;tat Congolais</span>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Fondations</div>
+          <a href="../tokens/couleurs.html" class="sidebar-link"><i data-lucide="palette" style="width:16px;height:16px"></i> Couleurs</a>
+          <a href="../tokens/typographie.html" class="sidebar-link"><i data-lucide="type" style="width:16px;height:16px"></i> Typographie</a>
+          <a href="../tokens/espacement.html" class="sidebar-link"><i data-lucide="ruler" style="width:16px;height:16px"></i> Espacement</a>
+          <a href="../tokens/grilles.html" class="sidebar-link"><i data-lucide="layout-grid" style="width:16px;height:16px"></i> Grilles</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Identit&eacute; / Marque</div>
+          <a href="logo.html" class="sidebar-link active"><i data-lucide="shield" style="width:16px;height:16px"></i> Logo & Identit&eacute;</a>
+          <a href="ligne-etat.html" class="sidebar-link"><i data-lucide="minus" style="width:16px;height:16px"></i> Ligne d'&Eacute;tat</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Composants</div>
+          <a href="../composants/boutons.html" class="sidebar-link"><i data-lucide="mouse-pointer-click" style="width:16px;height:16px"></i> Boutons</a>
+          <a href="../composants/formulaires.html" class="sidebar-link"><i data-lucide="text-cursor-input" style="width:16px;height:16px"></i> Formulaires</a>
+          <a href="../composants/cartes.html" class="sidebar-link"><i data-lucide="square" style="width:16px;height:16px"></i> Cartes</a>
+          <a href="../composants/alertes.html" class="sidebar-link"><i data-lucide="alert-triangle" style="width:16px;height:16px"></i> Alertes</a>
+          <a href="../composants/tableaux.html" class="sidebar-link"><i data-lucide="table" style="width:16px;height:16px"></i> Tableaux</a>
+          <a href="../composants/navigation.html" class="sidebar-link"><i data-lucide="menu" style="width:16px;height:16px"></i> Navigation</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Mod&egrave;les</div>
+          <a href="../modeles/page-accueil.html" class="sidebar-link"><i data-lucide="home" style="width:16px;height:16px"></i> Page d'accueil</a>
+          <a href="../modeles/page-interieure.html" class="sidebar-link"><i data-lucide="file-text" style="width:16px;height:16px"></i> Page int&eacute;rieure</a>
+          <a href="../modeles/page-service.html" class="sidebar-link"><i data-lucide="briefcase" style="width:16px;height:16px"></i> Page service</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- ══════════ MAIN CONTENT ══════════ -->
+    <main class="main-content">
+
+      <!-- Page hero -->
+      <div class="page-hero">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="badge badge-info">Identit&eacute;</span>
+        </div>
+        <h1 class="page-title">Logo & Identit&eacute;</h1>
+        <p class="page-subtitle">Architecture, r&egrave;gles de composition et usages du logo officiel du Gouvernement de la R&eacute;publique D&eacute;mocratique du Congo.</p>
+      </div>
+
+      <!-- ─── 1. Architecture du Logo ─── -->
+      <section class="section" style="border-top:none">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-6)">Architecture du Logo</h2>
+        <p style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary);margin-bottom:var(--space-8);max-width:680px">
+          Le logo officiel se compose de trois &eacute;l&eacute;ments indissociables. Aucun ne peut &ecirc;tre utilis&eacute; seul ou modifi&eacute; ind&eacute;pendamment.
+        </p>
+
+        <div class="card" style="padding:var(--space-10);overflow:hidden">
+          <!-- Visual diagram -->
+          <div style="display:flex;align-items:stretch;gap:0;justify-content:center;min-height:160px">
+            <!-- Bloc-armoirie -->
+            <div style="display:flex;flex-direction:column;align-items:center">
+              <div style="border:2px dashed var(--rdc-bleu);border-radius:var(--radius-lg);padding:var(--space-6);display:flex;align-items:center;justify-content:center;height:120px;width:120px">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="40" cy="40" r="36" stroke="#17418A" stroke-width="2.5" fill="#EFF6FF"/>
+                  <text x="40" y="45" text-anchor="middle" font-family="Cooper Hewitt, Inter, sans-serif" font-size="16" font-weight="700" fill="#17418A">RDC</text>
+                </svg>
+              </div>
+              <span style="font-family:var(--font-principale);font-size:var(--text-xs);font-weight:600;color:var(--rdc-bleu);margin-top:var(--space-3);text-align:center">Bloc-armoirie</span>
+              <span style="font-family:var(--font-complement);font-size:11px;color:var(--text-muted);text-align:center">Partie statique</span>
+            </div>
+
+            <!-- Zone s&eacute;curit&eacute; indicator -->
+            <div style="display:flex;align-items:center;padding:0 12px">
+              <div style="border-top:1px dashed var(--text-muted);border-bottom:1px dashed var(--text-muted);height:20px;width:24px;position:relative">
+                <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--font-principale);font-size:9px;color:var(--text-muted);white-space:nowrap;background:var(--bg-white);padding:0 2px">4X</span>
+              </div>
+            </div>
+
+            <!-- Ligne d'&Eacute;tat -->
+            <div style="display:flex;flex-direction:column;align-items:center">
+              <div style="border:2px dashed var(--rdc-jaune);border-radius:var(--radius-lg);padding:var(--space-6) var(--space-4);display:flex;align-items:center;justify-content:center;height:120px">
+                <span class="ligne-etat ligne-etat--lg" style="min-height:80px"></span>
+              </div>
+              <span style="font-family:var(--font-principale);font-size:var(--text-xs);font-weight:600;color:var(--rdc-jaune);margin-top:var(--space-3);text-align:center">Ligne d'&Eacute;tat</span>
+              <span style="font-family:var(--font-complement);font-size:11px;color:var(--text-muted);text-align:center">S&eacute;parateur tricolore</span>
+            </div>
+
+            <!-- Zone s&eacute;curit&eacute; indicator -->
+            <div style="display:flex;align-items:center;padding:0 12px">
+              <div style="border-top:1px dashed var(--text-muted);border-bottom:1px dashed var(--text-muted);height:20px;width:24px;position:relative">
+                <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--font-principale);font-size:9px;color:var(--text-muted);white-space:nowrap;background:var(--bg-white);padding:0 2px">4X</span>
+              </div>
+            </div>
+
+            <!-- Intitul&eacute; officiel -->
+            <div style="display:flex;flex-direction:column;align-items:center">
+              <div style="border:2px dashed var(--rdc-rouge);border-radius:var(--radius-lg);padding:var(--space-6);display:flex;align-items:flex-start;justify-content:center;height:120px;min-width:180px">
+                <div>
+                  <span style="font-family:var(--font-principale);font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:0.06em;display:block;color:var(--text-primary)">R&eacute;publique D&eacute;mocratique</span>
+                  <span style="font-family:var(--font-principale);font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:0.06em;display:block;color:var(--text-primary)">du Congo</span>
+                  <span style="font-family:var(--font-principale);font-weight:600;font-size:9px;text-transform:uppercase;letter-spacing:0.06em;display:block;color:var(--text-secondary);margin-top:4px">Minist&egrave;re du Num&eacute;rique</span>
+                </div>
+              </div>
+              <span style="font-family:var(--font-principale);font-size:var(--text-xs);font-weight:600;color:var(--rdc-rouge);margin-top:var(--space-3);text-align:center">Intitul&eacute; officiel</span>
+              <span style="font-family:var(--font-complement);font-size:11px;color:var(--text-muted);text-align:center">Partie variable</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 2. R&egrave;gles de composition ─── -->
+      <section class="section">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-6)">R&egrave;gles de composition</h2>
+
+        <div class="grid grid-3" style="margin-bottom:var(--space-8)">
+          <!-- Zone de s&eacute;curit&eacute; -->
+          <div class="card" style="text-align:center">
+            <div style="display:inline-flex;align-items:stretch;gap:16px;border:2px dashed var(--primary-border);border-radius:var(--radius-lg);padding:24px;margin-bottom:var(--space-4)">
+              <svg width="50" height="50" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#17418A" stroke-width="2" fill="#EFF6FF"/><text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#17418A">RDC</text></svg>
+              <span class="ligne-etat" style="min-height:50px;width:4px"></span>
+              <div style="display:flex;align-items:center"><span style="font-family:var(--font-principale);font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em">R&eacute;publique<br>D&eacute;mocratique<br>du Congo</span></div>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">Zone de s&eacute;curit&eacute;</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary)">4&times; la largeur de la Ligne d'&Eacute;tat autour du logo. Aucun &eacute;l&eacute;ment ne doit empi&eacute;ter sur cette zone.</p>
+            <div class="badge badge-info" style="margin-top:var(--space-3)">4X = 16px</div>
+          </div>
+
+          <!-- Unit&eacute; X -->
+          <div class="card" style="text-align:center">
+            <div style="display:flex;align-items:center;justify-content:center;gap:var(--space-3);margin-bottom:var(--space-4);padding:24px">
+              <div style="width:4px;height:60px;background:var(--rdc-bleu);border-radius:2px;position:relative">
+                <span style="position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-family:var(--font-principale);font-size:10px;font-weight:700;color:var(--rdc-bleu)">X</span>
+              </div>
+              <div style="font-family:var(--font-principale);font-size:var(--text-4xl);font-weight:700;color:var(--rdc-bleu-fonce)">=</div>
+              <div style="width:4px;height:60px;background:linear-gradient(180deg,var(--rdc-bleu) 33.33%,var(--rdc-jaune) 33.33%,var(--rdc-jaune) 66.66%,var(--rdc-rouge) 66.66%);border-radius:2px"></div>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">Unit&eacute; de base X</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary)">X = largeur de la Ligne d'&Eacute;tat. Toutes les proportions du logo sont calcul&eacute;es &agrave; partir de cette unit&eacute;.</p>
+            <div class="badge badge-neutral" style="margin-top:var(--space-3)">X = 4px (web)</div>
+          </div>
+
+          <!-- Hauteur -->
+          <div class="card" style="text-align:center">
+            <div style="display:flex;align-items:center;justify-content:center;gap:var(--space-4);padding:24px">
+              <div style="position:relative;display:flex;align-items:stretch;gap:12px">
+                <svg width="50" height="50" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#17418A" stroke-width="2" fill="#EFF6FF"/><text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#17418A">RDC</text></svg>
+                <span class="ligne-etat" style="min-height:50px;width:4px"></span>
+                <div style="position:absolute;right:-30px;top:0;bottom:0;border-right:1px dashed var(--rdc-rouge);display:flex;align-items:center">
+                  <span style="position:absolute;right:-4px;font-family:var(--font-principale);font-size:9px;font-weight:700;color:var(--rdc-rouge);writing-mode:vertical-lr;transform:rotate(180deg)">= hauteur</span>
+                </div>
+              </div>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">Hauteur Ligne = Bloc-armoirie</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary)">La hauteur de la Ligne d'&Eacute;tat doit toujours &ecirc;tre &eacute;gale &agrave; la hauteur du Bloc-armoirie.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 3. Tailles ─── -->
+      <section class="section">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-6)">Tailles</h2>
+
+        <div class="grid grid-3">
+          <!-- Web header -->
+          <div class="card card-hover" style="text-align:center">
+            <div class="badge badge-info" style="margin-bottom:var(--space-4)">Web header</div>
+            <div style="display:flex;align-items:stretch;gap:8px;justify-content:center;margin-bottom:var(--space-4)">
+              <svg width="50" height="50" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#17418A" stroke-width="2" fill="#EFF6FF"/><text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#17418A">RDC</text></svg>
+              <span class="ligne-etat" style="min-height:50px;width:4px"></span>
+              <div style="display:flex;align-items:center"><span style="font-family:var(--font-principale);font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">R&eacute;publique<br>D&eacute;mocratique<br>du Congo</span></div>
+            </div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-3xl);font-weight:700;color:var(--rdc-bleu-fonce)">50px</div>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-muted)">Hauteur du logo dans les headers web</p>
+          </div>
+
+          <!-- R&eacute;seaux sociaux -->
+          <div class="card card-hover" style="text-align:center">
+            <div class="badge badge-warning" style="margin-bottom:var(--space-4)">R&eacute;seaux sociaux / Vid&eacute;o</div>
+            <div style="display:flex;align-items:stretch;gap:12px;justify-content:center;margin-bottom:var(--space-4)">
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="36" stroke="#17418A" stroke-width="2" fill="#EFF6FF"/><text x="40" y="45" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#17418A">RDC</text></svg>
+              <span class="ligne-etat ligne-etat--lg" style="min-height:80px"></span>
+              <div style="display:flex;align-items:center"><span style="font-family:var(--font-principale);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">R&eacute;publique<br>D&eacute;mocratique<br>du Congo</span></div>
+            </div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-3xl);font-weight:700;color:var(--rdc-bleu-fonce)">110px</div>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-muted)">Hauteur du logo pour les r&eacute;seaux sociaux et vid&eacute;os</p>
+          </div>
+
+          <!-- Taille minimale -->
+          <div class="card card-hover" style="text-align:center">
+            <div class="badge badge-danger" style="margin-bottom:var(--space-4)">Taille minimale digitale</div>
+            <div style="display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4)">
+              <span class="ligne-etat" style="min-height:53px;width:4px"></span>
+            </div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-3xl);font-weight:700;color:var(--rdc-rouge)">53px</div>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-muted)">Hauteur minimale de la Ligne d'&Eacute;tat en digital</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 4. Versions autoris&eacute;es ─── -->
+      <section class="section">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-6)">Versions autoris&eacute;es</h2>
+
+        <div class="grid grid-3">
+          <!-- Couleur sur fond blanc -->
+          <div class="card card-hover">
+            <div style="background:#FFFFFF;border:1px solid #E5E7EB;border-radius:var(--radius-lg);padding:var(--space-8);display:flex;align-items:stretch;gap:12px;justify-content:center;margin-bottom:var(--space-4)">
+              <svg width="50" height="50" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#17418A" stroke-width="2" fill="#EFF6FF"/><text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#17418A">RDC</text></svg>
+              <span class="ligne-etat" style="min-height:50px;width:4px"></span>
+              <div style="display:flex;align-items:center"><span style="font-family:var(--font-principale);font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:#111827">R&eacute;publique<br>D&eacute;mocratique<br>du Congo</span></div>
+            </div>
+            <div class="badge badge-success" style="margin-bottom:var(--space-2)">Recommand&eacute;</div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">Couleur sur fond blanc</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary)">Version principale. &Agrave; privil&eacute;gier dans tous les cas.</p>
+          </div>
+
+          <!-- Monochrome blanc sur fond color&eacute; -->
+          <div class="card card-hover">
+            <div style="background:var(--rdc-bleu-inst);border-radius:var(--radius-lg);padding:var(--space-8);display:flex;align-items:stretch;gap:12px;justify-content:center;margin-bottom:var(--space-4)">
+              <svg width="50" height="50" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="white" stroke-width="2" fill="rgba(255,255,255,0.1)"/><text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="white">RDC</text></svg>
+              <span style="display:block;width:4px;min-height:50px;background:white;flex-shrink:0"></span>
+              <div style="display:flex;align-items:center"><span style="font-family:var(--font-principale);font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:white">R&eacute;publique<br>D&eacute;mocratique<br>du Congo</span></div>
+            </div>
+            <div class="badge badge-info" style="margin-bottom:var(--space-2)">Autoris&eacute;</div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">Monochrome blanc sur fond color&eacute;</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary)">Pour les fonds fonc&eacute;s ou color&eacute;s (footer, banni&egrave;res).</p>
+          </div>
+
+          <!-- Monochrome noir -->
+          <div class="card card-hover">
+            <div style="background:#FFFFFF;border:1px solid #E5E7EB;border-radius:var(--radius-lg);padding:var(--space-8);display:flex;align-items:stretch;gap:12px;justify-content:center;margin-bottom:var(--space-4)">
+              <svg width="50" height="50" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#323230" stroke-width="2" fill="#F3F4F6"/><text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#323230">RDC</text></svg>
+              <span style="display:block;width:4px;min-height:50px;background:#323230;flex-shrink:0"></span>
+              <div style="display:flex;align-items:center"><span style="font-family:var(--font-principale);font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:#323230">R&eacute;publique<br>D&eacute;mocratique<br>du Congo</span></div>
+            </div>
+            <div class="badge badge-warning" style="margin-bottom:var(--space-2)">Usage restreint</div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">Monochrome noir</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary)">R&eacute;serv&eacute; aux impressions noir et blanc uniquement.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 5. Interdits (Do's and Don'ts) ─── -->
+      <section class="section">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-2)">Interdits</h2>
+        <p style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary);margin-bottom:var(--space-8)">Ces usages sont strictement interdits et constituent une violation de la charte graphique.</p>
+
+        <div class="grid grid-3">
+          <!-- Interdit 1 -->
+          <div class="card" style="border:2px solid rgba(219,56,50,0.2);position:relative">
+            <div style="position:absolute;top:12px;right:12px;width:28px;height:28px;background:var(--rdc-rouge);border-radius:50%;display:flex;align-items:center;justify-content:center">
+              <i data-lucide="x" style="width:16px;height:16px;color:white"></i>
+            </div>
+            <div style="background:#FEF2F2;border-radius:var(--radius-lg);padding:var(--space-6);display:flex;align-items:stretch;gap:10px;justify-content:center;margin-bottom:var(--space-4)">
+              <svg width="50" height="70" viewBox="0 0 50 70" fill="none"><ellipse cx="25" cy="35" rx="22" ry="32" stroke="#17418A" stroke-width="2" fill="#EFF6FF"/><text x="25" y="40" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#17418A">RDC</text></svg>
+              <span class="ligne-etat" style="min-height:70px;width:4px"></span>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--rdc-rouge)">Ne pas d&eacute;former les proportions</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-secondary)">Le logo ne doit jamais &ecirc;tre &eacute;tir&eacute;, compress&eacute; ou d&eacute;form&eacute;.</p>
+          </div>
+
+          <!-- Interdit 2 -->
+          <div class="card" style="border:2px solid rgba(219,56,50,0.2);position:relative">
+            <div style="position:absolute;top:12px;right:12px;width:28px;height:28px;background:var(--rdc-rouge);border-radius:50%;display:flex;align-items:center;justify-content:center">
+              <i data-lucide="x" style="width:16px;height:16px;color:white"></i>
+            </div>
+            <div style="background:#FEF2F2;border-radius:var(--radius-lg);padding:var(--space-6);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4)">
+              <span style="display:block;width:8px;min-height:60px;background:linear-gradient(180deg,var(--rdc-rouge) 33.33%,var(--rdc-jaune) 33.33%,var(--rdc-jaune) 66.66%,var(--rdc-bleu) 66.66%);flex-shrink:0;border-radius:2px"></span>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--rdc-rouge)">Ne pas changer l'ordre des couleurs</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-secondary)">L'ordre Bleu &rarr; Jaune &rarr; Rouge doit toujours &ecirc;tre respect&eacute;.</p>
+          </div>
+
+          <!-- Interdit 3 -->
+          <div class="card" style="border:2px solid rgba(219,56,50,0.2);position:relative">
+            <div style="position:absolute;top:12px;right:12px;width:28px;height:28px;background:var(--rdc-rouge);border-radius:50%;display:flex;align-items:center;justify-content:center">
+              <i data-lucide="x" style="width:16px;height:16px;color:white"></i>
+            </div>
+            <div style="background:#FEF2F2;border-radius:var(--radius-lg);padding:var(--space-6);display:flex;align-items:stretch;gap:10px;justify-content:center;margin-bottom:var(--space-4)">
+              <svg width="50" height="50" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#17418A" stroke-width="2" fill="#EFF6FF"/><text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#17418A">RDC</text></svg>
+              <span class="ligne-etat" style="min-height:50px;width:4px"></span>
+              <div style="display:flex;align-items:center"><span style="font-family:Arial,sans-serif;font-size:8px;font-weight:900;text-transform:uppercase;letter-spacing:0.05em">R&Eacute;PUBLIQUE<br>D&Eacute;MOCRATIQUE<br>DU CONGO</span></div>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--rdc-rouge)">Ne pas utiliser une police plus grasse/fine</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-secondary)">La graisse de la typographie ne doit pas &ecirc;tre modifi&eacute;e.</p>
+          </div>
+
+          <!-- Interdit 4 -->
+          <div class="card" style="border:2px solid rgba(219,56,50,0.2);position:relative">
+            <div style="position:absolute;top:12px;right:12px;width:28px;height:28px;background:var(--rdc-rouge);border-radius:50%;display:flex;align-items:center;justify-content:center">
+              <i data-lucide="x" style="width:16px;height:16px;color:white"></i>
+            </div>
+            <div style="background:#FEF2F2;border-radius:var(--radius-lg);padding:var(--space-6);display:flex;align-items:stretch;gap:10px;justify-content:center;margin-bottom:var(--space-4)">
+              <svg width="50" height="50" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#17418A" stroke-width="2" fill="#EFF6FF"/><text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#17418A">RDC</text></svg>
+              <span class="ligne-etat" style="min-height:50px;width:4px"></span>
+              <div style="display:flex;align-items:center"><span style="font-family:'Times New Roman',serif;font-size:9px;font-weight:400;font-style:italic">R&eacute;publique<br>D&eacute;mocratique<br>du Congo</span></div>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--rdc-rouge)">Ne pas changer la typographie de l'intitul&eacute;</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-secondary)">Seule la police Cooper Hewitt est autoris&eacute;e pour l'intitul&eacute;.</p>
+          </div>
+
+          <!-- Interdit 5 -->
+          <div class="card" style="border:2px solid rgba(219,56,50,0.2);position:relative">
+            <div style="position:absolute;top:12px;right:12px;width:28px;height:28px;background:var(--rdc-rouge);border-radius:50%;display:flex;align-items:center;justify-content:center">
+              <i data-lucide="x" style="width:16px;height:16px;color:white"></i>
+            </div>
+            <div style="background:#FEF2F2;border-radius:var(--radius-lg);padding:var(--space-6);display:flex;align-items:stretch;gap:10px;justify-content:center;margin-bottom:var(--space-4)">
+              <svg width="50" height="50" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#65B32E" stroke-width="2" fill="#F0FDF4"/><text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#65B32E">RDC</text></svg>
+              <span style="display:block;width:4px;min-height:50px;background:linear-gradient(180deg,#65B32E 33.33%,#ED7016 33.33%,#ED7016 66.66%,#9C0055 66.66%);flex-shrink:0"></span>
+              <div style="display:flex;align-items:center"><span style="font-family:var(--font-principale);font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:#65B32E">R&eacute;publique<br>D&eacute;mocratique<br>du Congo</span></div>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--rdc-rouge)">Ne pas changer les couleurs</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-secondary)">Seules les couleurs officielles du drapeau sont permises.</p>
+          </div>
+
+          <!-- Interdit 6 -->
+          <div class="card" style="border:2px solid rgba(219,56,50,0.2);position:relative">
+            <div style="position:absolute;top:12px;right:12px;width:28px;height:28px;background:var(--rdc-rouge);border-radius:50%;display:flex;align-items:center;justify-content:center">
+              <i data-lucide="x" style="width:16px;height:16px;color:white"></i>
+            </div>
+            <div style="background:#323230;border-radius:var(--radius-lg);padding:var(--space-6);display:flex;align-items:stretch;gap:10px;justify-content:center;margin-bottom:var(--space-4)">
+              <svg width="50" height="50" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#0095C9" stroke-width="2" fill="rgba(0,149,201,0.15)"/><text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#0095C9">RDC</text></svg>
+              <span class="ligne-etat" style="min-height:50px;width:4px"></span>
+              <div style="display:flex;align-items:center"><span style="font-family:var(--font-principale);font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--rdc-bleu)">R&eacute;publique<br>D&eacute;mocratique<br>du Congo</span></div>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--rdc-rouge)">Ne pas mettre le logo en couleur sur fond sombre</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-secondary)">Sur fond sombre, utiliser la version monochrome blanc.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 6. Exemples d'usage ─── -->
+      <section class="section">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-6)">Exemples d'usage</h2>
+        <p style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary);margin-bottom:var(--space-8)">Voici trois exemples de composition correcte du logo pour diff&eacute;rents minist&egrave;res.</p>
+
+        <div class="grid grid-3">
+          <!-- Minist&egrave;re du Num&eacute;rique -->
+          <div class="card card-hover">
+            <div style="background:var(--bg-white);border:1px solid #E5E7EB;border-radius:var(--radius-lg);padding:var(--space-6);margin-bottom:var(--space-4)">
+              <div class="logo-officiel" style="gap:12px">
+                <svg width="44" height="44" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#17418A" stroke-width="2" fill="#EFF6FF"/><text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#17418A">RDC</text></svg>
+                <span class="ligne-etat" style="min-height:44px;width:4px"></span>
+                <div class="intitule-officiel" style="max-width:none">
+                  <span class="sous-intitule" style="font-size:10px">R&eacute;publique D&eacute;mocratique du Congo</span>
+                  <span style="font-size:9px;display:block">Minist&egrave;re du Num&eacute;rique</span>
+                </div>
+              </div>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Minist&egrave;re du Num&eacute;rique</h3>
+          </div>
+
+          <!-- Minist&egrave;re de la Sant&eacute; -->
+          <div class="card card-hover">
+            <div style="background:var(--bg-white);border:1px solid #E5E7EB;border-radius:var(--radius-lg);padding:var(--space-6);margin-bottom:var(--space-4)">
+              <div class="logo-officiel" style="gap:12px">
+                <svg width="44" height="44" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#17418A" stroke-width="2" fill="#EFF6FF"/><text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#17418A">RDC</text></svg>
+                <span class="ligne-etat" style="min-height:44px;width:4px"></span>
+                <div class="intitule-officiel" style="max-width:none">
+                  <span class="sous-intitule" style="font-size:10px">R&eacute;publique D&eacute;mocratique du Congo</span>
+                  <span style="font-size:9px;display:block">Minist&egrave;re de la Sant&eacute; Publique</span>
+                </div>
+              </div>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Minist&egrave;re de la Sant&eacute; Publique</h3>
+          </div>
+
+          <!-- Minist&egrave;re de l'&Eacute;ducation -->
+          <div class="card card-hover">
+            <div style="background:var(--bg-white);border:1px solid #E5E7EB;border-radius:var(--radius-lg);padding:var(--space-6);margin-bottom:var(--space-4)">
+              <div class="logo-officiel" style="gap:12px">
+                <svg width="44" height="44" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#17418A" stroke-width="2" fill="#EFF6FF"/><text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#17418A">RDC</text></svg>
+                <span class="ligne-etat" style="min-height:44px;width:4px"></span>
+                <div class="intitule-officiel" style="max-width:none">
+                  <span class="sous-intitule" style="font-size:10px">R&eacute;publique D&eacute;mocratique du Congo</span>
+                  <span style="font-size:9px;display:block">Minist&egrave;re de l'&Eacute;ducation Nationale</span>
+                </div>
+              </div>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Minist&egrave;re de l'&Eacute;ducation Nationale</h3>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

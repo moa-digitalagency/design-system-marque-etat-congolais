@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typographie — Design System Marque État Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="layout-sidebar">
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" style="text-decoration:none;display:flex;align-items:center;gap:var(--space-3)">
+          <div class="ligne-etat" style="min-height:32px;width:4px;border-radius:2px"></div>
+          <div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-primary)">Design System</div>
+            <div style="font-family:var(--font-principale);font-weight:500;font-size:var(--text-xs);color:var(--text-muted)">RDC</div>
+          </div>
+        </a>
+      </div>
+      <nav>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Tokens</div>
+          <a href="couleurs.html" class="sidebar-link"><i data-lucide="palette" style="width:16px;height:16px"></i> Couleurs</a>
+          <a href="typographie.html" class="sidebar-link active"><i data-lucide="type" style="width:16px;height:16px"></i> Typographie</a>
+          <a href="espacements.html" class="sidebar-link"><i data-lucide="move" style="width:16px;height:16px"></i> Espacements</a>
+          <a href="ombres-elevations.html" class="sidebar-link"><i data-lucide="layers" style="width:16px;height:16px"></i> Ombres & Elevations</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Composants</div>
+          <a href="../composants/boutons.html" class="sidebar-link"><i data-lucide="mouse-pointer-click" style="width:16px;height:16px"></i> Boutons</a>
+          <a href="../composants/formulaires.html" class="sidebar-link"><i data-lucide="text-cursor-input" style="width:16px;height:16px"></i> Formulaires</a>
+          <a href="../composants/cartes.html" class="sidebar-link"><i data-lucide="square" style="width:16px;height:16px"></i> Cartes</a>
+          <a href="../composants/navigation.html" class="sidebar-link"><i data-lucide="compass" style="width:16px;height:16px"></i> Navigation</a>
+          <a href="../composants/tableaux.html" class="sidebar-link"><i data-lucide="table" style="width:16px;height:16px"></i> Tableaux</a>
+          <a href="../composants/badges-alertes.html" class="sidebar-link"><i data-lucide="bell" style="width:16px;height:16px"></i> Badges & Alertes</a>
+          <a href="../composants/entete-officiel.html" class="sidebar-link"><i data-lucide="landmark" style="width:16px;height:16px"></i> En-tete Officiel</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Modeles</div>
+          <a href="../modeles/page-accueil.html" class="sidebar-link"><i data-lucide="home" style="width:16px;height:16px"></i> Page d'Accueil</a>
+          <a href="../modeles/page-interieure.html" class="sidebar-link"><i data-lucide="file-text" style="width:16px;height:16px"></i> Page Interieure</a>
+          <a href="../modeles/page-service.html" class="sidebar-link"><i data-lucide="briefcase" style="width:16px;height:16px"></i> Page Service</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Marque</div>
+          <a href="../marque/logo.html" class="sidebar-link"><i data-lucide="shield" style="width:16px;height:16px"></i> Logo</a>
+          <a href="../marque/ligne-etat.html" class="sidebar-link"><i data-lucide="minus" style="width:16px;height:16px"></i> Ligne d'Etat</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <main class="main-content">
+      <div class="page-hero">
+        <h1 class="page-title">Typographie</h1>
+        <p class="page-subtitle">Systeme typographique de la Charte Graphique du Gouvernement de la RDC</p>
+      </div>
+
+      <!-- ════ Cooper Hewitt ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-2);color:var(--text-primary)">
+          Cooper Hewitt — Typographie Principale
+        </h2>
+        <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);margin-bottom:var(--space-6)">
+          Utilisee pour les titres, elements d'interface et intitules officiels des ministeres.
+        </p>
+
+        <div style="display:grid;grid-template-columns:200px 1fr;gap:var(--space-6);margin-bottom:var(--space-8)">
+          <!-- Specimen Aa -->
+          <div class="card" style="display:flex;align-items:center;justify-content:center;min-height:200px;background:linear-gradient(135deg,var(--rdc-bleu-inst),var(--rdc-bleu))">
+            <span style="font-family:var(--font-principale);font-size:80px;font-weight:700;color:white">Aa</span>
+          </div>
+          <!-- Weights -->
+          <div class="card">
+            <div style="margin-bottom:var(--space-4)">
+              <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-1)">Bold (700)</div>
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl)">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg)">abcdefghijklmnopqrstuvwxyz 0123456789</div>
+            </div>
+            <div style="margin-bottom:var(--space-4)">
+              <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-1)">Semi-bold (600)</div>
+              <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-2xl)">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+              <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-lg)">abcdefghijklmnopqrstuvwxyz 0123456789</div>
+            </div>
+            <div style="margin-bottom:var(--space-4)">
+              <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-1)">Medium (500)</div>
+              <div style="font-family:var(--font-principale);font-weight:500;font-size:var(--text-2xl)">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+              <div style="font-family:var(--font-principale);font-weight:500;font-size:var(--text-lg)">abcdefghijklmnopqrstuvwxyz 0123456789</div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-1)">Book (400)</div>
+              <div style="font-family:var(--font-principale);font-weight:400;font-size:var(--text-2xl)">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+              <div style="font-family:var(--font-principale);font-weight:400;font-size:var(--text-lg)">abcdefghijklmnopqrstuvwxyz 0123456789</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════ EB Garamond ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-2);color:var(--text-primary)">
+          EB Garamond — Typographie de Complement
+        </h2>
+        <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);margin-bottom:var(--space-6)">
+          Utilisee pour le corps de texte, la correspondance formelle et la papeterie officielle.
+        </p>
+
+        <div style="display:grid;grid-template-columns:200px 1fr;gap:var(--space-6);margin-bottom:var(--space-8)">
+          <div class="card" style="display:flex;align-items:center;justify-content:center;min-height:200px;background:linear-gradient(135deg,#323230,#4B5563)">
+            <span style="font-family:var(--font-complement);font-size:80px;font-weight:700;color:white">Aa</span>
+          </div>
+          <div class="card">
+            <div style="margin-bottom:var(--space-4)">
+              <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-1)">Regular (400)</div>
+              <div style="font-family:var(--font-complement);font-weight:400;font-size:var(--text-2xl)">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+              <div style="font-family:var(--font-complement);font-weight:400;font-size:var(--text-lg)">abcdefghijklmnopqrstuvwxyz 0123456789</div>
+            </div>
+            <div style="margin-bottom:var(--space-4)">
+              <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-1)">Bold (700)</div>
+              <div style="font-family:var(--font-complement);font-weight:700;font-size:var(--text-2xl)">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+              <div style="font-family:var(--font-complement);font-weight:700;font-size:var(--text-lg)">abcdefghijklmnopqrstuvwxyz 0123456789</div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-1)">Bold Italic (700i)</div>
+              <div style="font-family:var(--font-complement);font-weight:700;font-style:italic;font-size:var(--text-2xl)">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+              <div style="font-family:var(--font-complement);font-weight:700;font-style:italic;font-size:var(--text-lg)">abcdefghijklmnopqrstuvwxyz 0123456789</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════ Great Vibes ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-2);color:var(--text-primary)">
+          Great Vibes — Typographie d'Autorite
+        </h2>
+        <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);margin-bottom:var(--space-6)">
+          Reservee aux mentions d'autorite : « Le Ministre », « Le Cabinet du Ministre », signatures protocolaires.
+        </p>
+
+        <div style="display:grid;grid-template-columns:200px 1fr;gap:var(--space-6);margin-bottom:var(--space-8)">
+          <div class="card" style="display:flex;align-items:center;justify-content:center;min-height:200px;background:linear-gradient(135deg,#9C0055,#DB3832)">
+            <span style="font-family:var(--font-autorite);font-size:72px;color:white">Aa</span>
+          </div>
+          <div class="card" style="display:flex;flex-direction:column;justify-content:center;gap:var(--space-6)">
+            <div>
+              <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-2)">Exemple d'usage</div>
+              <div style="font-family:var(--font-autorite);font-size:var(--text-3xl);color:var(--text-primary)">Le Ministre</div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-autorite);font-size:var(--text-2xl);color:var(--text-primary)">Le Cabinet du Ministre</div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-autorite);font-size:var(--text-xl);color:var(--text-primary)">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════ Echelle Typographique ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);color:var(--text-primary)">
+          Echelle Typographique
+        </h2>
+
+        <div class="card" style="overflow:hidden">
+          <table style="width:100%;border-collapse:collapse">
+            <thead>
+              <tr style="border-bottom:2px solid #E5E7EB">
+                <th style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);text-align:left;padding:var(--space-3) var(--space-4)">Token</th>
+                <th style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);text-align:left;padding:var(--space-3) var(--space-4)">Taille</th>
+                <th style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);text-align:left;padding:var(--space-3) var(--space-4)">Apercu</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">text-5xl</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-muted)">48px / 3rem</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-5xl);font-weight:700;line-height:1.2">Titre principal</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">text-4xl</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-muted)">36px / 2.25rem</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-4xl);font-weight:700;line-height:1.2">Section majeure</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">text-3xl</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-muted)">30px / 1.875rem</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-3xl);font-weight:700;line-height:1.2">Sous-section</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">text-2xl</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-muted)">24px / 1.5rem</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:600;line-height:1.3">Titre de carte</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">text-xl</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-muted)">20px / 1.25rem</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-xl);font-weight:600;line-height:1.4">Sous-titre</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">text-lg</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-muted)">18px / 1.125rem</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-complement);font-size:var(--text-lg);line-height:1.5">Corps de texte large</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">text-base</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-muted)">16px / 1rem</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-complement);font-size:var(--text-base);line-height:1.6">Corps de texte standard</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">text-sm</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-muted)">14px / 0.875rem</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-complement);font-size:var(--text-sm);line-height:1.5">Texte secondaire, labels</td>
+              </tr>
+              <tr>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">text-xs</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-muted)">12px / 0.75rem</td>
+                <td style="padding:var(--space-3) var(--space-4);font-family:var(--font-principale);font-size:var(--text-xs);line-height:1.5">Legendes, mentions</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ════ Regles d'Usage ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);color:var(--text-primary)">
+          Regles d'Usage
+        </h2>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6)">
+          <div class="card">
+            <div style="width:40px;height:40px;border-radius:var(--radius-lg);background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4)">
+              <i data-lucide="heading" style="width:20px;height:20px;color:var(--primary)"></i>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:var(--space-2)">Intitules Officiels</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6">
+              Cooper Hewitt Semi-bold pour tous les intitules officiels des ministeres et entites gouvernementales. Majuscules avec espacement de 0.06em.
+            </p>
+          </div>
+          <div class="card">
+            <div style="width:40px;height:40px;border-radius:var(--radius-lg);background:rgba(219,56,50,0.08);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4)">
+              <i data-lucide="minimize-2" style="width:20px;height:20px;color:var(--rdc-rouge)"></i>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:var(--space-2)">Taille Minimale</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6">
+              6pt minimum en impression, 12px minimum en digital. Aucun texte ne doit etre affiche en dessous de ces seuils pour garantir la lisibilite.
+            </p>
+          </div>
+          <div class="card">
+            <div style="width:40px;height:40px;border-radius:var(--radius-lg);background:rgba(101,179,46,0.08);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4)">
+              <i data-lucide="book-open" style="width:20px;height:20px;color:var(--rdc-vert)"></i>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:var(--space-2)">Contenu Editorial</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6">
+              EB Garamond pour tout le contenu editorial, les paragraphes de texte, la correspondance formelle et les documents officiels.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

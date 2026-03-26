@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Couleurs — Design System Marque État Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="layout-sidebar">
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" style="text-decoration:none;display:flex;align-items:center;gap:var(--space-3)">
+          <div class="ligne-etat" style="min-height:32px;width:4px;border-radius:2px"></div>
+          <div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-primary)">Design System</div>
+            <div style="font-family:var(--font-principale);font-weight:500;font-size:var(--text-xs);color:var(--text-muted)">RDC</div>
+          </div>
+        </a>
+      </div>
+
+      <nav>
+        <!-- Tokens -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Tokens</div>
+          <a href="couleurs.html" class="sidebar-link active"><i data-lucide="palette" style="width:16px;height:16px"></i> Couleurs</a>
+          <a href="typographie.html" class="sidebar-link"><i data-lucide="type" style="width:16px;height:16px"></i> Typographie</a>
+          <a href="espacements.html" class="sidebar-link"><i data-lucide="move" style="width:16px;height:16px"></i> Espacements</a>
+          <a href="ombres-elevations.html" class="sidebar-link"><i data-lucide="layers" style="width:16px;height:16px"></i> Ombres & Elevations</a>
+        </div>
+
+        <!-- Composants -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Composants</div>
+          <a href="../composants/boutons.html" class="sidebar-link"><i data-lucide="mouse-pointer-click" style="width:16px;height:16px"></i> Boutons</a>
+          <a href="../composants/formulaires.html" class="sidebar-link"><i data-lucide="text-cursor-input" style="width:16px;height:16px"></i> Formulaires</a>
+          <a href="../composants/cartes.html" class="sidebar-link"><i data-lucide="square" style="width:16px;height:16px"></i> Cartes</a>
+          <a href="../composants/navigation.html" class="sidebar-link"><i data-lucide="compass" style="width:16px;height:16px"></i> Navigation</a>
+          <a href="../composants/tableaux.html" class="sidebar-link"><i data-lucide="table" style="width:16px;height:16px"></i> Tableaux</a>
+          <a href="../composants/badges-alertes.html" class="sidebar-link"><i data-lucide="bell" style="width:16px;height:16px"></i> Badges & Alertes</a>
+          <a href="../composants/entete-officiel.html" class="sidebar-link"><i data-lucide="landmark" style="width:16px;height:16px"></i> En-tete Officiel</a>
+        </div>
+
+        <!-- Modeles -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Modeles</div>
+          <a href="../modeles/page-accueil.html" class="sidebar-link"><i data-lucide="home" style="width:16px;height:16px"></i> Page d'Accueil</a>
+          <a href="../modeles/page-interieure.html" class="sidebar-link"><i data-lucide="file-text" style="width:16px;height:16px"></i> Page Interieure</a>
+          <a href="../modeles/page-service.html" class="sidebar-link"><i data-lucide="briefcase" style="width:16px;height:16px"></i> Page Service</a>
+        </div>
+
+        <!-- Marque -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Marque</div>
+          <a href="../marque/logo.html" class="sidebar-link"><i data-lucide="shield" style="width:16px;height:16px"></i> Logo</a>
+          <a href="../marque/ligne-etat.html" class="sidebar-link"><i data-lucide="minus" style="width:16px;height:16px"></i> Ligne d'Etat</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <main class="main-content">
+      <!-- Page Hero -->
+      <div class="page-hero">
+        <h1 class="page-title">Palette de Couleurs</h1>
+        <p class="page-subtitle">Couleurs officielles de la Charte Graphique du Gouvernement de la RDC</p>
+      </div>
+
+      <!-- ════ Couleurs Principales (Tricolore) ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);color:var(--text-primary)">
+          Couleurs Principales (Tricolore)
+        </h2>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6)">
+          <!-- Bleu -->
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:200px;background:#0095C9;position:relative">
+              <button onclick="copyHex('#0095C9')" style="position:absolute;top:12px;right:12px;background:rgba(255,255,255,0.2);border:none;border-radius:var(--radius-md);padding:8px;cursor:pointer;color:white;backdrop-filter:blur(4px)" title="Copier">
+                <i data-lucide="copy" style="width:16px;height:16px"></i>
+              </button>
+            </div>
+            <div style="padding:var(--space-4)">
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:var(--space-2)">Bleu RDC</div>
+              <div style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span>HEX</span><strong>#0095C9</strong></div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span>RGB</span><span>R:0 V:149 B:201</span></div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span>CMYK</span><span>C:100 M:0 J:0 N:0</span></div>
+                <div style="display:flex;justify-content:space-between"><span>Pantone</span><span>801C</span></div>
+              </div>
+            </div>
+          </div>
+          <!-- Jaune -->
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:200px;background:#FFF24B;position:relative">
+              <button onclick="copyHex('#FFF24B')" style="position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.1);border:none;border-radius:var(--radius-md);padding:8px;cursor:pointer;color:#323230;backdrop-filter:blur(4px)" title="Copier">
+                <i data-lucide="copy" style="width:16px;height:16px"></i>
+              </button>
+            </div>
+            <div style="padding:var(--space-4)">
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:var(--space-2)">Jaune RDC</div>
+              <div style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span>HEX</span><strong>#FFF24B</strong></div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span>RGB</span><span>R:255 V:237 B:0</span></div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span>CMYK</span><span>C:0 M:0 J:100 N:0</span></div>
+                <div style="display:flex;justify-content:space-between"><span>Pantone</span><span>803C</span></div>
+              </div>
+            </div>
+          </div>
+          <!-- Rouge -->
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:200px;background:#DB3832;position:relative">
+              <button onclick="copyHex('#DB3832')" style="position:absolute;top:12px;right:12px;background:rgba(255,255,255,0.2);border:none;border-radius:var(--radius-md);padding:8px;cursor:pointer;color:white;backdrop-filter:blur(4px)" title="Copier">
+                <i data-lucide="copy" style="width:16px;height:16px"></i>
+              </button>
+            </div>
+            <div style="padding:var(--space-4)">
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:var(--space-2)">Rouge RDC</div>
+              <div style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span>HEX</span><strong>#DB3832</strong></div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span>RGB</span><span>R:227 V:6 B:19</span></div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span>CMYK</span><span>C:0 M:100 J:100 N:0</span></div>
+                <div style="display:flex;justify-content:space-between"><span>Pantone</span><span>485C</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════ Couleurs Complementaires — Tier 1 ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-2);color:var(--text-primary)">
+          Couleurs Complementaires — Tier 1
+        </h2>
+        <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);margin-bottom:var(--space-6)">Faune, Flore, Richesses du Congo</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4)">
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:100px;background:#323230"></div>
+            <div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center">
+              <div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Noir</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#323230</div></div>
+              <button onclick="copyHex('#323230')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button>
+            </div>
+          </div>
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:100px;background:#17418A"></div>
+            <div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center">
+              <div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Bleu Fonce</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#17418A</div></div>
+              <button onclick="copyHex('#17418A')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button>
+            </div>
+          </div>
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:100px;background:#0F89CB"></div>
+            <div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center">
+              <div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Bleu Ciel</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#0F89CB</div></div>
+              <button onclick="copyHex('#0F89CB')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button>
+            </div>
+          </div>
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:100px;background:#65B32E"></div>
+            <div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center">
+              <div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Vert</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#65B32E</div></div>
+              <button onclick="copyHex('#65B32E')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button>
+            </div>
+          </div>
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:100px;background:#D44816"></div>
+            <div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center">
+              <div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Orange</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#D44816</div></div>
+              <button onclick="copyHex('#D44816')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button>
+            </div>
+          </div>
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:100px;background:#ED7016"></div>
+            <div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center">
+              <div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Orange Vif</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#ED7016</div></div>
+              <button onclick="copyHex('#ED7016')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button>
+            </div>
+          </div>
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:100px;background:#405D64"></div>
+            <div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center">
+              <div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Sarcelle</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#405D64</div></div>
+              <button onclick="copyHex('#405D64')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button>
+            </div>
+          </div>
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:100px;background:#9C0055"></div>
+            <div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center">
+              <div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Pourpre</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#9C0055</div></div>
+              <button onclick="copyHex('#9C0055')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button>
+            </div>
+          </div>
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:100px;background:#9F6E26"></div>
+            <div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center">
+              <div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Or</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#9F6E26</div></div>
+              <button onclick="copyHex('#9F6E26')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════ Couleurs Complementaires — Tier 2 ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);color:var(--text-primary)">
+          Couleurs Complementaires — Tier 2
+        </h2>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4)">
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#6B5854"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Brun</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#6B5854</div></div><button onclick="copyHex('#6B5854')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#3E4D9C"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Indigo</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#3E4D9C</div></div><button onclick="copyHex('#3E4D9C')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#115780"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Petrole</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#115780</div></div><button onclick="copyHex('#115780')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#89A331"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Olive</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#89A331</div></div><button onclick="copyHex('#89A331')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#E58858"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Peche</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#E58858</div></div><button onclick="copyHex('#E58858')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#A14E17"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Cuivre</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#A14E17</div></div><button onclick="copyHex('#A14E17')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#193540"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Ardoise</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#193540</div></div><button onclick="copyHex('#193540')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#A14E17"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Magenta</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#A14E17</div></div><button onclick="copyHex('#A14E17')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#CBAC7E"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Beige</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#CBAC7E</div></div><button onclick="copyHex('#CBAC7E')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+        </div>
+      </section>
+
+      <!-- ════ Couleurs Complementaires — Tier 3 ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);color:var(--text-primary)">
+          Couleurs Complementaires — Tier 3
+        </h2>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4)">
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#AFB8BE"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Gris Clair</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#AFB8BE</div></div><button onclick="copyHex('#AFB8BE')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#6B5854"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Mauve</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#6B5854</div></div><button onclick="copyHex('#6B5854')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#1A806C"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Emeraude</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#1A806C</div></div><button onclick="copyHex('#1A806C')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#BD9A00"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Or Fonce</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#BD9A00</div></div><button onclick="copyHex('#BD9A00')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#F9E3D5"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Creme</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#F9E3D5</div></div><button onclick="copyHex('#F9E3D5')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#63230B"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Acajou</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#63230B</div></div><button onclick="copyHex('#63230B')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#899EAA"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Gris Bleu</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#899EAA</div></div><button onclick="copyHex('#899EAA')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#63230B"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Grenat</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#63230B</div></div><button onclick="copyHex('#63230B')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+          <div class="card" style="padding:0;overflow:hidden"><div style="height:100px;background:#80602C"></div><div style="padding:var(--space-3);display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Brun Fonce</div><div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#80602C</div></div><button onclick="copyHex('#80602C')" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px" title="Copier"><i data-lucide="copy" style="width:14px;height:14px"></i></button></div></div>
+        </div>
+      </section>
+
+      <!-- ════ Bleu Institutionnel ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);color:var(--text-primary)">
+          Bleu Institutionnel
+        </h2>
+        <div class="card" style="padding:0;overflow:hidden;max-width:400px">
+          <div style="height:160px;background:#174899;position:relative">
+            <button onclick="copyHex('#174899')" style="position:absolute;top:12px;right:12px;background:rgba(255,255,255,0.2);border:none;border-radius:var(--radius-md);padding:8px;cursor:pointer;color:white;backdrop-filter:blur(4px)" title="Copier">
+              <i data-lucide="copy" style="width:16px;height:16px"></i>
+            </button>
+          </div>
+          <div style="padding:var(--space-4)">
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:var(--space-1)">Bleu Institutionnel</div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);margin-bottom:var(--space-2)">Chemise bleue du Gouvernement</div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-muted)">#174899</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════ Couleurs Semantiques ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);color:var(--text-primary)">
+          Couleurs Semantiques
+        </h2>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4)">
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:100px;background:#65B32E"></div>
+            <div style="padding:var(--space-3)">
+              <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Success</div>
+              <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#65B32E</div>
+            </div>
+          </div>
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:100px;background:#ED7016"></div>
+            <div style="padding:var(--space-3)">
+              <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Warning</div>
+              <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#ED7016</div>
+            </div>
+          </div>
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:100px;background:#DB3832"></div>
+            <div style="padding:var(--space-3)">
+              <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Danger</div>
+              <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#DB3832</div>
+            </div>
+          </div>
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="height:100px;background:#0095C9"></div>
+            <div style="padding:var(--space-3)">
+              <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm)">Info</div>
+              <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">#0095C9</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    function copyHex(hex) {
+      navigator.clipboard.writeText(hex).then(function() {
+        var toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.innerHTML = '<i data-lucide="check" style="width:16px;height:16px;color:var(--color-success)"></i> <span>' + hex + ' copie !</span>';
+        toast.style.position = 'fixed';
+        toast.style.bottom = '24px';
+        toast.style.right = '24px';
+        toast.style.zIndex = '50';
+        document.body.appendChild(toast);
+        lucide.createIcons({nodes: [toast]});
+        setTimeout(function() { toast.remove(); }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

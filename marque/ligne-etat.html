@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ligne d'&Eacute;tat — Design System Marque &Eacute;tat Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="layout-sidebar">
+
+    <!-- ══════════ SIDEBAR ══════════ -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-officiel" style="gap:8px">
+          <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="30" stroke="#0095C9" stroke-width="2" fill="#EFF6FF"/>
+            <text x="32" y="37" text-anchor="middle" font-family="Cooper Hewitt, Inter, sans-serif" font-size="14" font-weight="700" fill="#17418A">RDC</text>
+          </svg>
+          <span class="ligne-etat ligne-etat--sm" style="min-height:32px"></span>
+          <div class="intitule-officiel" style="max-width:none">
+            <span class="sous-intitule" style="font-size:11px">Design System</span>
+            <span style="font-size:9px;display:block;color:var(--text-muted)">Marque &Eacute;tat Congolais</span>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Fondations</div>
+          <a href="../tokens/couleurs.html" class="sidebar-link"><i data-lucide="palette" style="width:16px;height:16px"></i> Couleurs</a>
+          <a href="../tokens/typographie.html" class="sidebar-link"><i data-lucide="type" style="width:16px;height:16px"></i> Typographie</a>
+          <a href="../tokens/espacement.html" class="sidebar-link"><i data-lucide="ruler" style="width:16px;height:16px"></i> Espacement</a>
+          <a href="../tokens/grilles.html" class="sidebar-link"><i data-lucide="layout-grid" style="width:16px;height:16px"></i> Grilles</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Identit&eacute; / Marque</div>
+          <a href="logo.html" class="sidebar-link"><i data-lucide="shield" style="width:16px;height:16px"></i> Logo & Identit&eacute;</a>
+          <a href="ligne-etat.html" class="sidebar-link active"><i data-lucide="minus" style="width:16px;height:16px"></i> Ligne d'&Eacute;tat</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Composants</div>
+          <a href="../composants/boutons.html" class="sidebar-link"><i data-lucide="mouse-pointer-click" style="width:16px;height:16px"></i> Boutons</a>
+          <a href="../composants/formulaires.html" class="sidebar-link"><i data-lucide="text-cursor-input" style="width:16px;height:16px"></i> Formulaires</a>
+          <a href="../composants/cartes.html" class="sidebar-link"><i data-lucide="square" style="width:16px;height:16px"></i> Cartes</a>
+          <a href="../composants/alertes.html" class="sidebar-link"><i data-lucide="alert-triangle" style="width:16px;height:16px"></i> Alertes</a>
+          <a href="../composants/tableaux.html" class="sidebar-link"><i data-lucide="table" style="width:16px;height:16px"></i> Tableaux</a>
+          <a href="../composants/navigation.html" class="sidebar-link"><i data-lucide="menu" style="width:16px;height:16px"></i> Navigation</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Mod&egrave;les</div>
+          <a href="../modeles/page-accueil.html" class="sidebar-link"><i data-lucide="home" style="width:16px;height:16px"></i> Page d'accueil</a>
+          <a href="../modeles/page-interieure.html" class="sidebar-link"><i data-lucide="file-text" style="width:16px;height:16px"></i> Page int&eacute;rieure</a>
+          <a href="../modeles/page-service.html" class="sidebar-link"><i data-lucide="briefcase" style="width:16px;height:16px"></i> Page service</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- ══════════ MAIN CONTENT ══════════ -->
+    <main class="main-content">
+
+      <!-- Page hero -->
+      <div class="page-hero">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="badge badge-info">Identit&eacute;</span>
+        </div>
+        <h1 class="page-title">Ligne d'&Eacute;tat</h1>
+        <p class="page-subtitle">La barre tricolore qui symbolise l'unit&eacute; nationale et l'autorit&eacute; de l'&Eacute;tat congolais.</p>
+      </div>
+
+      <!-- ─── 1. D&eacute;finition ─── -->
+      <section class="section" style="border-top:none">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-4)">D&eacute;finition</h2>
+        <div style="display:flex;gap:var(--space-8);align-items:flex-start;max-width:800px">
+          <span class="ligne-etat ligne-etat--xl" style="min-height:120px;border-radius:2px"></span>
+          <div>
+            <p style="font-family:var(--font-complement);font-size:var(--text-lg);color:var(--text-primary);margin-bottom:var(--space-4);line-height:1.7">
+              La <strong>Ligne d'&Eacute;tat</strong> est la barre tricolore verticale reprenant les couleurs du drapeau de la R&eacute;publique D&eacute;mocratique du Congo. Elle symbolise la rigueur, la d&eacute;termination et l'unit&eacute; nationale.
+            </p>
+            <p style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary);line-height:1.7">
+              Pr&eacute;sente dans le logo officiel comme s&eacute;parateur entre le Bloc-armoirie et l'Intitul&eacute;, elle s'utilise &eacute;galement de mani&egrave;re autonome comme &eacute;l&eacute;ment d&eacute;coratif et identitaire sur tous les supports de communication gouvernementaux.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 2. Composition des couleurs ─── -->
+      <section class="section">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-6)">Composition des couleurs</h2>
+
+        <div class="card" style="padding:var(--space-8);max-width:700px">
+          <div style="display:flex;gap:var(--space-8);align-items:stretch">
+            <!-- Tall ligne demo -->
+            <span class="ligne-etat ligne-etat--xl" style="min-height:200px;border-radius:3px"></span>
+
+            <!-- Color breakdown -->
+            <div style="flex:1;display:flex;flex-direction:column;gap:0">
+              <div style="flex:1;display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4);background:rgba(0,149,201,0.06);border-radius:var(--radius-md) var(--radius-md) 0 0">
+                <div style="width:40px;height:40px;background:var(--rdc-bleu);border-radius:var(--radius-md)"></div>
+                <div>
+                  <span style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);display:block">Bleu</span>
+                  <span style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-muted)">#0095C9 &middot; 33.33%</span>
+                </div>
+                <span class="badge badge-info" style="margin-left:auto">Haut</span>
+              </div>
+              <div style="flex:1;display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4);background:rgba(255,242,75,0.08)">
+                <div style="width:40px;height:40px;background:var(--rdc-jaune);border-radius:var(--radius-md);border:1px solid rgba(0,0,0,0.06)"></div>
+                <div>
+                  <span style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);display:block">Jaune</span>
+                  <span style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-muted)">#FFF24B &middot; 33.33%</span>
+                </div>
+                <span class="badge badge-warning" style="margin-left:auto">Milieu</span>
+              </div>
+              <div style="flex:1;display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4);background:rgba(219,56,50,0.04);border-radius:0 0 var(--radius-md) var(--radius-md)">
+                <div style="width:40px;height:40px;background:var(--rdc-rouge);border-radius:var(--radius-md)"></div>
+                <div>
+                  <span style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);display:block">Rouge</span>
+                  <span style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-muted)">#DB3832 &middot; 33.33%</span>
+                </div>
+                <span class="badge badge-danger" style="margin-left:auto">Bas</span>
+              </div>
+            </div>
+          </div>
+          <div class="alert alert-info" style="margin-top:var(--space-6)">
+            <i data-lucide="info" style="width:18px;height:18px;flex-shrink:0;margin-top:2px"></i>
+            <span>Les trois couleurs occupent <strong>exactement un tiers</strong> chacune (33.33%). Aucune couleur ne doit &ecirc;tre plus grande qu'une autre. L'ordre de lecture est toujours du haut vers le bas : Bleu, Jaune, Rouge.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 3. Orientations ─── -->
+      <section class="section">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-6)">Orientations</h2>
+
+        <div class="grid grid-2" style="max-width:700px">
+          <!-- Verticale -->
+          <div class="card card-hover" style="text-align:center">
+            <div class="badge badge-success" style="margin-bottom:var(--space-4)">Standard</div>
+            <div style="display:flex;justify-content:center;margin-bottom:var(--space-6)">
+              <span class="ligne-etat ligne-etat--xl" style="min-height:180px;border-radius:3px"></span>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base)">Verticale</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);margin-top:var(--space-2)">Orientation par d&eacute;faut. Utilis&eacute;e dans le logo, les sidebars et comme s&eacute;parateur vertical.</p>
+            <code style="display:inline-block;margin-top:var(--space-3);font-size:12px;background:#F3F4F6;padding:4px 12px;border-radius:var(--radius-md)">.ligne-etat</code>
+          </div>
+
+          <!-- Horizontale -->
+          <div class="card card-hover" style="text-align:center">
+            <div class="badge badge-info" style="margin-bottom:var(--space-4)">Variante</div>
+            <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;height:180px;margin-bottom:var(--space-6)">
+              <span class="ligne-etat-h ligne-etat-h--xl" style="width:100%;border-radius:3px"></span>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base)">Horizontale</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);margin-top:var(--space-2)">Pour les bordures de header/footer et les s&eacute;parateurs horizontaux de sections.</p>
+            <code style="display:inline-block;margin-top:var(--space-3);font-size:12px;background:#F3F4F6;padding:4px 12px;border-radius:var(--radius-md)">.ligne-etat-h</code>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 4. Tailles disponibles ─── -->
+      <section class="section">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-6)">Tailles disponibles</h2>
+
+        <div class="grid grid-4" style="max-width:800px">
+          <!-- sm -->
+          <div class="card card-hover" style="text-align:center">
+            <div style="display:flex;justify-content:center;margin-bottom:var(--space-4)">
+              <span class="ligne-etat ligne-etat--sm" style="min-height:80px"></span>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">sm</div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-muted)">2px</div>
+            <code style="display:block;margin-top:var(--space-2);font-size:11px;background:#F3F4F6;padding:3px 8px;border-radius:var(--radius-sm)">.ligne-etat--sm</code>
+          </div>
+          <!-- md -->
+          <div class="card card-hover" style="text-align:center">
+            <div style="display:flex;justify-content:center;margin-bottom:var(--space-4)">
+              <span class="ligne-etat ligne-etat--md" style="min-height:80px"></span>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">md</div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-muted)">4px (d&eacute;faut)</div>
+            <code style="display:block;margin-top:var(--space-2);font-size:11px;background:#F3F4F6;padding:3px 8px;border-radius:var(--radius-sm)">.ligne-etat--md</code>
+          </div>
+          <!-- lg -->
+          <div class="card card-hover" style="text-align:center">
+            <div style="display:flex;justify-content:center;margin-bottom:var(--space-4)">
+              <span class="ligne-etat ligne-etat--lg" style="min-height:80px"></span>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">lg</div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-muted)">8px</div>
+            <code style="display:block;margin-top:var(--space-2);font-size:11px;background:#F3F4F6;padding:3px 8px;border-radius:var(--radius-sm)">.ligne-etat--lg</code>
+          </div>
+          <!-- xl -->
+          <div class="card card-hover" style="text-align:center">
+            <div style="display:flex;justify-content:center;margin-bottom:var(--space-4)">
+              <span class="ligne-etat ligne-etat--xl" style="min-height:80px"></span>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">xl</div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-muted)">12px</div>
+            <code style="display:block;margin-top:var(--space-2);font-size:11px;background:#F3F4F6;padding:3px 8px;border-radius:var(--radius-sm)">.ligne-etat--xl</code>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 5. Usages ─── -->
+      <section class="section">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-6)">Usages</h2>
+
+        <div class="grid grid-2" style="max-width:800px">
+          <div class="card" style="display:flex;gap:var(--space-4);align-items:flex-start">
+            <div style="width:36px;height:36px;background:var(--primary-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <i data-lucide="shield" style="width:18px;height:18px;color:var(--primary)"></i>
+            </div>
+            <div>
+              <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">Dans le logo officiel</h3>
+              <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary)">S&eacute;paration entre le Bloc-armoirie et l'Intitul&eacute; officiel.</p>
+            </div>
+          </div>
+          <div class="card" style="display:flex;gap:var(--space-4);align-items:flex-start">
+            <div style="width:36px;height:36px;background:var(--primary-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <i data-lucide="panel-top" style="width:18px;height:18px;color:var(--primary)"></i>
+            </div>
+            <div>
+              <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">Bordure inf&eacute;rieure du header</h3>
+              <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary)">Version horizontale en bas de l'en-t&ecirc;te officiel.</p>
+            </div>
+          </div>
+          <div class="card" style="display:flex;gap:var(--space-4);align-items:flex-start">
+            <div style="width:36px;height:36px;background:var(--primary-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <i data-lucide="separator-horizontal" style="width:18px;height:18px;color:var(--primary)"></i>
+            </div>
+            <div>
+              <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">S&eacute;parateur de sections</h3>
+              <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary)">Version horizontale pour diviser les grandes sections de contenu.</p>
+            </div>
+          </div>
+          <div class="card" style="display:flex;gap:var(--space-4);align-items:flex-start">
+            <div style="width:36px;height:36px;background:var(--primary-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <i data-lucide="panel-left" style="width:18px;height:18px;color:var(--primary)"></i>
+            </div>
+            <div>
+              <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">&Eacute;l&eacute;ment d&eacute;coratif vertical</h3>
+              <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary)">Dans les sidebars et panneaux lat&eacute;raux comme accent visuel.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 6. Code CSS ─── -->
+      <section class="section">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-6)">Code CSS</h2>
+
+        <div class="card" style="padding:0;overflow:hidden;max-width:700px">
+          <div style="background:#1E293B;padding:var(--space-4) var(--space-6);display:flex;align-items:center;justify-content:space-between">
+            <span style="font-family:var(--font-principale);font-size:var(--text-xs);font-weight:600;color:rgba(255,255,255,0.7)">marque.css</span>
+            <span class="badge" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7)">CSS</span>
+          </div>
+          <pre style="background:#0F172A;padding:var(--space-6);margin:0;overflow-x:auto;font-size:13px;line-height:1.7;color:#E2E8F0;font-family:'Fira Code',Consolas,monospace"><code><span style="color:#7DD3FC">/* Ligne d'&Eacute;tat verticale */</span>
+<span style="color:#F472B6">.ligne-etat</span> {
+  <span style="color:#94A3B8">display:</span> <span style="color:#FDE68A">block</span>;
+  <span style="color:#94A3B8">width:</span> <span style="color:#FDE68A">4px</span>;
+  <span style="color:#94A3B8">min-height:</span> <span style="color:#FDE68A">53px</span>;
+  <span style="color:#94A3B8">background:</span> <span style="color:#FDE68A">linear-gradient</span>(
+    <span style="color:#A5B4FC">180deg</span>,
+    <span style="color:#7DD3FC">#0095C9</span>  0%,
+    <span style="color:#7DD3FC">#0095C9</span>  33.33%,
+    <span style="color:#FDE68A">#FFF24B</span> 33.33%,
+    <span style="color:#FDE68A">#FFF24B</span> 66.66%,
+    <span style="color:#FCA5A5">#DB3832</span> 66.66%,
+    <span style="color:#FCA5A5">#DB3832</span> 100%
+  );
+}
+
+<span style="color:#7DD3FC">/* Ligne d'&Eacute;tat horizontale */</span>
+<span style="color:#F472B6">.ligne-etat-h</span> {
+  <span style="color:#94A3B8">display:</span> <span style="color:#FDE68A">block</span>;
+  <span style="color:#94A3B8">height:</span> <span style="color:#FDE68A">4px</span>;
+  <span style="color:#94A3B8">width:</span> <span style="color:#FDE68A">100%</span>;
+  <span style="color:#94A3B8">background:</span> <span style="color:#FDE68A">linear-gradient</span>(
+    <span style="color:#A5B4FC">90deg</span>,
+    <span style="color:#7DD3FC">#0095C9</span>  0%,
+    <span style="color:#7DD3FC">#0095C9</span>  33.33%,
+    <span style="color:#FDE68A">#FFF24B</span> 33.33%,
+    <span style="color:#FDE68A">#FFF24B</span> 66.66%,
+    <span style="color:#FCA5A5">#DB3832</span> 66.66%,
+    <span style="color:#FCA5A5">#DB3832</span> 100%
+  );
+}</code></pre>
+        </div>
+      </section>
+
+      <!-- ─── 7. D&eacute;mo interactive ─── -->
+      <section class="section">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-6)">D&eacute;mo interactive</h2>
+        <p style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary);margin-bottom:var(--space-8)">Exemples d'utilisation de la Ligne d'&Eacute;tat dans diff&eacute;rents contextes.</p>
+
+        <div style="display:flex;flex-direction:column;gap:var(--space-8)">
+
+          <!-- Demo 1: Header border -->
+          <div>
+            <h3 style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);margin-bottom:var(--space-3);color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em">Bordure de header</h3>
+            <div class="card" style="padding:0;overflow:hidden">
+              <div style="background:white;padding:var(--space-4) var(--space-6);display:flex;align-items:center;justify-content:space-between">
+                <div style="display:flex;align-items:center;gap:var(--space-3)">
+                  <svg width="28" height="28" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#17418A" stroke-width="2" fill="#EFF6FF"/><text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#17418A">RDC</text></svg>
+                  <span class="ligne-etat ligne-etat--sm" style="min-height:28px"></span>
+                  <span style="font-family:var(--font-principale);font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--text-primary)">R&eacute;publique D&eacute;mocratique du Congo</span>
+                </div>
+                <div style="display:flex;gap:var(--space-6)">
+                  <span style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">Accueil</span>
+                  <span style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">Services</span>
+                  <span style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">Contact</span>
+                </div>
+              </div>
+              <span class="ligne-etat-h ligne-etat-h--md"></span>
+            </div>
+          </div>
+
+          <!-- Demo 2: Sidebar decoration -->
+          <div>
+            <h3 style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);margin-bottom:var(--space-3);color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em">D&eacute;coration de sidebar</h3>
+            <div class="card" style="padding:0;overflow:hidden;max-width:300px">
+              <div style="display:flex">
+                <span class="ligne-etat ligne-etat--lg" style="min-height:auto"></span>
+                <div style="padding:var(--space-5)">
+                  <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);margin-bottom:var(--space-3)">Navigation</div>
+                  <div style="display:flex;flex-direction:column;gap:var(--space-2)">
+                    <span style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--primary);font-weight:600">Tableau de bord</span>
+                    <span style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">Services</span>
+                    <span style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">Documents</span>
+                    <span style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">Param&egrave;tres</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo 3: Section divider -->
+          <div>
+            <h3 style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);margin-bottom:var(--space-3);color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em">S&eacute;parateur de sections</h3>
+            <div class="card" style="max-width:600px">
+              <p style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary);margin-bottom:var(--space-4)">
+                Le Gouvernement de la R&eacute;publique D&eacute;mocratique du Congo s'engage &agrave; moderniser ses services publics.
+              </p>
+              <span class="ligne-etat-h ligne-etat-h--md" style="margin:var(--space-4) 0;border-radius:2px"></span>
+              <p style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary);margin-top:var(--space-4)">
+                La transformation num&eacute;rique est au c&oelig;ur de cette vision, avec des portails d&eacute;di&eacute;s &agrave; chaque minist&egrave;re.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

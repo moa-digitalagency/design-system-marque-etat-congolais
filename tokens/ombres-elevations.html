@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ombres & Elevations — Design System Marque État Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="layout-sidebar">
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" style="text-decoration:none;display:flex;align-items:center;gap:var(--space-3)">
+          <div class="ligne-etat" style="min-height:32px;width:4px;border-radius:2px"></div>
+          <div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-primary)">Design System</div>
+            <div style="font-family:var(--font-principale);font-weight:500;font-size:var(--text-xs);color:var(--text-muted)">RDC</div>
+          </div>
+        </a>
+      </div>
+      <nav>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Tokens</div>
+          <a href="couleurs.html" class="sidebar-link"><i data-lucide="palette" style="width:16px;height:16px"></i> Couleurs</a>
+          <a href="typographie.html" class="sidebar-link"><i data-lucide="type" style="width:16px;height:16px"></i> Typographie</a>
+          <a href="espacements.html" class="sidebar-link"><i data-lucide="move" style="width:16px;height:16px"></i> Espacements</a>
+          <a href="ombres-elevations.html" class="sidebar-link active"><i data-lucide="layers" style="width:16px;height:16px"></i> Ombres & Elevations</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Composants</div>
+          <a href="../composants/boutons.html" class="sidebar-link"><i data-lucide="mouse-pointer-click" style="width:16px;height:16px"></i> Boutons</a>
+          <a href="../composants/formulaires.html" class="sidebar-link"><i data-lucide="text-cursor-input" style="width:16px;height:16px"></i> Formulaires</a>
+          <a href="../composants/cartes.html" class="sidebar-link"><i data-lucide="square" style="width:16px;height:16px"></i> Cartes</a>
+          <a href="../composants/navigation.html" class="sidebar-link"><i data-lucide="compass" style="width:16px;height:16px"></i> Navigation</a>
+          <a href="../composants/tableaux.html" class="sidebar-link"><i data-lucide="table" style="width:16px;height:16px"></i> Tableaux</a>
+          <a href="../composants/badges-alertes.html" class="sidebar-link"><i data-lucide="bell" style="width:16px;height:16px"></i> Badges & Alertes</a>
+          <a href="../composants/entete-officiel.html" class="sidebar-link"><i data-lucide="landmark" style="width:16px;height:16px"></i> En-tete Officiel</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Modeles</div>
+          <a href="../modeles/page-accueil.html" class="sidebar-link"><i data-lucide="home" style="width:16px;height:16px"></i> Page d'Accueil</a>
+          <a href="../modeles/page-interieure.html" class="sidebar-link"><i data-lucide="file-text" style="width:16px;height:16px"></i> Page Interieure</a>
+          <a href="../modeles/page-service.html" class="sidebar-link"><i data-lucide="briefcase" style="width:16px;height:16px"></i> Page Service</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Marque</div>
+          <a href="../marque/logo.html" class="sidebar-link"><i data-lucide="shield" style="width:16px;height:16px"></i> Logo</a>
+          <a href="../marque/ligne-etat.html" class="sidebar-link"><i data-lucide="minus" style="width:16px;height:16px"></i> Ligne d'Etat</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <main class="main-content">
+      <div class="page-hero">
+        <h1 class="page-title">Ombres & Elevations</h1>
+        <p class="page-subtitle">Systeme d'ombres et niveaux d'elevation pour creer de la profondeur et de la hierarchie visuelle</p>
+      </div>
+
+      <!-- ════ Systeme d'Ombres ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);color:var(--text-primary)">
+          Systeme d'Ombres
+        </h2>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:var(--space-6)">
+          <!-- None -->
+          <div style="text-align:center">
+            <div style="background:white;border:1px solid var(--border-soft);border-radius:var(--radius-xl);padding:var(--space-8) var(--space-4);margin-bottom:var(--space-4);box-shadow:var(--shadow-none)">
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);color:var(--text-primary)">None</div>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);color:var(--rdc-bleu-inst);margin-bottom:var(--space-1)">shadow-none</div>
+            <code style="font-size:10px;color:var(--text-muted);font-family:monospace;word-break:break-all">none</code>
+          </div>
+          <!-- Soft -->
+          <div style="text-align:center">
+            <div style="background:white;border-radius:var(--radius-xl);padding:var(--space-8) var(--space-4);margin-bottom:var(--space-4);box-shadow:var(--shadow-soft)">
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);color:var(--text-primary)">Soft</div>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);color:var(--rdc-bleu-inst);margin-bottom:var(--space-1)">shadow-soft</div>
+            <code style="font-size:10px;color:var(--text-muted);font-family:monospace;word-break:break-all">0 1px 3px rgba(0,0,0,0.08)</code>
+          </div>
+          <!-- Md -->
+          <div style="text-align:center">
+            <div style="background:white;border-radius:var(--radius-xl);padding:var(--space-8) var(--space-4);margin-bottom:var(--space-4);box-shadow:var(--shadow-md)">
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);color:var(--text-primary)">Medium</div>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);color:var(--rdc-bleu-inst);margin-bottom:var(--space-1)">shadow-md</div>
+            <code style="font-size:10px;color:var(--text-muted);font-family:monospace;word-break:break-all">0 4px 12px rgba(0,0,0,0.08)</code>
+          </div>
+          <!-- Lg -->
+          <div style="text-align:center">
+            <div style="background:white;border-radius:var(--radius-xl);padding:var(--space-8) var(--space-4);margin-bottom:var(--space-4);box-shadow:var(--shadow-lg)">
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);color:var(--text-primary)">Large</div>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);color:var(--rdc-bleu-inst);margin-bottom:var(--space-1)">shadow-lg</div>
+            <code style="font-size:10px;color:var(--text-muted);font-family:monospace;word-break:break-all">0 8px 24px rgba(0,0,0,0.12)</code>
+          </div>
+          <!-- Xl -->
+          <div style="text-align:center">
+            <div style="background:white;border-radius:var(--radius-xl);padding:var(--space-8) var(--space-4);margin-bottom:var(--space-4);box-shadow:var(--shadow-xl)">
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);color:var(--text-primary)">Extra Large</div>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);color:var(--rdc-bleu-inst);margin-bottom:var(--space-1)">shadow-xl</div>
+            <code style="font-size:10px;color:var(--text-muted);font-family:monospace;word-break:break-all">0 16px 48px rgba(0,0,0,0.16)</code>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════ Niveaux d'Elevation ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);color:var(--text-primary)">
+          Niveaux d'Elevation
+        </h2>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:var(--space-6)">
+          <!-- Elevation 0 -->
+          <div style="background:white;border:1px solid var(--border-soft);border-radius:var(--radius-xl);padding:var(--space-5);box-shadow:var(--elevation-0)">
+            <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3)">
+              <div style="width:32px;height:32px;border-radius:var(--radius-md);background:#F3F4F6;display:flex;align-items:center;justify-content:center">
+                <span style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-muted)">0</span>
+              </div>
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">Elevation 0</div>
+            </div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-secondary);line-height:1.5">
+              Elements plats, fonds de page, surfaces de base sans profondeur.
+            </div>
+          </div>
+          <!-- Elevation 1 -->
+          <div style="background:white;border-radius:var(--radius-xl);padding:var(--space-5);box-shadow:var(--elevation-1)">
+            <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3)">
+              <div style="width:32px;height:32px;border-radius:var(--radius-md);background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+                <span style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--primary)">1</span>
+              </div>
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">Elevation 1</div>
+            </div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-secondary);line-height:1.5">
+              Cartes, conteneurs, panneaux lateraux, surfaces interactives.
+            </div>
+          </div>
+          <!-- Elevation 2 -->
+          <div style="background:white;border-radius:var(--radius-xl);padding:var(--space-5);box-shadow:var(--elevation-2)">
+            <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3)">
+              <div style="width:32px;height:32px;border-radius:var(--radius-md);background:rgba(255,242,75,0.2);display:flex;align-items:center;justify-content:center">
+                <span style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:#9F6E26">2</span>
+              </div>
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">Elevation 2</div>
+            </div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-secondary);line-height:1.5">
+              Menus deroulants, dropdowns, popovers et suggestions.
+            </div>
+          </div>
+          <!-- Elevation 3 -->
+          <div style="background:white;border-radius:var(--radius-xl);padding:var(--space-5);box-shadow:var(--elevation-3)">
+            <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3)">
+              <div style="width:32px;height:32px;border-radius:var(--radius-md);background:rgba(219,56,50,0.08);display:flex;align-items:center;justify-content:center">
+                <span style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--rdc-rouge)">3</span>
+              </div>
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">Elevation 3</div>
+            </div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-secondary);line-height:1.5">
+              Modals, dialogues, notifications toast, panneaux d'action.
+            </div>
+          </div>
+          <!-- Elevation 4 -->
+          <div style="background:white;border-radius:var(--radius-xl);padding:var(--space-5);box-shadow:var(--elevation-4)">
+            <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3)">
+              <div style="width:32px;height:32px;border-radius:var(--radius-md);background:rgba(23,72,153,0.1);display:flex;align-items:center;justify-content:center">
+                <span style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--rdc-bleu-inst)">4</span>
+              </div>
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm)">Elevation 4</div>
+            </div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-secondary);line-height:1.5">
+              Elements flottants, tooltips persistants, overlays prioritaires.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════ Glassmorphisme ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);color:var(--text-primary)">
+          Glassmorphisme
+        </h2>
+        <div style="border-radius:var(--radius-xl);overflow:hidden;position:relative;padding:var(--space-12) var(--space-8);background:linear-gradient(135deg,var(--rdc-bleu) 0%,var(--rdc-bleu-inst) 40%,var(--rdc-pourpre) 100%)">
+          <!-- Decorative shapes -->
+          <div style="position:absolute;top:-40px;right:-20px;width:200px;height:200px;border-radius:50%;background:var(--rdc-jaune);opacity:0.2"></div>
+          <div style="position:absolute;bottom:-60px;left:30%;width:250px;height:250px;border-radius:50%;background:var(--rdc-rouge);opacity:0.15"></div>
+          <div style="position:absolute;top:40%;left:-30px;width:150px;height:150px;border-radius:50%;background:var(--rdc-bleu-ciel);opacity:0.2"></div>
+
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-6);position:relative;z-index:1">
+            <div class="glass-card">
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);color:var(--text-primary);margin-bottom:var(--space-2)">Glass Card</div>
+              <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6;margin-bottom:var(--space-4)">
+                Effet de transparence et de flou d'arriere-plan pour creer des surfaces semi-transparentes elegantes.
+              </p>
+              <code style="font-size:var(--text-xs);color:var(--text-muted);font-family:monospace;display:block;background:rgba(0,0,0,0.04);padding:var(--space-3);border-radius:var(--radius-md);line-height:1.6">
+                background: rgba(255,255,255,0.70);<br>
+                backdrop-filter: blur(12px);<br>
+                border: 1px solid rgba(255,255,255,0.40);<br>
+                box-shadow: var(--shadow-glass);
+              </code>
+            </div>
+            <div class="glass-card">
+              <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4)">
+                <div style="width:48px;height:48px;border-radius:var(--radius-lg);background:rgba(0,149,201,0.15);display:flex;align-items:center;justify-content:center">
+                  <i data-lucide="sparkles" style="width:24px;height:24px;color:var(--rdc-bleu)"></i>
+                </div>
+                <div>
+                  <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base)">Exemple d'usage</div>
+                  <div style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-secondary)">Hero sections, overlays, cartes sur image</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:var(--space-2)">
+                <span class="badge badge-info">Moderne</span>
+                <span class="badge badge-success">Accessible</span>
+                <span class="badge badge-neutral">CSS natif</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════ Rayons de Bordure ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);color:var(--text-primary)">
+          Rayons de Bordure
+        </h2>
+        <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:var(--space-6)">
+          <!-- radius-sm -->
+          <div style="text-align:center">
+            <div style="width:80px;height:80px;background:white;border:2px solid var(--rdc-bleu);border-radius:var(--radius-sm);margin:0 auto var(--space-3);display:flex;align-items:center;justify-content:center">
+              <span style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-xs);color:var(--rdc-bleu)">4px</span>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);color:var(--rdc-bleu-inst)">radius-sm</div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">4px</div>
+          </div>
+          <!-- radius-md -->
+          <div style="text-align:center">
+            <div style="width:80px;height:80px;background:white;border:2px solid var(--rdc-bleu);border-radius:var(--radius-md);margin:0 auto var(--space-3);display:flex;align-items:center;justify-content:center">
+              <span style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-xs);color:var(--rdc-bleu)">8px</span>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);color:var(--rdc-bleu-inst)">radius-md</div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">8px</div>
+          </div>
+          <!-- radius-lg -->
+          <div style="text-align:center">
+            <div style="width:80px;height:80px;background:white;border:2px solid var(--rdc-jaune);border-radius:var(--radius-lg);margin:0 auto var(--space-3);display:flex;align-items:center;justify-content:center">
+              <span style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-xs);color:#9F6E26">12px</span>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);color:var(--rdc-bleu-inst)">radius-lg</div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">12px</div>
+          </div>
+          <!-- radius-xl -->
+          <div style="text-align:center">
+            <div style="width:80px;height:80px;background:white;border:2px solid var(--rdc-jaune);border-radius:var(--radius-xl);margin:0 auto var(--space-3);display:flex;align-items:center;justify-content:center">
+              <span style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-xs);color:#9F6E26">16px</span>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);color:var(--rdc-bleu-inst)">radius-xl</div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">16px</div>
+          </div>
+          <!-- radius-2xl -->
+          <div style="text-align:center">
+            <div style="width:80px;height:80px;background:white;border:2px solid var(--rdc-rouge);border-radius:var(--radius-2xl);margin:0 auto var(--space-3);display:flex;align-items:center;justify-content:center">
+              <span style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-xs);color:var(--rdc-rouge)">24px</span>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);color:var(--rdc-bleu-inst)">radius-2xl</div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">24px</div>
+          </div>
+          <!-- radius-full -->
+          <div style="text-align:center">
+            <div style="width:80px;height:80px;background:white;border:2px solid var(--rdc-rouge);border-radius:var(--radius-full);margin:0 auto var(--space-3);display:flex;align-items:center;justify-content:center">
+              <span style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-xs);color:var(--rdc-rouge)">Full</span>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);color:var(--rdc-bleu-inst)">radius-full</div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">9999px</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

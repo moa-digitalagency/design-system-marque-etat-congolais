@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demande de Passeport — Modèle Page Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body style="background:var(--bg-app);">
+
+  <!-- Header officiel -->
+  <header style="background:white;box-shadow:var(--shadow-soft);">
+    <div class="entete-officiel" style="max-width:1280px;">
+      <div class="logo-officiel" style="align-items:center;flex:1;">
+        <div class="bloc-armoirie">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));display:flex;align-items:center;justify-content:center;">
+            <span style="color:white;font-family:var(--font-principale);font-weight:700;font-size:11px;">RDC</span>
+          </div>
+        </div>
+        <div class="ligne-etat" style="min-height:44px;"></div>
+        <div class="intitule-officiel">
+          <span class="sous-intitule">République Démocratique du Congo</span>
+          Ministère de l'Intérieur et Sécurité
+        </div>
+      </div>
+      <nav style="display:flex;gap:var(--space-5);font-family:var(--font-principale);font-size:var(--text-sm);align-items:center;">
+        <a href="#" style="color:var(--text-secondary);text-decoration:none;">Accueil</a>
+        <a href="#" style="color:var(--primary);font-weight:600;text-decoration:none;">Services</a>
+        <a href="#" style="color:var(--text-secondary);text-decoration:none;">Actualités</a>
+        <a href="#" style="color:var(--text-secondary);text-decoration:none;">Contact</a>
+        <button class="btn btn-primary btn-sm" style="margin-left:var(--space-2);"><i data-lucide="log-in" style="width:14px;height:14px;"></i> Connexion</button>
+      </nav>
+    </div>
+    <div class="ligne-etat-h--lg"></div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div style="max-width:1280px;margin:0 auto;padding:var(--space-4) var(--space-8);">
+    <ul class="breadcrumb">
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#">Services</a></li>
+      <li class="current">Demande de Passeport</li>
+    </ul>
+  </div>
+
+  <!-- Service Hero -->
+  <div style="max-width:1280px;margin:0 auto;padding:0 var(--space-8) var(--space-8);">
+    <div class="card" style="padding:var(--space-10);display:flex;gap:var(--space-8);align-items:center;">
+      <div style="width:80px;height:80px;border-radius:var(--radius-xl);background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <i data-lucide="book-open" style="width:36px;height:36px;color:white;"></i>
+      </div>
+      <div style="flex:1;">
+        <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
+          <h1 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);color:var(--text-primary);">Demande de Passeport Biométrique</h1>
+          <span class="badge badge-success">Service en ligne</span>
+        </div>
+        <p style="font-family:var(--font-complement);color:var(--text-secondary);font-size:var(--text-base);line-height:1.6;max-width:640px;">
+          Effectuez votre demande de passeport biométrique en ligne. Le traitement prend entre 10 et 15 jours ouvrables après validation de votre dossier complet.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stepper -->
+  <div style="max-width:1280px;margin:0 auto;padding:0 var(--space-8) var(--space-8);">
+    <div class="card" style="padding:var(--space-8);">
+      <div class="stepper" style="max-width:700px;margin:0 auto;">
+        <div class="stepper-step active">
+          <div class="stepper-dot">1</div>
+          <div class="stepper-label">Informations<br>personnelles</div>
+        </div>
+        <div class="stepper-step">
+          <div class="stepper-dot">2</div>
+          <div class="stepper-label">Documents<br>requis</div>
+        </div>
+        <div class="stepper-step">
+          <div class="stepper-dot">3</div>
+          <div class="stepper-label">Paiement</div>
+        </div>
+        <div class="stepper-step">
+          <div class="stepper-dot">4</div>
+          <div class="stepper-label">Confirmation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <div style="max-width:1280px;margin:0 auto;padding:0 var(--space-8) var(--space-8);">
+    <div class="card" style="padding:var(--space-8);">
+      <h2 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-xl);margin-bottom:var(--space-2);">Étape 1 : Informations personnelles</h2>
+      <p style="font-family:var(--font-complement);color:var(--text-secondary);font-size:var(--text-sm);margin-bottom:var(--space-8);">Remplissez les champs ci-dessous avec vos informations telles qu'elles apparaissent sur votre carte d'identité.</p>
+
+      <div class="alert alert-info" style="margin-bottom:var(--space-8);">
+        <i data-lucide="info" style="width:18px;height:18px;flex-shrink:0;margin-top:2px;"></i>
+        <span>Les champs marqués d'un astérisque (<strong>*</strong>) sont obligatoires.</span>
+      </div>
+
+      <form>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);margin-bottom:var(--space-6);">
+          <div>
+            <label class="form-label">Nom de famille *</label>
+            <input type="text" class="input" placeholder="Ex: KABILA">
+          </div>
+          <div>
+            <label class="form-label">Prénom *</label>
+            <input type="text" class="input" placeholder="Ex: Joseph">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);margin-bottom:var(--space-6);">
+          <div>
+            <label class="form-label">Post-nom</label>
+            <input type="text" class="input" placeholder="Ex: KABANGE">
+            <div class="form-hint">Facultatif</div>
+          </div>
+          <div>
+            <label class="form-label">Date de naissance *</label>
+            <input type="date" class="input">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);margin-bottom:var(--space-6);">
+          <div>
+            <label class="form-label">Adresse e-mail *</label>
+            <input type="email" class="input" placeholder="votre@email.cd">
+          </div>
+          <div>
+            <label class="form-label">Téléphone *</label>
+            <input type="tel" class="input" placeholder="+243 XXX XXX XXX">
+          </div>
+        </div>
+
+        <div style="margin-bottom:var(--space-6);">
+          <label class="form-label">Province de résidence *</label>
+          <select class="input select" style="max-width:50%;">
+            <option value="">-- Sélectionnez une province --</option>
+            <option>Kinshasa</option>
+            <option>Haut-Katanga</option>
+            <option>Nord-Kivu</option>
+            <option>Sud-Kivu</option>
+            <option>Kongo-Central</option>
+            <option>Kasaï-Oriental</option>
+            <option>Équateur</option>
+            <option>Tshopo</option>
+            <option>Lualaba</option>
+            <option>Ituri</option>
+            <option>Kwilu</option>
+            <option>Kwango</option>
+            <option>Mai-Ndombe</option>
+            <option>Mongala</option>
+            <option>Nord-Ubangi</option>
+            <option>Sud-Ubangi</option>
+            <option>Tshuapa</option>
+            <option>Tanganyika</option>
+            <option>Haut-Lomami</option>
+            <option>Lomami</option>
+            <option>Kasaï</option>
+            <option>Kasaï-Central</option>
+            <option>Sankuru</option>
+            <option>Maniema</option>
+            <option>Haut-Uélé</option>
+            <option>Bas-Uélé</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom:var(--space-6);">
+          <label class="form-label">Motif de la demande</label>
+          <textarea class="input textarea" placeholder="Décrivez brièvement le motif de votre demande de passeport..." style="min-height:100px;"></textarea>
+        </div>
+
+        <!-- File upload area -->
+        <div style="margin-bottom:var(--space-8);">
+          <label class="form-label">Photo d'identité *</label>
+          <div style="border:2px dashed #D1D5DB;border-radius:var(--radius-lg);padding:var(--space-8);text-align:center;background:#FAFBFC;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--rdc-bleu)';this.style.background='rgba(0,149,201,0.03)'" onmouseout="this.style.borderColor='#D1D5DB';this.style.background='#FAFBFC'">
+            <i data-lucide="upload-cloud" style="width:40px;height:40px;color:var(--text-muted);margin:0 auto 12px;display:block;"></i>
+            <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);color:var(--text-primary);margin-bottom:4px;">Cliquez pour téléverser ou glissez votre fichier ici</div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-xs);color:var(--text-muted);">Format : JPG ou PNG · Taille max : 5 Mo · Fond blanc</div>
+          </div>
+        </div>
+
+        <!-- Terms -->
+        <div style="display:flex;align-items:flex-start;gap:var(--space-3);margin-bottom:var(--space-8);">
+          <input type="checkbox" class="checkbox" style="margin-top:2px;">
+          <label style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.5;">
+            Je certifie que les informations fournies sont exactes et je m'engage à fournir les documents originaux lors du retrait du passeport. <a href="#" style="color:var(--primary);">Politique de confidentialité</a>
+          </label>
+        </div>
+
+        <div style="display:flex;gap:var(--space-4);justify-content:flex-end;">
+          <button type="button" class="btn btn-ghost">Annuler</button>
+          <button type="button" class="btn btn-secondary">Enregistrer le brouillon</button>
+          <button type="submit" class="btn btn-primary"><i data-lucide="arrow-right" style="width:16px;height:16px;"></i> Étape suivante</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Related services -->
+  <div style="max-width:1280px;margin:0 auto;padding:0 var(--space-8) var(--space-12);">
+    <h2 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-xl);margin-bottom:var(--space-6);">Services connexes</h2>
+    <div class="grid grid-3">
+      <div class="card card-hover" style="padding:var(--space-6);">
+        <div style="width:48px;height:48px;border-radius:var(--radius-lg);background:rgba(101,179,46,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4);">
+          <i data-lucide="id-card" style="width:22px;height:22px;color:var(--rdc-vert);"></i>
+        </div>
+        <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:var(--space-2);">Carte d'Identité Nationale</h3>
+        <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6;">Faites votre demande de carte d'identité biométrique en ligne.</p>
+        <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--primary);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:var(--space-3);">En savoir plus <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+      </div>
+
+      <div class="card card-hover" style="padding:var(--space-6);">
+        <div style="width:48px;height:48px;border-radius:var(--radius-lg);background:rgba(237,112,22,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4);">
+          <i data-lucide="file-text" style="width:22px;height:22px;color:var(--rdc-orange-vif);"></i>
+        </div>
+        <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:var(--space-2);">Extrait de Casier Judiciaire</h3>
+        <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6;">Demandez un extrait de casier judiciaire pour vos démarches administratives.</p>
+        <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--primary);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:var(--space-3);">En savoir plus <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+      </div>
+
+      <div class="card card-hover" style="padding:var(--space-6);">
+        <div style="width:48px;height:48px;border-radius:var(--radius-lg);background:rgba(156,0,85,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4);">
+          <i data-lucide="baby" style="width:22px;height:22px;color:var(--rdc-pourpre);"></i>
+        </div>
+        <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin-bottom:var(--space-2);">Acte de Naissance</h3>
+        <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6;">Obtenez une copie certifiée de votre acte de naissance en ligne.</p>
+        <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--primary);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:var(--space-3);">En savoir plus <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="pied-page-officiel" style="max-width:none;">
+    <div class="ligne-etat-h--lg" style="margin-bottom:var(--space-6);"></div>
+    <div style="max-width:1280px;margin:0 auto;padding:0 var(--space-8);">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:var(--space-8);margin-bottom:var(--space-8);">
+        <!-- Logo -->
+        <div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:var(--space-4);">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;">
+              <span style="font-family:var(--font-principale);font-weight:700;font-size:9px;color:white;">RDC</span>
+            </div>
+            <div style="width:3px;min-height:36px;background:rgba(255,255,255,0.3);"></div>
+            <div style="font-family:var(--font-principale);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;line-height:1.3;">République Démocratique<br>du Congo</div>
+          </div>
+          <p style="font-size:var(--text-xs);opacity:0.6;line-height:1.6;">Portail officiel des services gouvernementaux en ligne de la République Démocratique du Congo.</p>
+        </div>
+        <!-- Services -->
+        <div>
+          <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:var(--space-4);opacity:0.5;">Services</div>
+          <div style="display:flex;flex-direction:column;gap:var(--space-2);">
+            <a href="#" style="font-size:var(--text-sm);">Passeport</a>
+            <a href="#" style="font-size:var(--text-sm);">Carte d'identité</a>
+            <a href="#" style="font-size:var(--text-sm);">Casier judiciaire</a>
+            <a href="#" style="font-size:var(--text-sm);">Acte de naissance</a>
+          </div>
+        </div>
+        <!-- Ressources -->
+        <div>
+          <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:var(--space-4);opacity:0.5;">Ressources</div>
+          <div style="display:flex;flex-direction:column;gap:var(--space-2);">
+            <a href="#" style="font-size:var(--text-sm);">Guide du citoyen</a>
+            <a href="#" style="font-size:var(--text-sm);">FAQ</a>
+            <a href="#" style="font-size:var(--text-sm);">Tarifs</a>
+            <a href="#" style="font-size:var(--text-sm);">Délais de traitement</a>
+          </div>
+        </div>
+        <!-- Contact -->
+        <div>
+          <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:var(--space-4);opacity:0.5;">Contact</div>
+          <div style="display:flex;flex-direction:column;gap:var(--space-2);font-size:var(--text-sm);opacity:0.8;">
+            <span>Av. des Huileries, Kinshasa/Gombe</span>
+            <span>+243 81 000 0000</span>
+            <span>info@numerique.gouv.cd</span>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:var(--space-4);display:flex;justify-content:space-between;font-size:var(--text-xs);opacity:0.5;">
+        <span>© 2024 République Démocratique du Congo — Tous droits réservés</span>
+        <span>Mentions légales · Politique de confidentialité · Accessibilité</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>En-tête Officiel — Design System Marque État Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="layout-sidebar">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" style="text-decoration:none;display:flex;align-items:center;gap:12px;">
+          <div class="ligne-etat" style="min-height:32px;width:4px;"></div>
+          <div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:14px;color:var(--text-primary);">Design System</div>
+            <div style="font-family:var(--font-principale);font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;">Marque État Congolais</div>
+          </div>
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Tokens</div>
+        <a href="../tokens/couleurs.html" class="sidebar-link">Couleurs</a>
+        <a href="../tokens/typographie.html" class="sidebar-link">Typographie</a>
+        <a href="../tokens/espacements.html" class="sidebar-link">Espacements</a>
+        <a href="../tokens/ombres-elevations.html" class="sidebar-link">Ombres & Élévations</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Composants</div>
+        <a href="boutons.html" class="sidebar-link">Boutons</a>
+        <a href="formulaires.html" class="sidebar-link">Formulaires</a>
+        <a href="cartes.html" class="sidebar-link">Cartes</a>
+        <a href="navigation.html" class="sidebar-link">Navigation</a>
+        <a href="tableaux.html" class="sidebar-link">Tableaux</a>
+        <a href="badges-alertes.html" class="sidebar-link">Badges & Alertes</a>
+        <a href="en-tete-officiel.html" class="sidebar-link active">En-tête Officiel</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Marque</div>
+        <a href="../marque/logo.html" class="sidebar-link">Logo</a>
+        <a href="../marque/ligne-etat.html" class="sidebar-link">Ligne d'État</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Modèles</div>
+        <a href="../modeles/page-accueil.html" class="sidebar-link">Page d'Accueil</a>
+        <a href="../modeles/page-interieure.html" class="sidebar-link">Page Intérieure</a>
+        <a href="../modeles/page-service.html" class="sidebar-link">Page Service</a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+      <div class="page-hero">
+        <h1 class="page-title">En-tête Officiel</h1>
+        <p class="page-subtitle">Composition officielle du logo gouvernemental : Bloc-armoirie, Ligne d'État et Intitulé officiel. L'élément central de l'identité visuelle de l'État congolais.</p>
+      </div>
+
+      <!-- Section 1: Anatomie -->
+      <section style="margin-bottom:var(--space-12);">
+        <h2 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);margin-bottom:var(--space-6);">Anatomie de l'en-tête</h2>
+        <p style="font-family:var(--font-complement);color:var(--text-secondary);margin-bottom:var(--space-6);max-width:640px;">
+          L'en-tête officiel est composé de trois éléments indissociables qui forment la signature visuelle de chaque institution gouvernementale.
+        </p>
+
+        <div class="card" style="padding:var(--space-10);margin-bottom:var(--space-6);">
+          <div style="display:flex;align-items:center;gap:var(--space-8);justify-content:center;padding:var(--space-10) 0;">
+            <!-- Bloc-armoirie -->
+            <div style="text-align:center;">
+              <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+                <span style="color:white;font-family:var(--font-principale);font-weight:700;font-size:18px;">RDC</span>
+              </div>
+              <div style="font-family:var(--font-principale);font-size:11px;font-weight:600;color:var(--rdc-bleu);text-transform:uppercase;letter-spacing:0.08em;">Bloc-armoirie</div>
+              <div style="font-family:var(--font-complement);font-size:12px;color:var(--text-muted);margin-top:4px;">Partie statique</div>
+            </div>
+
+            <!-- Flèche -->
+            <div style="color:var(--text-muted);font-size:24px;">+</div>
+
+            <!-- Ligne d'État -->
+            <div style="text-align:center;">
+              <div class="ligne-etat" style="width:8px;min-height:80px;margin:0 auto 12px;border-radius:4px;"></div>
+              <div style="font-family:var(--font-principale);font-size:11px;font-weight:600;color:var(--rdc-bleu);text-transform:uppercase;letter-spacing:0.08em;">Ligne d'État</div>
+              <div style="font-family:var(--font-complement);font-size:12px;color:var(--text-muted);margin-top:4px;">Séparateur tricolore</div>
+            </div>
+
+            <!-- Flèche -->
+            <div style="color:var(--text-muted);font-size:24px;">+</div>
+
+            <!-- Intitulé -->
+            <div style="text-align:center;">
+              <div style="text-align:left;margin:0 auto 12px;width:180px;">
+                <div style="font-family:var(--font-principale);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;line-height:1.3;">
+                  République Démocratique<br>du Congo
+                </div>
+                <div style="font-family:var(--font-principale);font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-secondary);margin-top:4px;line-height:1.3;">
+                  Ministère du Numérique<br>et des Nouvelles Technologies
+                </div>
+              </div>
+              <div style="font-family:var(--font-principale);font-size:11px;font-weight:600;color:var(--rdc-bleu);text-transform:uppercase;letter-spacing:0.08em;">Intitulé officiel</div>
+              <div style="font-family:var(--font-complement);font-size:12px;color:var(--text-muted);margin-top:4px;">Partie extensible (max 5 lignes)</div>
+            </div>
+
+            <!-- = -->
+            <div style="color:var(--text-muted);font-size:24px;">=</div>
+
+            <!-- Résultat -->
+            <div class="card" style="padding:var(--space-6);border:2px solid var(--rdc-bleu);background:rgba(0,149,201,0.03);">
+              <div class="logo-officiel" style="align-items:center;">
+                <div class="bloc-armoirie">
+                  <div style="width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));display:flex;align-items:center;justify-content:center;">
+                    <span style="color:white;font-family:var(--font-principale);font-weight:700;font-size:12px;">RDC</span>
+                  </div>
+                </div>
+                <div class="ligne-etat" style="min-height:50px;"></div>
+                <div class="intitule-officiel">
+                  <span class="sous-intitule">République Démocratique du Congo</span>
+                  Ministère du Numérique et des Nouvelles Technologies
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Règles de la zone de sécurité -->
+      <section style="margin-bottom:var(--space-12);">
+        <h2 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);margin-bottom:var(--space-6);">Zone de sécurité</h2>
+        <p style="font-family:var(--font-complement);color:var(--text-secondary);margin-bottom:var(--space-6);max-width:640px;">
+          La zone de sécurité correspond à <strong>4 fois la largeur de la Ligne d'État (4X)</strong>. Aucun élément graphique ou textuel ne doit empiéter sur cette zone.
+        </p>
+
+        <div class="card" style="padding:var(--space-10);">
+          <div style="display:flex;justify-content:center;">
+            <div style="position:relative;display:inline-block;">
+              <!-- Zone de sécurité (dashed) -->
+              <div style="border:2px dashed var(--rdc-rouge);padding:24px;border-radius:8px;position:relative;">
+                <!-- Labels -->
+                <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:white;padding:0 8px;font-family:var(--font-principale);font-size:10px;color:var(--rdc-rouge);font-weight:600;">4X</div>
+                <div style="position:absolute;left:-10px;top:50%;transform:translateY(-50%) rotate(-90deg);background:white;padding:0 8px;font-family:var(--font-principale);font-size:10px;color:var(--rdc-rouge);font-weight:600;">4X</div>
+
+                <!-- Logo -->
+                <div class="logo-officiel" style="align-items:center;">
+                  <div class="bloc-armoirie">
+                    <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));display:flex;align-items:center;justify-content:center;">
+                      <span style="color:white;font-family:var(--font-principale);font-weight:700;font-size:14px;">RDC</span>
+                    </div>
+                  </div>
+                  <div class="ligne-etat" style="min-height:60px;width:6px;"></div>
+                  <div class="intitule-officiel" style="max-width:200px;">
+                    <span class="sous-intitule">République Démocratique du Congo</span>
+                    Ministère du Numérique
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:var(--space-6);justify-content:center;margin-top:var(--space-8);">
+            <div style="text-align:center;padding:var(--space-4) var(--space-6);background:#F0FDF4;border-radius:var(--radius-lg);">
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);color:var(--rdc-vert);">X = 4px</div>
+              <div style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Largeur Ligne d'État</div>
+            </div>
+            <div style="text-align:center;padding:var(--space-4) var(--space-6);background:#EFF6FF;border-radius:var(--radius-lg);">
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);color:var(--rdc-bleu);">4X = 16px</div>
+              <div style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Zone de sécurité</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Tailles standards -->
+      <section style="margin-bottom:var(--space-12);">
+        <h2 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);margin-bottom:var(--space-6);">Tailles standards</h2>
+
+        <div class="grid grid-3" style="margin-bottom:var(--space-6);">
+          <!-- Web Header -->
+          <div class="card" style="text-align:center;padding:var(--space-8);">
+            <div style="font-family:var(--font-principale);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:var(--space-4);">Header Web</div>
+            <div style="display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:var(--space-4);">
+              <div style="width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));display:flex;align-items:center;justify-content:center;">
+                <span style="color:white;font-family:var(--font-principale);font-weight:700;font-size:11px;">RDC</span>
+              </div>
+              <div class="ligne-etat" style="min-height:50px;width:3px;"></div>
+              <div style="text-align:left;">
+                <div style="font-family:var(--font-principale);font-weight:700;font-size:9px;text-transform:uppercase;letter-spacing:0.04em;line-height:1.3;">République Démocratique du Congo</div>
+              </div>
+            </div>
+            <div class="badge badge-info">50px</div>
+          </div>
+
+          <!-- Réseaux sociaux -->
+          <div class="card" style="text-align:center;padding:var(--space-8);">
+            <div style="font-family:var(--font-principale);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:var(--space-4);">Réseaux sociaux</div>
+            <div style="display:flex;align-items:center;gap:16px;justify-content:center;margin-bottom:var(--space-4);">
+              <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));display:flex;align-items:center;justify-content:center;">
+                <span style="color:white;font-family:var(--font-principale);font-weight:700;font-size:16px;">RDC</span>
+              </div>
+              <div class="ligne-etat" style="min-height:80px;width:6px;"></div>
+              <div style="text-align:left;">
+                <div style="font-family:var(--font-principale);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;line-height:1.3;">République<br>Démocratique<br>du Congo</div>
+              </div>
+            </div>
+            <div class="badge badge-info">110px</div>
+          </div>
+
+          <!-- Minimum digital -->
+          <div class="card" style="text-align:center;padding:var(--space-8);">
+            <div style="font-family:var(--font-principale);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:var(--space-4);">Taille Minimale</div>
+            <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:var(--space-4);">
+              <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));display:flex;align-items:center;justify-content:center;">
+                <span style="color:white;font-family:var(--font-principale);font-weight:700;font-size:8px;">RDC</span>
+              </div>
+              <div class="ligne-etat" style="min-height:36px;width:2px;"></div>
+              <div style="text-align:left;">
+                <div style="font-family:var(--font-principale);font-weight:700;font-size:7px;text-transform:uppercase;letter-spacing:0.04em;line-height:1.3;">République Démocratique du Congo</div>
+              </div>
+            </div>
+            <div class="badge badge-warning">Min. 53px Ligne d'État</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Header complet -->
+      <section style="margin-bottom:var(--space-12);">
+        <h2 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);margin-bottom:var(--space-6);">En-tête complet — Fond blanc</h2>
+        <p style="font-family:var(--font-complement);color:var(--text-secondary);margin-bottom:var(--space-6);">
+          Version standard pour les pages d'accueil. Le logo s'affiche en couleur, la barre tricolore en bordure inférieure.
+        </p>
+
+        <div class="card" style="padding:0;overflow:hidden;">
+          <div class="entete-officiel">
+            <div class="logo-officiel" style="align-items:center;flex:1;">
+              <div class="bloc-armoirie">
+                <div style="width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));display:flex;align-items:center;justify-content:center;">
+                  <span style="color:white;font-family:var(--font-principale);font-weight:700;font-size:12px;">RDC</span>
+                </div>
+              </div>
+              <div class="ligne-etat" style="min-height:50px;"></div>
+              <div class="intitule-officiel">
+                <span class="sous-intitule">République Démocratique du Congo</span>
+                Ministère du Numérique et des Nouvelles Technologies
+              </div>
+            </div>
+            <nav style="display:flex;gap:var(--space-6);font-family:var(--font-principale);font-size:var(--text-sm);">
+              <a href="#" style="color:var(--primary);font-weight:600;text-decoration:none;">Accueil</a>
+              <a href="#" style="color:var(--text-secondary);text-decoration:none;">Services</a>
+              <a href="#" style="color:var(--text-secondary);text-decoration:none;">Actualités</a>
+              <a href="#" style="color:var(--text-secondary);text-decoration:none;">Contact</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Header bleu -->
+      <section style="margin-bottom:var(--space-12);">
+        <h2 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);margin-bottom:var(--space-6);">En-tête complet — Fond bleu institutionnel</h2>
+        <p style="font-family:var(--font-complement);color:var(--text-secondary);margin-bottom:var(--space-6);">
+          Version pour les pages intérieures. Le fond passe en bleu institutionnel, le logo et le texte deviennent blancs.
+        </p>
+
+        <div class="card" style="padding:0;overflow:hidden;">
+          <div class="entete-officiel entete-officiel--bleu">
+            <div class="logo-officiel marque--mono" style="align-items:center;flex:1;">
+              <div class="bloc-armoirie">
+                <div style="width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;">
+                  <span style="color:white;font-family:var(--font-principale);font-weight:700;font-size:12px;">RDC</span>
+                </div>
+              </div>
+              <div style="width:4px;min-height:50px;background:rgba(255,255,255,0.4);flex-shrink:0;"></div>
+              <div class="intitule-officiel" style="color:white;">
+                <span class="sous-intitule" style="color:white;">République Démocratique du Congo</span>
+                Ministère du Numérique et des Nouvelles Technologies
+              </div>
+            </div>
+            <nav style="display:flex;gap:var(--space-6);font-family:var(--font-principale);font-size:var(--text-sm);">
+              <a href="#" style="color:rgba(255,255,255,0.9);font-weight:600;text-decoration:none;">Accueil</a>
+              <a href="#" style="color:rgba(255,255,255,0.7);text-decoration:none;">Services</a>
+              <a href="#" style="color:rgba(255,255,255,0.7);text-decoration:none;">Actualités</a>
+              <a href="#" style="color:rgba(255,255,255,0.7);text-decoration:none;">Contact</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Exemples de ministères -->
+      <section style="margin-bottom:var(--space-12);">
+        <h2 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);margin-bottom:var(--space-6);">Exemples d'intitulés ministériels</h2>
+        <p style="font-family:var(--font-complement);color:var(--text-secondary);margin-bottom:var(--space-6);">
+          L'intitulé officiel s'adapte au nom de chaque institution. Maximum 5 lignes en Cooper Hewitt Semi-bold.
+        </p>
+
+        <div style="display:flex;flex-direction:column;gap:var(--space-6);">
+          <!-- Ministère court -->
+          <div class="card" style="display:flex;align-items:center;gap:var(--space-6);padding:var(--space-5);">
+            <div class="logo-officiel" style="align-items:center;">
+              <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <span style="color:white;font-family:var(--font-principale);font-weight:700;font-size:10px;">RDC</span>
+              </div>
+              <div class="ligne-etat" style="min-height:42px;width:3px;"></div>
+              <div class="intitule-officiel">
+                <span class="sous-intitule">République Démocratique du Congo</span>
+                Ministère de la Défense
+              </div>
+            </div>
+            <div class="badge badge-success" style="margin-left:auto;">Court — 2 lignes</div>
+          </div>
+
+          <!-- Ministère moyen -->
+          <div class="card" style="display:flex;align-items:center;gap:var(--space-6);padding:var(--space-5);">
+            <div class="logo-officiel" style="align-items:center;">
+              <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <span style="color:white;font-family:var(--font-principale);font-weight:700;font-size:10px;">RDC</span>
+              </div>
+              <div class="ligne-etat" style="min-height:42px;width:3px;"></div>
+              <div class="intitule-officiel">
+                <span class="sous-intitule">République Démocratique du Congo</span>
+                Ministère des Postes, Télécommunications et Nouvelles Technologies de l'Information
+              </div>
+            </div>
+            <div class="badge badge-warning" style="margin-left:auto;">Moyen — 4 lignes</div>
+          </div>
+
+          <!-- Ministère long -->
+          <div class="card" style="display:flex;align-items:center;gap:var(--space-6);padding:var(--space-5);">
+            <div class="logo-officiel" style="align-items:center;">
+              <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <span style="color:white;font-family:var(--font-principale);font-weight:700;font-size:10px;">RDC</span>
+              </div>
+              <div class="ligne-etat" style="min-height:42px;width:3px;"></div>
+              <div class="intitule-officiel">
+                <span class="sous-intitule">République Démocratique du Congo</span>
+                Ministère de l'Environnement et Développement Durable — Direction Générale
+              </div>
+            </div>
+            <div class="badge badge-danger" style="margin-left:auto;">Max — 5 lignes</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Démo interactive -->
+      <section style="margin-bottom:var(--space-12);">
+        <h2 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);margin-bottom:var(--space-6);">Démo interactive</h2>
+        <p style="font-family:var(--font-complement);color:var(--text-secondary);margin-bottom:var(--space-6);">
+          Modifiez le nom du ministère pour voir comment l'en-tête s'adapte.
+        </p>
+
+        <div class="card" style="padding:var(--space-8);">
+          <div style="margin-bottom:var(--space-6);">
+            <label class="form-label" for="ministryInput">Nom du ministère</label>
+            <input type="text" id="ministryInput" class="input" value="Ministère du Numérique et des Nouvelles Technologies" oninput="updateMinistry(this.value)" style="max-width:500px;">
+          </div>
+
+          <div class="card" style="padding:0;overflow:hidden;border:2px solid var(--primary-border);">
+            <div class="entete-officiel">
+              <div class="logo-officiel" style="align-items:center;flex:1;">
+                <div class="bloc-armoirie">
+                  <div style="width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--rdc-bleu),var(--rdc-bleu-fonce));display:flex;align-items:center;justify-content:center;">
+                    <span style="color:white;font-family:var(--font-principale);font-weight:700;font-size:12px;">RDC</span>
+                  </div>
+                </div>
+                <div class="ligne-etat" style="min-height:50px;"></div>
+                <div class="intitule-officiel">
+                  <span class="sous-intitule">République Démocratique du Congo</span>
+                  <span id="ministryText">Ministère du Numérique et des Nouvelles Technologies</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: Code CSS -->
+      <section style="margin-bottom:var(--space-12);">
+        <h2 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-2xl);margin-bottom:var(--space-6);">Code HTML</h2>
+
+        <div style="background:#1E293B;border-radius:var(--radius-lg);padding:var(--space-6);overflow-x:auto;">
+          <pre style="font-family:monospace;font-size:13px;color:#E2E8F0;line-height:1.6;margin:0;"><code>&lt;header class="entete-officiel"&gt;
+  &lt;div class="logo-officiel"&gt;
+    &lt;div class="bloc-armoirie"&gt;
+      &lt;img src="armoiries-rdc.svg" alt="Armoiries RDC"&gt;
+    &lt;/div&gt;
+    &lt;div class="ligne-etat"&gt;&lt;/div&gt;
+    &lt;div class="intitule-officiel"&gt;
+      &lt;span class="sous-intitule"&gt;
+        République Démocratique du Congo
+      &lt;/span&gt;
+      Ministère du Numérique
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+
+<span style="color:#94A3B8;">&lt;!-- Variante bleue (pages intérieures) --&gt;</span>
+&lt;header class="entete-officiel entete-officiel--bleu"&gt;
+  &lt;div class="logo-officiel marque--mono"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    lucide.createIcons();
+    function updateMinistry(value) {
+      document.getElementById('ministryText').textContent = value;
+    }
+  </script>
+</body>
+</html>

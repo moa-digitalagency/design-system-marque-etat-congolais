@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartes — Design System Marque État Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .demo-box {
+      background: var(--bg-white);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      margin-bottom: var(--space-2);
+    }
+    .section-title {
+      font-family: var(--font-principale);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--space-4);
+      margin-top: var(--space-8);
+    }
+    .section-title:first-of-type { margin-top: 0; }
+    .subsection-desc {
+      font-family: var(--font-complement);
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      margin-bottom: var(--space-4);
+    }
+  </style>
+</head>
+<body>
+  <div class="layout-sidebar">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" style="text-decoration:none;">
+          <div style="display:flex;align-items:center;gap:var(--space-3);">
+            <div style="width:32px;height:32px;background:var(--rdc-bleu-inst);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;">
+              <i data-lucide="shield" style="width:18px;height:18px;color:white;"></i>
+            </div>
+            <div>
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);">Design System RDC</div>
+              <div class="ligne-etat-h ligne-etat-h--sm" style="width:48px;margin-top:4px;border-radius:2px;"></div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <nav>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Tokens</div>
+          <a href="../tokens/couleurs.html" class="sidebar-link"><i data-lucide="palette" style="width:16px;height:16px;"></i> Couleurs</a>
+          <a href="../tokens/typographie.html" class="sidebar-link"><i data-lucide="type" style="width:16px;height:16px;"></i> Typographie</a>
+          <a href="../tokens/espacements.html" class="sidebar-link"><i data-lucide="ruler" style="width:16px;height:16px;"></i> Espacements</a>
+          <a href="../tokens/ombres-elevations.html" class="sidebar-link"><i data-lucide="layers" style="width:16px;height:16px;"></i> Ombres</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Composants</div>
+          <a href="boutons.html" class="sidebar-link"><i data-lucide="mouse-pointer-click" style="width:16px;height:16px;"></i> Boutons</a>
+          <a href="formulaires.html" class="sidebar-link"><i data-lucide="text-cursor-input" style="width:16px;height:16px;"></i> Formulaires</a>
+          <a href="cartes.html" class="sidebar-link active"><i data-lucide="square" style="width:16px;height:16px;"></i> Cartes</a>
+          <a href="navigation.html" class="sidebar-link"><i data-lucide="compass" style="width:16px;height:16px;"></i> Navigation</a>
+          <a href="tableaux.html" class="sidebar-link"><i data-lucide="table" style="width:16px;height:16px;"></i> Tableaux</a>
+          <a href="badges-alertes.html" class="sidebar-link"><i data-lucide="bell" style="width:16px;height:16px;"></i> Badges &amp; Alertes</a>
+          <a href="en-tete-officiel.html" class="sidebar-link"><i data-lucide="landmark" style="width:16px;height:16px;"></i> En-t&ecirc;te Officiel</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Marque</div>
+          <a href="../marque/logo.html" class="sidebar-link"><i data-lucide="image" style="width:16px;height:16px;"></i> Logo</a>
+          <a href="../marque/ligne-etat.html" class="sidebar-link"><i data-lucide="minus" style="width:16px;height:16px;"></i> Ligne d'&Eacute;tat</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Mod&egrave;les</div>
+          <a href="../modeles/page-accueil.html" class="sidebar-link"><i data-lucide="layout-dashboard" style="width:16px;height:16px;"></i> Page d'Accueil</a>
+          <a href="../modeles/page-interieure.html" class="sidebar-link"><i data-lucide="file-text" style="width:16px;height:16px;"></i> Page Int&eacute;rieure</a>
+          <a href="../modeles/page-service.html" class="sidebar-link"><i data-lucide="settings" style="width:16px;height:16px;"></i> Page Service</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="page-hero">
+        <h1 class="page-title">Cartes</h1>
+        <p class="page-subtitle">Conteneurs visuels pour regrouper des informations connexes avec diff&eacute;rents niveaux d'&eacute;l&eacute;vation et d'interactivit&eacute;.</p>
+      </div>
+
+      <!-- Section 1: Carte par défaut -->
+      <h2 class="section-title">Carte par d&eacute;faut</h2>
+      <p class="subsection-desc">La carte de base avec bordure l&eacute;g&egrave;re, ombre douce et padding standard. Utilis&eacute;e pour regrouper du contenu.</p>
+      <div class="demo-box">
+        <div class="card" style="max-width:480px;">
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);color:var(--text-primary);margin-bottom:var(--space-3);">Titre de la carte</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-base);color:var(--text-secondary);line-height:var(--leading-relaxed);margin-bottom:var(--space-4);">Ceci est un exemple de contenu dans une carte par d&eacute;faut. Le texte utilise la police EB Garamond pour le corps, offrant une lisibilit&eacute; optimale.</p>
+          <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--primary);text-decoration:none;">En savoir plus &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Section 2: Carte avec hover -->
+      <h2 class="section-title">Carte avec hover</h2>
+      <p class="subsection-desc">Les cartes interactives se soul&egrave;vent au survol gr&acirc;ce &agrave; la classe <code>card-hover</code>.</p>
+      <div class="demo-box">
+        <div class="grid grid-3">
+          <div class="card card-hover" style="text-align:center;">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(0,149,201,0.12);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-4);">
+              <i data-lucide="shield" style="width:24px;height:24px;color:var(--rdc-bleu);"></i>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);color:var(--text-primary);margin-bottom:var(--space-2);">S&eacute;curit&eacute;</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Protection des donn&eacute;es et acc&egrave;s s&eacute;curis&eacute; aux services publics.</p>
+          </div>
+          <div class="card card-hover" style="text-align:center;">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(101,179,46,0.12);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-4);">
+              <i data-lucide="zap" style="width:24px;height:24px;color:var(--rdc-vert);"></i>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);color:var(--text-primary);margin-bottom:var(--space-2);">Performance</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Temps de r&eacute;ponse rapide et exp&eacute;rience fluide pour tous.</p>
+          </div>
+          <div class="card card-hover" style="text-align:center;">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(237,112,22,0.12);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-4);">
+              <i data-lucide="users" style="width:24px;height:24px;color:var(--rdc-orange-vif);"></i>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);color:var(--text-primary);margin-bottom:var(--space-2);">Accessibilit&eacute;</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);">Interfaces inclusives adapt&eacute;es &agrave; tous les citoyens.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Carte en verre (Glass) -->
+      <h2 class="section-title">Carte en verre (Glass)</h2>
+      <p class="subsection-desc">Effet glassmorphism avec fond semi-transparent et flou d'arri&egrave;re-plan. Id&eacute;al sur des fonds color&eacute;s ou d&eacute;grad&eacute;s.</p>
+      <div class="demo-box" style="padding:0;overflow:hidden;border:none;">
+        <div style="background:linear-gradient(135deg, var(--rdc-bleu) 0%, var(--rdc-bleu-fonce) 100%);padding:var(--space-10);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-xl);">
+          <div class="glass-card" style="text-align:center;min-width:240px;">
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-5xl);color:white;line-height:1;">12,4M</div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-base);color:rgba(255,255,255,0.85);margin-top:var(--space-2);">Citoyens enregistr&eacute;s</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 4: Carte statistique -->
+      <h2 class="section-title">Carte statistique</h2>
+      <p class="subsection-desc">Cartes compactes pour afficher des indicateurs cl&eacute;s avec ic&ocirc;ne, valeur et tendance.</p>
+      <div class="demo-box">
+        <div class="grid grid-4">
+          <div class="stat-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-3);">
+              <div style="width:40px;height:40px;border-radius:50%;background:rgba(0,149,201,0.12);display:flex;align-items:center;justify-content:center;">
+                <i data-lucide="users" style="width:20px;height:20px;color:var(--rdc-bleu);"></i>
+              </div>
+              <span class="badge badge-success" style="font-size:11px;">+12,5%</span>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-3xl);color:var(--text-primary);line-height:1;">8 420</div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-muted);margin-top:var(--space-1);">Utilisateurs actifs</div>
+          </div>
+          <div class="stat-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-3);">
+              <div style="width:40px;height:40px;border-radius:50%;background:rgba(101,179,46,0.12);display:flex;align-items:center;justify-content:center;">
+                <i data-lucide="file-check" style="width:20px;height:20px;color:var(--rdc-vert);"></i>
+              </div>
+              <span class="badge badge-success" style="font-size:11px;">+8,3%</span>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-3xl);color:var(--text-primary);line-height:1;">1 247</div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-muted);margin-top:var(--space-1);">Dossiers trait&eacute;s</div>
+          </div>
+          <div class="stat-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-3);">
+              <div style="width:40px;height:40px;border-radius:50%;background:rgba(237,112,22,0.12);display:flex;align-items:center;justify-content:center;">
+                <i data-lucide="clock" style="width:20px;height:20px;color:var(--rdc-orange-vif);"></i>
+              </div>
+              <span class="badge badge-danger" style="font-size:11px;">-3,2%</span>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-3xl);color:var(--text-primary);line-height:1;">2,4 j</div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-muted);margin-top:var(--space-1);">D&eacute;lai moyen</div>
+          </div>
+          <div class="stat-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-3);">
+              <div style="width:40px;height:40px;border-radius:50%;background:rgba(219,56,50,0.12);display:flex;align-items:center;justify-content:center;">
+                <i data-lucide="trending-up" style="width:20px;height:20px;color:var(--rdc-rouge);"></i>
+              </div>
+              <span class="badge badge-success" style="font-size:11px;">+24,1%</span>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-3xl);color:var(--text-primary);line-height:1;">94,7%</div>
+            <div style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-muted);margin-top:var(--space-1);">Taux de satisfaction</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 5: Carte service -->
+      <h2 class="section-title">Carte service</h2>
+      <p class="subsection-desc">Cartes utilis&eacute;es pour pr&eacute;senter les services publics avec ic&ocirc;ne, titre, description et lien d'action.</p>
+      <div class="demo-box">
+        <div class="grid grid-3">
+          <div class="card card-hover">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(0,149,201,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4);">
+              <i data-lucide="id-card" style="width:24px;height:24px;color:var(--rdc-bleu);"></i>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-base);color:var(--text-primary);margin-bottom:var(--space-2);">&Eacute;tat Civil</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:var(--leading-relaxed);margin-bottom:var(--space-4);">Demandez vos actes de naissance, mariage et d&eacute;c&egrave;s en ligne de mani&egrave;re simplifi&eacute;e.</p>
+            <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--primary);text-decoration:none;">En savoir plus &rarr;</a>
+          </div>
+          <div class="card card-hover">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(101,179,46,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4);">
+              <i data-lucide="graduation-cap" style="width:24px;height:24px;color:var(--rdc-vert);"></i>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-base);color:var(--text-primary);margin-bottom:var(--space-2);">&Eacute;ducation</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:var(--leading-relaxed);margin-bottom:var(--space-4);">Inscriptions scolaires, bourses et programmes &eacute;ducatifs pour les jeunes congolais.</p>
+            <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--primary);text-decoration:none;">En savoir plus &rarr;</a>
+          </div>
+          <div class="card card-hover">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(237,112,22,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4);">
+              <i data-lucide="heart-pulse" style="width:24px;height:24px;color:var(--rdc-orange-vif);"></i>
+            </div>
+            <h3 style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-base);color:var(--text-primary);margin-bottom:var(--space-2);">Sant&eacute;</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:var(--leading-relaxed);margin-bottom:var(--space-4);">Acc&eacute;dez aux centres de sant&eacute;, campagnes de vaccination et programmes de pr&eacute;vention.</p>
+            <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--primary);text-decoration:none;">En savoir plus &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 6: Carte actualité -->
+      <h2 class="section-title">Carte actualit&eacute;</h2>
+      <p class="subsection-desc">Cartes con&ccedil;ues pour les articles d'actualit&eacute; avec image, date, titre et extrait.</p>
+      <div class="demo-box">
+        <div class="grid grid-3">
+          <div class="card card-hover" style="padding:0;overflow:hidden;">
+            <div style="width:100%;height:200px;background:var(--rdc-bleu);"></div>
+            <div style="padding:var(--space-5);">
+              <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-2);">24 mars 2026</div>
+              <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);color:var(--text-primary);margin-bottom:var(--space-2);">Lancement du portail num&eacute;rique national</h3>
+              <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:var(--leading-normal);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Le gouvernement inaugure la plateforme unifi&eacute;e d'acc&egrave;s aux services publics pour l'ensemble des citoyens congolais.</p>
+            </div>
+          </div>
+          <div class="card card-hover" style="padding:0;overflow:hidden;">
+            <div style="width:100%;height:200px;background:var(--rdc-rouge);"></div>
+            <div style="padding:var(--space-5);">
+              <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-2);">20 mars 2026</div>
+              <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);color:var(--text-primary);margin-bottom:var(--space-2);">R&eacute;forme de la formation professionnelle</h3>
+              <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:var(--leading-normal);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Un nouveau programme de formation technique vise &agrave; renforcer les comp&eacute;tences de la jeunesse dans les secteurs cl&eacute;s.</p>
+            </div>
+          </div>
+          <div class="card card-hover" style="padding:0;overflow:hidden;">
+            <div style="width:100%;height:200px;background:var(--rdc-vert);"></div>
+            <div style="padding:var(--space-5);">
+              <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-2);">15 mars 2026</div>
+              <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);color:var(--text-primary);margin-bottom:var(--space-2);">Programme de reforestation du bassin du Congo</h3>
+              <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:var(--leading-normal);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Initiative environnementale majeure pour la protection et la restauration des for&ecirc;ts tropicales du pays.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

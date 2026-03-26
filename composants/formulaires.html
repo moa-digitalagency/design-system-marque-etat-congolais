@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaires — Design System Marque État Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .code-block {
+      background: #1E293B;
+      color: #E2E8F0;
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      font-family: 'Fira Code', 'Consolas', monospace;
+      font-size: 13px;
+      line-height: 1.6;
+      overflow-x: auto;
+      margin-top: var(--space-3);
+    }
+    .demo-box {
+      background: var(--bg-white);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      margin-bottom: var(--space-2);
+    }
+    .section-title {
+      font-family: var(--font-principale);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--space-4);
+      margin-top: var(--space-8);
+    }
+    .section-title:first-of-type { margin-top: 0; }
+    .subsection-desc {
+      font-family: var(--font-complement);
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      margin-bottom: var(--space-4);
+    }
+  </style>
+</head>
+<body>
+  <div class="layout-sidebar">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" style="text-decoration:none;">
+          <div style="display:flex;align-items:center;gap:var(--space-3);">
+            <div style="width:32px;height:32px;background:var(--rdc-bleu-inst);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;">
+              <i data-lucide="shield" style="width:18px;height:18px;color:white;"></i>
+            </div>
+            <div>
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);">Design System RDC</div>
+              <div class="ligne-etat-h ligne-etat-h--sm" style="width:48px;margin-top:4px;border-radius:2px;"></div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <nav>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Accueil</div>
+          <a href="../index.html" class="sidebar-link"><i data-lucide="home" style="width:16px;height:16px;"></i> Home</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Tokens</div>
+          <a href="../tokens/couleurs.html" class="sidebar-link"><i data-lucide="palette" style="width:16px;height:16px;"></i> Couleurs</a>
+          <a href="../tokens/typographie.html" class="sidebar-link"><i data-lucide="type" style="width:16px;height:16px;"></i> Typographie</a>
+          <a href="../tokens/espacements.html" class="sidebar-link"><i data-lucide="ruler" style="width:16px;height:16px;"></i> Espacements</a>
+          <a href="../tokens/ombres-elevations.html" class="sidebar-link"><i data-lucide="layers" style="width:16px;height:16px;"></i> Ombres</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Composants</div>
+          <a href="boutons.html" class="sidebar-link"><i data-lucide="mouse-pointer-click" style="width:16px;height:16px;"></i> Boutons</a>
+          <a href="formulaires.html" class="sidebar-link active"><i data-lucide="text-cursor-input" style="width:16px;height:16px;"></i> Formulaires</a>
+          <a href="cartes.html" class="sidebar-link"><i data-lucide="square" style="width:16px;height:16px;"></i> Cartes</a>
+          <a href="navigation.html" class="sidebar-link"><i data-lucide="compass" style="width:16px;height:16px;"></i> Navigation</a>
+          <a href="tableaux.html" class="sidebar-link"><i data-lucide="table" style="width:16px;height:16px;"></i> Tableaux</a>
+          <a href="badges-alertes.html" class="sidebar-link"><i data-lucide="bell" style="width:16px;height:16px;"></i> Badges &amp; Alertes</a>
+          <a href="en-tete-officiel.html" class="sidebar-link"><i data-lucide="landmark" style="width:16px;height:16px;"></i> En-t&ecirc;te Officiel</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Mod&egrave;les</div>
+          <a href="../modeles/page-accueil.html" class="sidebar-link"><i data-lucide="layout-dashboard" style="width:16px;height:16px;"></i> Page d'Accueil</a>
+          <a href="../modeles/page-interieure.html" class="sidebar-link"><i data-lucide="file-text" style="width:16px;height:16px;"></i> Page Int&eacute;rieure</a>
+          <a href="../modeles/page-service.html" class="sidebar-link"><i data-lucide="settings" style="width:16px;height:16px;"></i> Page Service</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Marque</div>
+          <a href="../marque/logo.html" class="sidebar-link"><i data-lucide="image" style="width:16px;height:16px;"></i> Logo</a>
+          <a href="../marque/ligne-etat.html" class="sidebar-link"><i data-lucide="minus" style="width:16px;height:16px;"></i> Ligne d'&Eacute;tat</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="page-hero">
+        <h1 class="page-title">Formulaires</h1>
+        <p class="page-subtitle">Champs de saisie, s&eacute;lecteurs et contr&ocirc;les pour la collecte de donn&eacute;es.</p>
+      </div>
+
+      <!-- Text Input States -->
+      <h2 class="section-title">Champ Texte &mdash; &Eacute;tats</h2>
+      <p class="subsection-desc">Le champ texte supporte plusieurs &eacute;tats visuels : par d&eacute;faut, focus, erreur, succ&egrave;s et d&eacute;sactiv&eacute;.</p>
+      <div class="demo-box" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5);">
+        <div>
+          <label class="form-label">Par d&eacute;faut</label>
+          <input type="text" class="input" placeholder="Entrez votre nom">
+        </div>
+        <div>
+          <label class="form-label">Focus</label>
+          <input type="text" class="input" placeholder="Cliquez ici pour voir le focus" style="border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-light);">
+          <p class="form-hint">Ce champ montre l'&eacute;tat focus avec la bordure bleue.</p>
+        </div>
+        <div>
+          <label class="form-label">Erreur</label>
+          <input type="text" class="input input--error" value="texte invalide">
+          <p class="form-error-msg">Ce champ contient une erreur. Veuillez corriger.</p>
+        </div>
+        <div>
+          <label class="form-label">Succ&egrave;s</label>
+          <input type="text" class="input input--success" value="texte valide">
+          <p class="form-hint" style="color:var(--color-success);">Valide !</p>
+        </div>
+        <div>
+          <label class="form-label">D&eacute;sactiv&eacute;</label>
+          <input type="text" class="input" disabled value="Non modifiable">
+        </div>
+      </div>
+      <pre class="code-block"><code>&lt;input type="text" class="input" placeholder="Par d&eacute;faut"&gt;
+&lt;input type="text" class="input input--error" value="texte invalide"&gt;
+&lt;input type="text" class="input input--success" value="texte valide"&gt;
+&lt;input type="text" class="input" disabled value="Non modifiable"&gt;</code></pre>
+
+      <!-- Textarea -->
+      <h2 class="section-title">Zone de Texte (Textarea)</h2>
+      <p class="subsection-desc">Pour les saisies multi-lignes comme les commentaires ou descriptions.</p>
+      <div class="demo-box" style="max-width:500px;">
+        <label class="form-label">Message</label>
+        <textarea class="input textarea" placeholder="&Eacute;crivez votre message ici..."></textarea>
+        <p class="form-hint">Maximum 500 caract&egrave;res.</p>
+      </div>
+      <pre class="code-block"><code>&lt;label class="form-label"&gt;Message&lt;/label&gt;
+&lt;textarea class="input textarea" placeholder="&Eacute;crivez votre message ici..."&gt;&lt;/textarea&gt;
+&lt;p class="form-hint"&gt;Maximum 500 caract&egrave;res.&lt;/p&gt;</code></pre>
+
+      <!-- Select -->
+      <h2 class="section-title">Menu D&eacute;roulant (Select)</h2>
+      <p class="subsection-desc">S&eacute;lecteur personnalis&eacute; avec fl&egrave;che int&eacute;gr&eacute;e.</p>
+      <div class="demo-box" style="max-width:400px;">
+        <label class="form-label">Province</label>
+        <select class="input select">
+          <option value="">S&eacute;lectionnez une province</option>
+          <option value="kinshasa">Kinshasa</option>
+          <option value="katanga">Haut-Katanga</option>
+          <option value="kivu-sud">Sud-Kivu</option>
+          <option value="equateur">Equateur</option>
+          <option value="kasai">Kasa&iuml;</option>
+        </select>
+      </div>
+      <pre class="code-block"><code>&lt;label class="form-label"&gt;Province&lt;/label&gt;
+&lt;select class="input select"&gt;
+  &lt;option value=""&gt;S&eacute;lectionnez une province&lt;/option&gt;
+  &lt;option value="kinshasa"&gt;Kinshasa&lt;/option&gt;
+  &lt;option value="katanga"&gt;Haut-Katanga&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+      <!-- Checkbox -->
+      <h2 class="section-title">Cases &agrave; Cocher (Checkbox)</h2>
+      <p class="subsection-desc">Cases &agrave; cocher avec styles personnalis&eacute;s. L'&eacute;tat coch&eacute; utilise la couleur primaire.</p>
+      <div class="demo-box">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+          <label style="display:flex;align-items:center;gap:var(--space-3);cursor:pointer;font-family:var(--font-complement);font-size:var(--text-sm);">
+            <input type="checkbox" class="checkbox"> J'accepte les conditions g&eacute;n&eacute;rales
+          </label>
+          <label style="display:flex;align-items:center;gap:var(--space-3);cursor:pointer;font-family:var(--font-complement);font-size:var(--text-sm);">
+            <input type="checkbox" class="checkbox" checked> Recevoir les notifications par email
+          </label>
+          <label style="display:flex;align-items:center;gap:var(--space-3);cursor:pointer;font-family:var(--font-complement);font-size:var(--text-sm);opacity:0.5;">
+            <input type="checkbox" class="checkbox" disabled> Option d&eacute;sactiv&eacute;e
+          </label>
+        </div>
+      </div>
+      <pre class="code-block"><code>&lt;label&gt;
+  &lt;input type="checkbox" class="checkbox"&gt; Non coch&eacute;
+&lt;/label&gt;
+&lt;label&gt;
+  &lt;input type="checkbox" class="checkbox" checked&gt; Coch&eacute;
+&lt;/label&gt;</code></pre>
+
+      <!-- Radio -->
+      <h2 class="section-title">Boutons Radio</h2>
+      <p class="subsection-desc">Pour la s&eacute;lection unique dans un groupe d'options.</p>
+      <div class="demo-box">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+          <label style="display:flex;align-items:center;gap:var(--space-3);cursor:pointer;font-family:var(--font-complement);font-size:var(--text-sm);">
+            <input type="radio" name="genre" class="radio" checked> Masculin
+          </label>
+          <label style="display:flex;align-items:center;gap:var(--space-3);cursor:pointer;font-family:var(--font-complement);font-size:var(--text-sm);">
+            <input type="radio" name="genre" class="radio"> F&eacute;minin
+          </label>
+          <label style="display:flex;align-items:center;gap:var(--space-3);cursor:pointer;font-family:var(--font-complement);font-size:var(--text-sm);">
+            <input type="radio" name="genre" class="radio"> Autre
+          </label>
+        </div>
+      </div>
+      <pre class="code-block"><code>&lt;label&gt;
+  &lt;input type="radio" name="genre" class="radio" checked&gt; Masculin
+&lt;/label&gt;
+&lt;label&gt;
+  &lt;input type="radio" name="genre" class="radio"&gt; F&eacute;minin
+&lt;/label&gt;</code></pre>
+
+      <!-- Toggle -->
+      <h2 class="section-title">Interrupteur (Toggle)</h2>
+      <p class="subsection-desc">Commutateur bool&eacute;en pour activer ou d&eacute;sactiver une option.</p>
+      <div class="demo-box">
+        <div style="display:flex;flex-direction:column;gap:var(--space-4);">
+          <label style="display:flex;align-items:center;gap:var(--space-3);cursor:pointer;font-family:var(--font-complement);font-size:var(--text-sm);">
+            <input type="checkbox" class="toggle"> Notifications push
+          </label>
+          <label style="display:flex;align-items:center;gap:var(--space-3);cursor:pointer;font-family:var(--font-complement);font-size:var(--text-sm);">
+            <input type="checkbox" class="toggle" checked> Mode sombre
+          </label>
+        </div>
+      </div>
+      <pre class="code-block"><code>&lt;label&gt;
+  &lt;input type="checkbox" class="toggle"&gt; Notifications push
+&lt;/label&gt;
+&lt;label&gt;
+  &lt;input type="checkbox" class="toggle" checked&gt; Mode sombre
+&lt;/label&gt;</code></pre>
+
+      <!-- Form Layout -->
+      <h2 class="section-title">Disposition : Label + Input + Hint + Erreur</h2>
+      <p class="subsection-desc">Structure recommand&eacute;e pour un champ de formulaire complet.</p>
+      <div class="demo-box" style="max-width:500px;">
+        <div style="margin-bottom:var(--space-5);">
+          <label class="form-label">Adresse email <span style="color:var(--color-danger);">*</span></label>
+          <input type="email" class="input" placeholder="exemple@gouv.cd">
+          <p class="form-hint">Utilisez votre adresse professionnelle @gouv.cd.</p>
+        </div>
+        <div>
+          <label class="form-label">Mot de passe <span style="color:var(--color-danger);">*</span></label>
+          <input type="password" class="input input--error" value="abc">
+          <p class="form-error-msg">Le mot de passe doit contenir au moins 8 caract&egrave;res.</p>
+        </div>
+      </div>
+      <pre class="code-block"><code>&lt;div&gt;
+  &lt;label class="form-label"&gt;Adresse email &lt;span style="color:var(--color-danger);"&gt;*&lt;/span&gt;&lt;/label&gt;
+  &lt;input type="email" class="input" placeholder="exemple@gouv.cd"&gt;
+  &lt;p class="form-hint"&gt;Utilisez votre adresse professionnelle.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;label class="form-label"&gt;Mot de passe&lt;/label&gt;
+  &lt;input type="password" class="input input--error"&gt;
+  &lt;p class="form-error-msg"&gt;Le mot de passe doit contenir au moins 8 caract&egrave;res.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+      <!-- Complete Form -->
+      <h2 class="section-title">Formulaire Complet</h2>
+      <p class="subsection-desc">Exemple de formulaire d'inscription avec plusieurs types de champs.</p>
+      <div class="demo-box" style="max-width:600px;">
+        <form onsubmit="event.preventDefault();">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5);margin-bottom:var(--space-5);">
+            <div>
+              <label class="form-label">Pr&eacute;nom <span style="color:var(--color-danger);">*</span></label>
+              <input type="text" class="input" placeholder="Jean">
+            </div>
+            <div>
+              <label class="form-label">Nom <span style="color:var(--color-danger);">*</span></label>
+              <input type="text" class="input" placeholder="Kabila">
+            </div>
+          </div>
+          <div style="margin-bottom:var(--space-5);">
+            <label class="form-label">Email <span style="color:var(--color-danger);">*</span></label>
+            <input type="email" class="input" placeholder="jean.kabila@gouv.cd">
+          </div>
+          <div style="margin-bottom:var(--space-5);">
+            <label class="form-label">Province</label>
+            <select class="input select">
+              <option value="">S&eacute;lectionnez votre province</option>
+              <option>Kinshasa</option>
+              <option>Haut-Katanga</option>
+              <option>Sud-Kivu</option>
+              <option>Nord-Kivu</option>
+              <option>Equateur</option>
+            </select>
+          </div>
+          <div style="margin-bottom:var(--space-5);">
+            <label class="form-label">Bio</label>
+            <textarea class="input textarea" placeholder="Parlez-nous de vous..."></textarea>
+          </div>
+          <div style="margin-bottom:var(--space-5);">
+            <label class="form-label">Genre</label>
+            <div style="display:flex;gap:var(--space-5);margin-top:var(--space-2);">
+              <label style="display:flex;align-items:center;gap:var(--space-2);cursor:pointer;font-family:var(--font-complement);font-size:var(--text-sm);">
+                <input type="radio" name="genre2" class="radio" checked> Masculin
+              </label>
+              <label style="display:flex;align-items:center;gap:var(--space-2);cursor:pointer;font-family:var(--font-complement);font-size:var(--text-sm);">
+                <input type="radio" name="genre2" class="radio"> F&eacute;minin
+              </label>
+            </div>
+          </div>
+          <div style="margin-bottom:var(--space-5);">
+            <label style="display:flex;align-items:center;gap:var(--space-3);cursor:pointer;font-family:var(--font-complement);font-size:var(--text-sm);">
+              <input type="checkbox" class="checkbox"> J'accepte les conditions d'utilisation
+            </label>
+          </div>
+          <div style="margin-bottom:var(--space-5);">
+            <label style="display:flex;align-items:center;gap:var(--space-3);cursor:pointer;font-family:var(--font-complement);font-size:var(--text-sm);">
+              <input type="checkbox" class="toggle"> Recevoir la newsletter
+            </label>
+          </div>
+          <div style="display:flex;gap:var(--space-3);">
+            <button type="submit" class="btn btn-primary">S'inscrire</button>
+            <button type="reset" class="btn btn-secondary">R&eacute;initialiser</button>
+          </div>
+        </form>
+      </div>
+
+    </main>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

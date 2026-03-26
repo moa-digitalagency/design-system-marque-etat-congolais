@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page d'Accueil — Design System Marque &Eacute;tat Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body style="background:var(--bg-app)">
+
+  <!-- ══════════ HEADER OFFICIEL ══════════ -->
+  <header style="background:var(--bg-white);box-shadow:var(--shadow-soft);position:sticky;top:0;z-index:30">
+    <div style="max-width:1920px;margin:0 auto;padding:0 var(--space-8);height:72px;display:flex;align-items:center;justify-content:space-between">
+      <!-- Logo composition -->
+      <div class="logo-officiel" style="gap:10px">
+        <svg width="40" height="40" viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="28" stroke="#17418A" stroke-width="2" fill="#EFF6FF"/>
+          <text x="32" y="37" text-anchor="middle" font-family="Cooper Hewitt, Inter, sans-serif" font-size="12" font-weight="700" fill="#17418A">RDC</text>
+        </svg>
+        <span class="ligne-etat" style="min-height:40px;width:3px"></span>
+        <div class="intitule-officiel" style="max-width:none">
+          <span class="sous-intitule" style="font-size:10px">R&eacute;publique D&eacute;mocratique du Congo</span>
+          <span style="font-size:9px;display:block">Minist&egrave;re du Num&eacute;rique</span>
+          <span style="font-size:8px;display:block;color:var(--text-muted);font-weight:400;text-transform:none;letter-spacing:0">Le Gouvernement</span>
+        </div>
+      </div>
+      <!-- Navigation -->
+      <nav style="display:flex;align-items:center;gap:var(--space-8)">
+        <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--primary);text-decoration:none">Accueil</a>
+        <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:var(--text-secondary);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-secondary)'">Services</a>
+        <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:var(--text-secondary);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-secondary)'">Actualit&eacute;s</a>
+        <a href="#" style="font-family:var(--font-principale);font-size:var(--text-sm);font-weight:500;color:var(--text-secondary);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-secondary)'">Contact</a>
+      </nav>
+    </div>
+    <!-- Tricolor bottom border -->
+    <span class="ligne-etat-h ligne-etat-h--md"></span>
+  </header>
+
+  <!-- ══════════ HERO SECTION ══════════ -->
+  <section style="background:linear-gradient(135deg, #F0F9FF 0%, #EFF6FF 50%, #F8FAFC 100%);padding:var(--space-20) 0;position:relative;overflow:hidden">
+    <!-- Decorative elements -->
+    <div style="position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;background:rgba(0,149,201,0.05)"></div>
+    <div style="position:absolute;bottom:-60px;left:-60px;width:200px;height:200px;border-radius:50%;background:rgba(23,65,138,0.04)"></div>
+
+    <div style="max-width:1920px;margin:0 auto;padding:0 var(--space-8);text-align:center;position:relative;z-index:1">
+      <h1 style="font-family:var(--font-principale);font-size:clamp(2rem,4vw,3.5rem);font-weight:700;color:var(--text-primary);line-height:1.2;margin-bottom:var(--space-6);max-width:800px;margin-left:auto;margin-right:auto">
+        Bienvenue sur le Portail du Minist&egrave;re du Num&eacute;rique
+      </h1>
+      <p style="font-family:var(--font-complement);font-size:var(--text-xl);color:var(--text-secondary);line-height:1.7;max-width:600px;margin:0 auto var(--space-8)">
+        Au service des citoyens congolais, nous modernisons l'administration publique par la transformation num&eacute;rique et l'innovation technologique.
+      </p>
+      <a href="#services" class="btn btn-primary btn-lg" style="font-size:var(--text-base);padding:16px 40px">
+        <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
+        D&eacute;couvrir nos services
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════ STATS BAND ══════════ -->
+  <section style="background:linear-gradient(135deg, #0095C9 0%, #17418A 100%);padding:var(--space-10) 0">
+    <div style="max-width:1920px;margin:0 auto;padding:0 var(--space-8)">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-6)">
+        <!-- Stat 1 -->
+        <div style="text-align:center">
+          <div style="font-family:var(--font-principale);font-size:clamp(2rem,3vw,3rem);font-weight:700;color:white">26</div>
+          <div style="font-family:var(--font-complement);font-size:var(--text-base);color:rgba(255,255,255,0.8)">Provinces</div>
+        </div>
+        <!-- Stat 2 -->
+        <div style="text-align:center">
+          <div style="font-family:var(--font-principale);font-size:clamp(2rem,3vw,3rem);font-weight:700;color:white">12 500+</div>
+          <div style="font-family:var(--font-complement);font-size:var(--text-base);color:rgba(255,255,255,0.8)">Agents</div>
+        </div>
+        <!-- Stat 3 -->
+        <div style="text-align:center">
+          <div style="font-family:var(--font-principale);font-size:clamp(2rem,3vw,3rem);font-weight:700;color:white">48</div>
+          <div style="font-family:var(--font-complement);font-size:var(--text-base);color:rgba(255,255,255,0.8)">Services en ligne</div>
+        </div>
+        <!-- Stat 4 -->
+        <div style="text-align:center">
+          <div style="font-family:var(--font-principale);font-size:clamp(2rem,3vw,3rem);font-weight:700;color:white">2M+</div>
+          <div style="font-family:var(--font-complement);font-size:var(--text-base);color:rgba(255,255,255,0.8)">Citoyens servis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ SERVICES GRID ══════════ -->
+  <section id="services" style="padding:var(--space-16) 0">
+    <div style="max-width:1920px;margin:0 auto;padding:0 var(--space-8)">
+      <div style="text-align:center;margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-3xl);font-weight:700;color:var(--text-primary);margin-bottom:var(--space-3)">Nos Services</h2>
+        <p style="font-family:var(--font-complement);font-size:var(--text-lg);color:var(--text-secondary);max-width:500px;margin:0 auto">D&eacute;couvrez l'ensemble des services num&eacute;riques mis &agrave; disposition des citoyens et des entreprises.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6);max-width:1200px;margin:0 auto">
+        <!-- Service 1 -->
+        <div class="card card-hover" style="padding:var(--space-8)">
+          <div style="width:48px;height:48px;background:rgba(0,149,201,0.1);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4)">
+            <i data-lucide="id-card" style="width:24px;height:24px;color:var(--rdc-bleu)"></i>
+          </div>
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);margin-bottom:var(--space-2)">Carte d'identit&eacute;</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6">Demande et renouvellement de la carte d'identit&eacute; nationale en ligne.</p>
+        </div>
+        <!-- Service 2 -->
+        <div class="card card-hover" style="padding:var(--space-8)">
+          <div style="width:48px;height:48px;background:rgba(101,179,46,0.1);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4)">
+            <i data-lucide="file-check" style="width:24px;height:24px;color:var(--rdc-vert)"></i>
+          </div>
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);margin-bottom:var(--space-2)">Acte de naissance</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6">Enregistrement et d&eacute;livrance d'actes de naissance &agrave; distance.</p>
+        </div>
+        <!-- Service 3 -->
+        <div class="card card-hover" style="padding:var(--space-8)">
+          <div style="width:48px;height:48px;background:rgba(237,112,22,0.1);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4)">
+            <i data-lucide="plane" style="width:24px;height:24px;color:var(--rdc-orange-vif)"></i>
+          </div>
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);margin-bottom:var(--space-2)">Passeport biom&eacute;trique</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6">Proc&eacute;dure de demande de passeport biom&eacute;trique simplifi&eacute;e.</p>
+        </div>
+        <!-- Service 4 -->
+        <div class="card card-hover" style="padding:var(--space-8)">
+          <div style="width:48px;height:48px;background:rgba(23,65,138,0.1);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4)">
+            <i data-lucide="building-2" style="width:24px;height:24px;color:var(--rdc-bleu-fonce)"></i>
+          </div>
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);margin-bottom:var(--space-2)">Cr&eacute;ation d'entreprise</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6">Immatriculation et formalit&eacute;s de cr&eacute;ation d'entreprise en ligne.</p>
+        </div>
+        <!-- Service 5 -->
+        <div class="card card-hover" style="padding:var(--space-8)">
+          <div style="width:48px;height:48px;background:rgba(156,0,85,0.1);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4)">
+            <i data-lucide="graduation-cap" style="width:24px;height:24px;color:var(--rdc-pourpre)"></i>
+          </div>
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);margin-bottom:var(--space-2)">Bourse d'&eacute;tudes</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6">Candidature aux programmes de bourses du gouvernement congolais.</p>
+        </div>
+        <!-- Service 6 -->
+        <div class="card card-hover" style="padding:var(--space-8)">
+          <div style="width:48px;height:48px;background:rgba(219,56,50,0.1);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4)">
+            <i data-lucide="heart-pulse" style="width:24px;height:24px;color:var(--rdc-rouge)"></i>
+          </div>
+          <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);margin-bottom:var(--space-2)">Couverture sant&eacute;</h3>
+          <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6">Inscription &agrave; la couverture sant&eacute; universelle et suivi des prestations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ ACTUALIT&Eacute;S ══════════ -->
+  <section style="padding:var(--space-16) 0;background:var(--bg-white)">
+    <div style="max-width:1920px;margin:0 auto;padding:0 var(--space-8)">
+      <div style="text-align:center;margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-3xl);font-weight:700;color:var(--text-primary);margin-bottom:var(--space-3)">Actualit&eacute;s</h2>
+        <p style="font-family:var(--font-complement);font-size:var(--text-lg);color:var(--text-secondary)">Les derni&egrave;res nouvelles du Gouvernement</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6);max-width:1200px;margin:0 auto">
+        <!-- Article 1 -->
+        <article class="card card-hover" style="padding:0;overflow:hidden">
+          <div style="height:200px;background:linear-gradient(135deg, #0095C9, #17418A)"></div>
+          <div style="padding:var(--space-6)">
+            <time style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);font-weight:500">15 Mars 2024</time>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin:var(--space-2) 0">Lancement du portail num&eacute;rique national</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6">Le Gouvernement annonce la mise en service de la plateforme unifi&eacute;e pour tous les services administratifs en ligne.</p>
+          </div>
+        </article>
+        <!-- Article 2 -->
+        <article class="card card-hover" style="padding:0;overflow:hidden">
+          <div style="height:200px;background:linear-gradient(135deg, #65B32E, #17418A)"></div>
+          <div style="padding:var(--space-6)">
+            <time style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);font-weight:500">8 Mars 2024</time>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin:var(--space-2) 0">Formation de 5 000 agents publics au num&eacute;rique</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6">Un programme ambitieux de formation aux outils num&eacute;riques pour les fonctionnaires de l'administration publique.</p>
+          </div>
+        </article>
+        <!-- Article 3 -->
+        <article class="card card-hover" style="padding:0;overflow:hidden">
+          <div style="height:200px;background:linear-gradient(135deg, #ED7016, #DB3832)"></div>
+          <div style="padding:var(--space-6)">
+            <time style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);font-weight:500">1 Mars 2024</time>
+            <h3 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-base);margin:var(--space-2) 0">Partenariat pour la connectivit&eacute; rurale</h3>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);line-height:1.6">Accord sign&eacute; pour l'extension du r&eacute;seau internet haut d&eacute;bit dans les zones rurales des 26 provinces.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER OFFICIEL ══════════ -->
+  <footer>
+    <span class="ligne-etat-h ligne-etat-h--md"></span>
+    <div style="background:#174899;padding:var(--space-12) 0">
+      <div style="max-width:1920px;margin:0 auto;padding:0 var(--space-8)">
+        <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:var(--space-10);margin-bottom:var(--space-10)">
+          <!-- Logo & desc -->
+          <div>
+            <div class="logo-officiel marque--mono" style="gap:10px;margin-bottom:var(--space-4)">
+              <svg width="36" height="36" viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="32" r="28" stroke="white" stroke-width="2" fill="rgba(255,255,255,0.1)"/>
+                <text x="32" y="37" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="white">RDC</text>
+              </svg>
+              <span style="display:block;width:3px;min-height:36px;background:white;flex-shrink:0"></span>
+              <div style="font-family:var(--font-principale);font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:white;line-height:1.3">
+                <span style="font-weight:700;font-size:11px;display:block">R&eacute;publique D&eacute;mocratique du Congo</span>
+                Minist&egrave;re du Num&eacute;rique
+              </div>
+            </div>
+            <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);line-height:1.7;max-width:350px">
+              Au service des citoyens, pour une administration moderne, transparente et efficace.
+            </p>
+          </div>
+          <!-- Liens utiles -->
+          <div>
+            <h4 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:white;margin-bottom:var(--space-4)">Liens utiles</h4>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-2)">
+              <li><a href="#" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Accueil</a></li>
+              <li><a href="#" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Services</a></li>
+              <li><a href="#" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Actualit&eacute;s</a></li>
+              <li><a href="#" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Contact</a></li>
+            </ul>
+          </div>
+          <!-- Services -->
+          <div>
+            <h4 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:white;margin-bottom:var(--space-4)">Services</h4>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-2)">
+              <li><a href="#" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Carte d'identit&eacute;</a></li>
+              <li><a href="#" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Passeport</a></li>
+              <li><a href="#" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Acte de naissance</a></li>
+              <li><a href="#" style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Entreprise</a></li>
+            </ul>
+          </div>
+          <!-- Contact -->
+          <div>
+            <h4 style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:white;margin-bottom:var(--space-4)">Contact</h4>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-2)">
+              <li style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7)">Kinshasa, Gombe</li>
+              <li style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7)">info@numerique.gouv.cd</li>
+              <li style="font-family:var(--font-complement);font-size:var(--text-sm);color:rgba(255,255,255,0.7)">+243 81 000 0000</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Copyright -->
+        <div style="border-top:1px solid rgba(255,255,255,0.15);padding-top:var(--space-6);text-align:center">
+          <p style="font-family:var(--font-principale);font-size:var(--text-xs);color:rgba(255,255,255,0.5)">&copy; 2024 R&eacute;publique D&eacute;mocratique du Congo. Tous droits r&eacute;serv&eacute;s.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

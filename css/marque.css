@@ -1,0 +1,198 @@
+/* ================================================================
+   MARQUE — Éléments d'identité visuelle · Marque État Congolais
+   Source : Charte Graphique du Gouvernement de la RDC, Fév 2022
+   ================================================================ */
+
+/* ── Ligne d'État — Barre tricolore verticale ──
+   Symbolise la rigueur et la détermination.
+   Couleurs réparties à part égale (33.33% chacune).
+   Ordre de lecture du haut vers le bas : Bleu, Jaune, Rouge.
+   ─────────────────────────────────────────────── */
+.ligne-etat {
+  display: block;
+  width: var(--ligne-etat-width);
+  min-height: var(--ligne-etat-min-h);
+  background: linear-gradient(
+    180deg,
+    var(--rdc-bleu)  0%,
+    var(--rdc-bleu)  33.33%,
+    var(--rdc-jaune) 33.33%,
+    var(--rdc-jaune) 66.66%,
+    var(--rdc-rouge) 66.66%,
+    var(--rdc-rouge) 100%
+  );
+  flex-shrink: 0;
+}
+.ligne-etat--sm  { width: 2px; }
+.ligne-etat--md  { width: 4px; }
+.ligne-etat--lg  { width: 8px; }
+.ligne-etat--xl  { width: 12px; }
+
+/* ── Ligne d'État horizontale ── */
+.ligne-etat-h {
+  display: block;
+  height: var(--ligne-etat-width);
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--rdc-bleu)  0%,
+    var(--rdc-bleu)  33.33%,
+    var(--rdc-jaune) 33.33%,
+    var(--rdc-jaune) 66.66%,
+    var(--rdc-rouge) 66.66%,
+    var(--rdc-rouge) 100%
+  );
+}
+.ligne-etat-h--sm { height: 2px; }
+.ligne-etat-h--md { height: 4px; }
+.ligne-etat-h--lg { height: 8px; }
+.ligne-etat-h--xl { height: 12px; }
+
+/* ── Bloc-Armoirie ──
+   Partie statique du logo qui ne change jamais.
+   Représente l'autorité de l'État.
+   ─────────────────────────────────────────────── */
+.bloc-armoirie {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.bloc-armoirie img,
+.bloc-armoirie svg {
+  height: var(--logo-web);
+  width: auto;
+  display: block;
+}
+.bloc-armoirie--lg img,
+.bloc-armoirie--lg svg {
+  height: var(--logo-social);
+}
+
+/* ── Intitulé Officiel ──
+   Partie extensible : dénomination du ministère / entité.
+   Police : Cooper Hewitt Semi-bold.
+   Maximum : 5 lignes, largeur max = 3× largeur du symbole.
+   ─────────────────────────────────────────────── */
+.intitule-officiel {
+  font-family: var(--font-principale);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: var(--leading-tight);
+  color: var(--text-primary);
+  max-width: calc(var(--logo-web) * 3);
+}
+.intitule-officiel--lg {
+  font-size: var(--text-sm);
+  max-width: calc(var(--logo-social) * 3);
+}
+.intitule-officiel .sous-intitule {
+  font-family: var(--font-principale);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* ── Composition du Logo Officiel ──
+   Assemblage : Bloc-armoirie | Ligne d'État | Intitulé
+   Zone de sécurité = 4 × largeur Ligne d'État
+   ─────────────────────────────────────────────── */
+.logo-officiel {
+  display: flex;
+  align-items: stretch;
+  gap: var(--zone-securite);
+}
+.logo-officiel .ligne-etat {
+  align-self: stretch;
+}
+
+/* ── Zone de sécurité ──
+   Aucun élément ne doit s'approcher du logo
+   à moins de 4× la largeur de la Ligne d'État.
+   ─────────────────────────────────────────────── */
+.zone-securite {
+  padding: var(--zone-securite);
+}
+
+/* ── En-tête Officiel (Header gouvernemental) ──
+   Barre supérieure standard pour tous les sites gouvernementaux.
+   Hauteur : 108px · Largeur : 100% (max 1920px)
+   ─────────────────────────────────────────────── */
+.entete-officiel {
+  display: flex;
+  align-items: center;
+  height: var(--header-h);
+  max-width: var(--header-w);
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+  background: var(--bg-white);
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(
+    90deg,
+    var(--rdc-bleu)  33.33%,
+    var(--rdc-jaune) 33.33%,
+    var(--rdc-jaune) 66.66%,
+    var(--rdc-rouge) 66.66%
+  ) 1;
+}
+
+/* Variante bleu (pages intérieures) — header bleu avec logo blanc */
+.entete-officiel--bleu {
+  background: var(--rdc-bleu-inst);
+  border-image: none;
+  border-bottom: none;
+}
+.entete-officiel--bleu .intitule-officiel,
+.entete-officiel--bleu .intitule-officiel .sous-intitule {
+  color: var(--text-inverse);
+}
+
+/* ── Pied de Page Officiel ──
+   Footer standard : 1920 × 108px
+   Logo en monochrome blanc sur fond coloré.
+   ─────────────────────────────────────────────── */
+.pied-page-officiel {
+  min-height: var(--header-h);
+  max-width: var(--header-w);
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-8);
+  background: var(--rdc-bleu-inst);
+  color: var(--text-inverse);
+  font-family: var(--font-principale);
+}
+.pied-page-officiel a {
+  color: var(--text-inverse);
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+  text-decoration: none;
+}
+.pied-page-officiel a:hover {
+  opacity: 1;
+}
+
+/* ── Variante Monochrome (fond coloré) ──
+   Sur fond sombre/coloré, le logo passe en blanc.
+   ─────────────────────────────────────────────── */
+.marque--mono .bloc-armoirie img,
+.marque--mono .bloc-armoirie svg {
+  filter: brightness(0) invert(1);
+}
+.marque--mono .intitule-officiel,
+.marque--mono .intitule-officiel .sous-intitule {
+  color: var(--text-inverse);
+}
+.marque--mono .ligne-etat,
+.marque--mono .ligne-etat-h {
+  background: var(--text-inverse);
+}
+
+/* ── Mention d'Autorité ──
+   Typographie Great Vibes pour « Le Ministre », « Le Cabinet », etc.
+   ─────────────────────────────────────────────── */
+.mention-autorite {
+  font-family: var(--font-autorite);
+  font-size: var(--text-xl);
+  color: var(--text-primary);
+}

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espacements — Design System Marque État Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="layout-sidebar">
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" style="text-decoration:none;display:flex;align-items:center;gap:var(--space-3)">
+          <div class="ligne-etat" style="min-height:32px;width:4px;border-radius:2px"></div>
+          <div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-primary)">Design System</div>
+            <div style="font-family:var(--font-principale);font-weight:500;font-size:var(--text-xs);color:var(--text-muted)">RDC</div>
+          </div>
+        </a>
+      </div>
+      <nav>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Tokens</div>
+          <a href="couleurs.html" class="sidebar-link"><i data-lucide="palette" style="width:16px;height:16px"></i> Couleurs</a>
+          <a href="typographie.html" class="sidebar-link"><i data-lucide="type" style="width:16px;height:16px"></i> Typographie</a>
+          <a href="espacements.html" class="sidebar-link active"><i data-lucide="move" style="width:16px;height:16px"></i> Espacements</a>
+          <a href="ombres-elevations.html" class="sidebar-link"><i data-lucide="layers" style="width:16px;height:16px"></i> Ombres & Elevations</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Composants</div>
+          <a href="../composants/boutons.html" class="sidebar-link"><i data-lucide="mouse-pointer-click" style="width:16px;height:16px"></i> Boutons</a>
+          <a href="../composants/formulaires.html" class="sidebar-link"><i data-lucide="text-cursor-input" style="width:16px;height:16px"></i> Formulaires</a>
+          <a href="../composants/cartes.html" class="sidebar-link"><i data-lucide="square" style="width:16px;height:16px"></i> Cartes</a>
+          <a href="../composants/navigation.html" class="sidebar-link"><i data-lucide="compass" style="width:16px;height:16px"></i> Navigation</a>
+          <a href="../composants/tableaux.html" class="sidebar-link"><i data-lucide="table" style="width:16px;height:16px"></i> Tableaux</a>
+          <a href="../composants/badges-alertes.html" class="sidebar-link"><i data-lucide="bell" style="width:16px;height:16px"></i> Badges & Alertes</a>
+          <a href="../composants/entete-officiel.html" class="sidebar-link"><i data-lucide="landmark" style="width:16px;height:16px"></i> En-tete Officiel</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Modeles</div>
+          <a href="../modeles/page-accueil.html" class="sidebar-link"><i data-lucide="home" style="width:16px;height:16px"></i> Page d'Accueil</a>
+          <a href="../modeles/page-interieure.html" class="sidebar-link"><i data-lucide="file-text" style="width:16px;height:16px"></i> Page Interieure</a>
+          <a href="../modeles/page-service.html" class="sidebar-link"><i data-lucide="briefcase" style="width:16px;height:16px"></i> Page Service</a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Marque</div>
+          <a href="../marque/logo.html" class="sidebar-link"><i data-lucide="shield" style="width:16px;height:16px"></i> Logo</a>
+          <a href="../marque/ligne-etat.html" class="sidebar-link"><i data-lucide="minus" style="width:16px;height:16px"></i> Ligne d'Etat</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <main class="main-content">
+      <div class="page-hero">
+        <h1 class="page-title">Espacements & Grille</h1>
+        <p class="page-subtitle">Systeme d'espacement base sur une grille de 4px pour la coherence visuelle</p>
+      </div>
+
+      <!-- ════ Unite de base ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-2);color:var(--text-primary)">
+          Unite de base
+        </h2>
+        <p style="font-family:var(--font-complement);font-size:var(--text-sm);color:var(--text-secondary);margin-bottom:var(--space-6)">
+          Tous les espacements sont des multiples de 4px. Cette unite garantit un alignement pixel-perfect et une harmonie visuelle sur tous les supports.
+        </p>
+        <div class="card" style="display:flex;align-items:center;gap:var(--space-6)">
+          <div style="display:flex;gap:2px;align-items:end">
+            <div style="width:16px;height:16px;background:var(--rdc-bleu);border-radius:2px;opacity:0.3"></div>
+            <div style="width:16px;height:16px;background:var(--rdc-bleu);border-radius:2px;opacity:0.5"></div>
+            <div style="width:16px;height:16px;background:var(--rdc-bleu);border-radius:2px;opacity:0.7"></div>
+            <div style="width:16px;height:16px;background:var(--rdc-bleu);border-radius:2px"></div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-3xl);color:var(--rdc-bleu-inst)">4px</div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-muted)">Unite de base = 0.25rem</div>
+          </div>
+          <div style="flex:1;display:grid;grid-template-columns:repeat(16,1fr);gap:2px;max-width:400px">
+            <div style="height:16px;background:var(--rdc-bleu);border-radius:1px;opacity:0.15"></div>
+            <div style="height:16px;background:var(--rdc-bleu);border-radius:1px;opacity:0.15"></div>
+            <div style="height:16px;background:var(--rdc-bleu);border-radius:1px;opacity:0.15"></div>
+            <div style="height:16px;background:var(--rdc-bleu);border-radius:1px;opacity:0.15"></div>
+            <div style="height:16px;background:var(--rdc-jaune);border-radius:1px;opacity:0.3"></div>
+            <div style="height:16px;background:var(--rdc-jaune);border-radius:1px;opacity:0.3"></div>
+            <div style="height:16px;background:var(--rdc-jaune);border-radius:1px;opacity:0.3"></div>
+            <div style="height:16px;background:var(--rdc-jaune);border-radius:1px;opacity:0.3"></div>
+            <div style="height:16px;background:var(--rdc-rouge);border-radius:1px;opacity:0.2"></div>
+            <div style="height:16px;background:var(--rdc-rouge);border-radius:1px;opacity:0.2"></div>
+            <div style="height:16px;background:var(--rdc-rouge);border-radius:1px;opacity:0.2"></div>
+            <div style="height:16px;background:var(--rdc-rouge);border-radius:1px;opacity:0.2"></div>
+            <div style="height:16px;background:var(--rdc-bleu);border-radius:1px;opacity:0.15"></div>
+            <div style="height:16px;background:var(--rdc-bleu);border-radius:1px;opacity:0.15"></div>
+            <div style="height:16px;background:var(--rdc-bleu);border-radius:1px;opacity:0.15"></div>
+            <div style="height:16px;background:var(--rdc-bleu);border-radius:1px;opacity:0.15"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════ Echelle d'espacement ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);color:var(--text-primary)">
+          Echelle d'espacement
+        </h2>
+        <div class="card" style="padding:var(--space-6)">
+          <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+            <!-- space-1 -->
+            <div style="display:flex;align-items:center;gap:var(--space-4)">
+              <div style="width:100px;font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">space-1</div>
+              <div style="width:80px;font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">4px / 0.25rem</div>
+              <div style="flex:1"><div style="width:4px;height:20px;background:var(--rdc-bleu);border-radius:2px"></div></div>
+            </div>
+            <!-- space-2 -->
+            <div style="display:flex;align-items:center;gap:var(--space-4)">
+              <div style="width:100px;font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">space-2</div>
+              <div style="width:80px;font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">8px / 0.5rem</div>
+              <div style="flex:1"><div style="width:8px;height:20px;background:var(--rdc-bleu);border-radius:2px"></div></div>
+            </div>
+            <!-- space-3 -->
+            <div style="display:flex;align-items:center;gap:var(--space-4)">
+              <div style="width:100px;font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">space-3</div>
+              <div style="width:80px;font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">12px / 0.75rem</div>
+              <div style="flex:1"><div style="width:12px;height:20px;background:var(--rdc-bleu);border-radius:2px"></div></div>
+            </div>
+            <!-- space-4 -->
+            <div style="display:flex;align-items:center;gap:var(--space-4)">
+              <div style="width:100px;font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">space-4</div>
+              <div style="width:80px;font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">16px / 1rem</div>
+              <div style="flex:1"><div style="width:16px;height:20px;background:var(--rdc-bleu);border-radius:2px"></div></div>
+            </div>
+            <!-- space-5 -->
+            <div style="display:flex;align-items:center;gap:var(--space-4)">
+              <div style="width:100px;font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">space-5</div>
+              <div style="width:80px;font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">20px / 1.25rem</div>
+              <div style="flex:1"><div style="width:20px;height:20px;background:var(--rdc-jaune);border-radius:2px;border:1px solid rgba(0,0,0,0.08)"></div></div>
+            </div>
+            <!-- space-6 -->
+            <div style="display:flex;align-items:center;gap:var(--space-4)">
+              <div style="width:100px;font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">space-6</div>
+              <div style="width:80px;font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">24px / 1.5rem</div>
+              <div style="flex:1"><div style="width:24px;height:20px;background:var(--rdc-jaune);border-radius:2px;border:1px solid rgba(0,0,0,0.08)"></div></div>
+            </div>
+            <!-- space-8 -->
+            <div style="display:flex;align-items:center;gap:var(--space-4)">
+              <div style="width:100px;font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">space-8</div>
+              <div style="width:80px;font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">32px / 2rem</div>
+              <div style="flex:1"><div style="width:32px;height:20px;background:var(--rdc-jaune);border-radius:2px;border:1px solid rgba(0,0,0,0.08)"></div></div>
+            </div>
+            <!-- space-10 -->
+            <div style="display:flex;align-items:center;gap:var(--space-4)">
+              <div style="width:100px;font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">space-10</div>
+              <div style="width:80px;font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">40px / 2.5rem</div>
+              <div style="flex:1"><div style="width:40px;height:20px;background:var(--rdc-rouge);border-radius:2px"></div></div>
+            </div>
+            <!-- space-12 -->
+            <div style="display:flex;align-items:center;gap:var(--space-4)">
+              <div style="width:100px;font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">space-12</div>
+              <div style="width:80px;font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">48px / 3rem</div>
+              <div style="flex:1"><div style="width:48px;height:20px;background:var(--rdc-rouge);border-radius:2px"></div></div>
+            </div>
+            <!-- space-16 -->
+            <div style="display:flex;align-items:center;gap:var(--space-4)">
+              <div style="width:100px;font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">space-16</div>
+              <div style="width:80px;font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">64px / 4rem</div>
+              <div style="flex:1"><div style="width:64px;height:20px;background:var(--rdc-rouge);border-radius:2px"></div></div>
+            </div>
+            <!-- space-20 -->
+            <div style="display:flex;align-items:center;gap:var(--space-4)">
+              <div style="width:100px;font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">space-20</div>
+              <div style="width:80px;font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">80px / 5rem</div>
+              <div style="flex:1"><div style="width:80px;height:20px;background:linear-gradient(90deg,var(--rdc-bleu),var(--rdc-jaune),var(--rdc-rouge));border-radius:2px"></div></div>
+            </div>
+            <!-- space-24 -->
+            <div style="display:flex;align-items:center;gap:var(--space-4)">
+              <div style="width:100px;font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">space-24</div>
+              <div style="width:80px;font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">96px / 6rem</div>
+              <div style="flex:1"><div style="width:96px;height:20px;background:linear-gradient(90deg,var(--rdc-bleu),var(--rdc-jaune),var(--rdc-rouge));border-radius:2px"></div></div>
+            </div>
+            <!-- space-32 -->
+            <div style="display:flex;align-items:center;gap:var(--space-4)">
+              <div style="width:100px;font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600;color:var(--rdc-bleu-inst)">space-32</div>
+              <div style="width:80px;font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted)">128px / 8rem</div>
+              <div style="flex:1"><div style="width:128px;height:20px;background:linear-gradient(90deg,var(--rdc-bleu),var(--rdc-jaune),var(--rdc-rouge));border-radius:2px"></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════ Mesures Charte Graphique ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);color:var(--text-primary)">
+          Mesures Charte Graphique
+        </h2>
+        <div class="card" style="overflow:hidden;padding:0">
+          <table style="width:100%;border-collapse:collapse">
+            <thead>
+              <tr style="border-bottom:2px solid #E5E7EB">
+                <th style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);text-align:left;padding:var(--space-3) var(--space-5)">Element</th>
+                <th style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);text-align:left;padding:var(--space-3) var(--space-5)">Digital</th>
+                <th style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);text-align:left;padding:var(--space-3) var(--space-5)">Print</th>
+                <th style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);text-align:left;padding:var(--space-3) var(--space-5)">Token CSS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-complement);font-size:var(--text-sm)">Ligne d'Etat (hauteur min.)</td>
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600">53px</td>
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">14mm</td>
+                <td style="padding:var(--space-3) var(--space-5)"><code style="font-size:var(--text-xs);background:#F3F4F6;padding:2px 8px;border-radius:var(--radius-sm);font-family:monospace">--ligne-etat-min-h</code></td>
+              </tr>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-complement);font-size:var(--text-sm)">Header / Footer</td>
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600">108px</td>
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">28.6mm</td>
+                <td style="padding:var(--space-3) var(--space-5)"><code style="font-size:var(--text-xs);background:#F3F4F6;padding:2px 8px;border-radius:var(--radius-sm);font-family:monospace">--header-h</code></td>
+              </tr>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-complement);font-size:var(--text-sm)">Logo web</td>
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600">50px</td>
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">13mm</td>
+                <td style="padding:var(--space-3) var(--space-5)"><code style="font-size:var(--text-xs);background:#F3F4F6;padding:2px 8px;border-radius:var(--radius-sm);font-family:monospace">--logo-web</code></td>
+              </tr>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-complement);font-size:var(--text-sm)">Logo social / video</td>
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600">110px</td>
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">29mm</td>
+                <td style="padding:var(--space-3) var(--space-5)"><code style="font-size:var(--text-xs);background:#F3F4F6;padding:2px 8px;border-radius:var(--radius-sm);font-family:monospace">--logo-social</code></td>
+              </tr>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-complement);font-size:var(--text-sm)">Zone de securite</td>
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600">16px</td>
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">4mm</td>
+                <td style="padding:var(--space-3) var(--space-5)"><code style="font-size:var(--text-xs);background:#F3F4F6;padding:2px 8px;border-radius:var(--radius-sm);font-family:monospace">--zone-securite</code></td>
+              </tr>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-complement);font-size:var(--text-sm)">Zone de contenu</td>
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600">438px</td>
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">116mm</td>
+                <td style="padding:var(--space-3) var(--space-5)"><code style="font-size:var(--text-xs);background:#F3F4F6;padding:2px 8px;border-radius:var(--radius-sm);font-family:monospace">--content-zone</code></td>
+              </tr>
+              <tr>
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-complement);font-size:var(--text-sm)">Module</td>
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-principale);font-size:var(--text-sm);font-weight:600">110px</td>
+                <td style="padding:var(--space-3) var(--space-5);font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">29mm</td>
+                <td style="padding:var(--space-3) var(--space-5)"><code style="font-size:var(--text-xs);background:#F3F4F6;padding:2px 8px;border-radius:var(--radius-sm);font-family:monospace">--module</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ════ Grille Responsive ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);color:var(--text-primary)">
+          Grille Responsive
+        </h2>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6)">
+          <!-- Mobile: 2 cols -->
+          <div class="card">
+            <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);margin-bottom:var(--space-1)">Mobile</div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-4)">1 colonne — &lt; 768px</div>
+            <div style="display:grid;grid-template-columns:1fr;gap:6px">
+              <div style="height:32px;background:var(--rdc-bleu);opacity:0.2;border-radius:var(--radius-sm)"></div>
+              <div style="height:32px;background:var(--rdc-bleu);opacity:0.2;border-radius:var(--radius-sm)"></div>
+            </div>
+          </div>
+          <!-- Tablet: 2-3 cols -->
+          <div class="card">
+            <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);margin-bottom:var(--space-1)">Tablette</div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-4)">2-3 colonnes — 768px+</div>
+            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:6px">
+              <div style="height:32px;background:var(--rdc-jaune);opacity:0.35;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.06)"></div>
+              <div style="height:32px;background:var(--rdc-jaune);opacity:0.35;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.06)"></div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
+              <div style="height:32px;background:var(--rdc-jaune);opacity:0.35;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.06)"></div>
+              <div style="height:32px;background:var(--rdc-jaune);opacity:0.35;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.06)"></div>
+              <div style="height:32px;background:var(--rdc-jaune);opacity:0.35;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.06)"></div>
+            </div>
+          </div>
+          <!-- Desktop: 4 cols -->
+          <div class="card">
+            <div style="font-family:var(--font-principale);font-weight:600;font-size:var(--text-sm);margin-bottom:var(--space-1)">Desktop</div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-4)">4 colonnes — 1280px+</div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px">
+              <div style="height:32px;background:var(--rdc-rouge);opacity:0.2;border-radius:var(--radius-sm)"></div>
+              <div style="height:32px;background:var(--rdc-rouge);opacity:0.2;border-radius:var(--radius-sm)"></div>
+              <div style="height:32px;background:var(--rdc-rouge);opacity:0.2;border-radius:var(--radius-sm)"></div>
+              <div style="height:32px;background:var(--rdc-rouge);opacity:0.2;border-radius:var(--radius-sm)"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════ Breakpoints ════ -->
+      <section style="margin-bottom:var(--space-12)">
+        <h2 style="font-family:var(--font-principale);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);color:var(--text-primary)">
+          Breakpoints
+        </h2>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4)">
+          <div class="card" style="text-align:center">
+            <div style="width:48px;height:48px;border-radius:var(--radius-lg);background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-3)">
+              <i data-lucide="smartphone" style="width:22px;height:22px;color:var(--primary)"></i>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);color:var(--rdc-bleu-inst)">375px</div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">Mobile</div>
+          </div>
+          <div class="card" style="text-align:center">
+            <div style="width:48px;height:48px;border-radius:var(--radius-lg);background:rgba(255,242,75,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-3)">
+              <i data-lucide="tablet" style="width:22px;height:22px;color:#9F6E26"></i>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);color:var(--rdc-bleu-inst)">768px</div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">Tablette</div>
+          </div>
+          <div class="card" style="text-align:center">
+            <div style="width:48px;height:48px;border-radius:var(--radius-lg);background:rgba(219,56,50,0.08);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-3)">
+              <i data-lucide="monitor" style="width:22px;height:22px;color:var(--rdc-rouge)"></i>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);color:var(--rdc-bleu-inst)">1280px</div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">Desktop</div>
+          </div>
+          <div class="card" style="text-align:center">
+            <div style="width:48px;height:48px;border-radius:var(--radius-lg);background:rgba(101,179,46,0.08);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-3)">
+              <i data-lucide="tv" style="width:22px;height:22px;color:var(--rdc-vert)"></i>
+            </div>
+            <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-lg);color:var(--rdc-bleu-inst)">1920px</div>
+            <div style="font-family:var(--font-principale);font-size:var(--text-sm);color:var(--text-secondary)">Wide</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

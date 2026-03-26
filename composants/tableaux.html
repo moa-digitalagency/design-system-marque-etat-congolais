@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableaux — Design System Marque État Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .code-block {
+      background: #1E293B;
+      color: #E2E8F0;
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      font-family: 'Fira Code', 'Consolas', monospace;
+      font-size: 13px;
+      line-height: 1.6;
+      overflow-x: auto;
+      margin-top: var(--space-3);
+    }
+    .demo-box {
+      background: var(--bg-white);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      margin-bottom: var(--space-2);
+    }
+    .section-title {
+      font-family: var(--font-principale);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--space-4);
+      margin-top: var(--space-8);
+    }
+    .section-title:first-of-type { margin-top: 0; }
+    .subsection-desc {
+      font-family: var(--font-complement);
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      margin-bottom: var(--space-4);
+    }
+  </style>
+</head>
+<body>
+  <div class="layout-sidebar">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" style="text-decoration:none;">
+          <div style="display:flex;align-items:center;gap:var(--space-3);">
+            <div style="width:32px;height:32px;background:var(--rdc-bleu-inst);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;">
+              <i data-lucide="shield" style="width:18px;height:18px;color:white;"></i>
+            </div>
+            <div>
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);">Design System RDC</div>
+              <div class="ligne-etat-h ligne-etat-h--sm" style="width:48px;margin-top:4px;border-radius:2px;"></div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <nav>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Tokens</div>
+          <a href="../tokens/couleurs.html" class="sidebar-link"><i data-lucide="palette" style="width:16px;height:16px;"></i> Couleurs</a>
+          <a href="../tokens/typographie.html" class="sidebar-link"><i data-lucide="type" style="width:16px;height:16px;"></i> Typographie</a>
+          <a href="../tokens/espacements.html" class="sidebar-link"><i data-lucide="ruler" style="width:16px;height:16px;"></i> Espacements</a>
+          <a href="../tokens/ombres-elevations.html" class="sidebar-link"><i data-lucide="layers" style="width:16px;height:16px;"></i> Ombres</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Composants</div>
+          <a href="boutons.html" class="sidebar-link"><i data-lucide="mouse-pointer-click" style="width:16px;height:16px;"></i> Boutons</a>
+          <a href="formulaires.html" class="sidebar-link"><i data-lucide="text-cursor-input" style="width:16px;height:16px;"></i> Formulaires</a>
+          <a href="cartes.html" class="sidebar-link"><i data-lucide="square" style="width:16px;height:16px;"></i> Cartes</a>
+          <a href="navigation.html" class="sidebar-link"><i data-lucide="compass" style="width:16px;height:16px;"></i> Navigation</a>
+          <a href="tableaux.html" class="sidebar-link active"><i data-lucide="table" style="width:16px;height:16px;"></i> Tableaux</a>
+          <a href="badges-alertes.html" class="sidebar-link"><i data-lucide="bell" style="width:16px;height:16px;"></i> Badges &amp; Alertes</a>
+          <a href="en-tete-officiel.html" class="sidebar-link"><i data-lucide="landmark" style="width:16px;height:16px;"></i> En-t&ecirc;te Officiel</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Marque</div>
+          <a href="../marque/logo.html" class="sidebar-link"><i data-lucide="image" style="width:16px;height:16px;"></i> Logo</a>
+          <a href="../marque/ligne-etat.html" class="sidebar-link"><i data-lucide="minus" style="width:16px;height:16px;"></i> Ligne d'&Eacute;tat</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Mod&egrave;les</div>
+          <a href="../modeles/page-accueil.html" class="sidebar-link"><i data-lucide="layout-dashboard" style="width:16px;height:16px;"></i> Page d'Accueil</a>
+          <a href="../modeles/page-interieure.html" class="sidebar-link"><i data-lucide="file-text" style="width:16px;height:16px;"></i> Page Int&eacute;rieure</a>
+          <a href="../modeles/page-service.html" class="sidebar-link"><i data-lucide="settings" style="width:16px;height:16px;"></i> Page Service</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="page-hero">
+        <h1 class="page-title">Tableaux</h1>
+        <p class="page-subtitle">Tables de donn&eacute;es pour afficher des informations structur&eacute;es.</p>
+      </div>
+
+      <!-- Section 1: Tableau simple -->
+      <h2 class="section-title">Tableau simple</h2>
+      <p class="subsection-desc">Tableau standard pour pr&eacute;senter des donn&eacute;es tabulaires avec en-t&ecirc;tes et lignes.</p>
+      <div class="demo-box">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Province</th>
+              <th>Fonction</th>
+              <th>Statut</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jean-Pierre Mukendi</td>
+              <td>Kinshasa</td>
+              <td>Directeur g&eacute;n&eacute;ral</td>
+              <td><span class="badge badge-success">Actif</span></td>
+              <td>12/01/2024</td>
+            </tr>
+            <tr>
+              <td>Marie-Claire Kabila</td>
+              <td>Lubumbashi</td>
+              <td>Cheffe de division</td>
+              <td><span class="badge badge-success">Actif</span></td>
+              <td>03/03/2024</td>
+            </tr>
+            <tr>
+              <td>Patrick Bisimwa</td>
+              <td>Goma</td>
+              <td>Inspecteur provincial</td>
+              <td><span class="badge badge-warning">En attente</span></td>
+              <td>17/05/2024</td>
+            </tr>
+            <tr>
+              <td>Ang&egrave;le Namwezi</td>
+              <td>Bukavu</td>
+              <td>Coordonnatrice</td>
+              <td><span class="badge badge-danger">Inactif</span></td>
+              <td>22/07/2023</td>
+            </tr>
+            <tr>
+              <td>Fran&ccedil;ois Tshilombo</td>
+              <td>Mbuji-Mayi</td>
+              <td>Secr&eacute;taire administratif</td>
+              <td><span class="badge badge-success">Actif</span></td>
+              <td>08/11/2024</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <pre class="code-block"><code>&lt;table class="table"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Nom&lt;/th&gt;
+      &lt;th&gt;Province&lt;/th&gt;
+      &lt;th&gt;Fonction&lt;/th&gt;
+      &lt;th&gt;Statut&lt;/th&gt;
+      &lt;th&gt;Date&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Jean-Pierre Mukendi&lt;/td&gt;
+      &lt;td&gt;Kinshasa&lt;/td&gt;
+      &lt;td&gt;Directeur g&eacute;n&eacute;ral&lt;/td&gt;
+      &lt;td&gt;&lt;span class="badge badge-success"&gt;Actif&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;12/01/2024&lt;/td&gt;
+    &lt;/tr&gt;
+    ...
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+      <!-- Section 2: Tableau alterné -->
+      <h2 class="section-title">Tableau altern&eacute;</h2>
+      <p class="subsection-desc">Ajoutez la classe <code>.table-striped</code> pour alterner la couleur de fond des lignes et am&eacute;liorer la lisibilit&eacute;.</p>
+      <div class="demo-box">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Responsable</th>
+              <th>D&eacute;partement</th>
+              <th>D&eacute;lai</th>
+              <th>&Eacute;tat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>D&eacute;livrance de passeport</td>
+              <td>Albert Mwamba</td>
+              <td>Affaires &eacute;trang&egrave;res</td>
+              <td>15 jours</td>
+              <td><span class="badge badge-success">Actif</span></td>
+            </tr>
+            <tr>
+              <td>Enregistrement civil</td>
+              <td>Claire Lukusa</td>
+              <td>Int&eacute;rieur</td>
+              <td>7 jours</td>
+              <td><span class="badge badge-success">Actif</span></td>
+            </tr>
+            <tr>
+              <td>Permis de construire</td>
+              <td>Joseph Kalala</td>
+              <td>Urbanisme</td>
+              <td>30 jours</td>
+              <td><span class="badge badge-warning">En attente</span></td>
+            </tr>
+            <tr>
+              <td>Licence commerciale</td>
+              <td>Esther Ngoy</td>
+              <td>Commerce</td>
+              <td>21 jours</td>
+              <td><span class="badge badge-success">Actif</span></td>
+            </tr>
+            <tr>
+              <td>Certificat d'origine</td>
+              <td>Simon Ilunga</td>
+              <td>Douanes</td>
+              <td>10 jours</td>
+              <td><span class="badge badge-danger">Inactif</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <pre class="code-block"><code>&lt;table class="table table-striped"&gt;
+  &lt;thead&gt;...&lt;/thead&gt;
+  &lt;tbody&gt;...&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+      <!-- Section 3: Tableau compact -->
+      <h2 class="section-title">Tableau compact</h2>
+      <p class="subsection-desc">Version compacte avec un espacement r&eacute;duit, adapt&eacute;e aux donn&eacute;es denses comme les lignes budg&eacute;taires.</p>
+      <div class="demo-box">
+        <table class="table" style="font-size:var(--text-sm);">
+          <thead>
+            <tr>
+              <th style="padding:var(--space-2) var(--space-3);">Code</th>
+              <th style="padding:var(--space-2) var(--space-3);">D&eacute;signation</th>
+              <th style="padding:var(--space-2) var(--space-3);text-align:right;">Montant (CDF)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:var(--space-2) var(--space-3);">BUD-001</td>
+              <td style="padding:var(--space-2) var(--space-3);">Infrastructures routi&egrave;res</td>
+              <td style="padding:var(--space-2) var(--space-3);text-align:right;">12 500 000 000</td>
+            </tr>
+            <tr>
+              <td style="padding:var(--space-2) var(--space-3);">BUD-002</td>
+              <td style="padding:var(--space-2) var(--space-3);">&Eacute;ducation nationale</td>
+              <td style="padding:var(--space-2) var(--space-3);text-align:right;">8 750 000 000</td>
+            </tr>
+            <tr>
+              <td style="padding:var(--space-2) var(--space-3);">BUD-003</td>
+              <td style="padding:var(--space-2) var(--space-3);">Sant&eacute; publique</td>
+              <td style="padding:var(--space-2) var(--space-3);text-align:right;">9 200 000 000</td>
+            </tr>
+            <tr>
+              <td style="padding:var(--space-2) var(--space-3);">BUD-004</td>
+              <td style="padding:var(--space-2) var(--space-3);">Agriculture et d&eacute;veloppement rural</td>
+              <td style="padding:var(--space-2) var(--space-3);text-align:right;">5 300 000 000</td>
+            </tr>
+            <tr>
+              <td style="padding:var(--space-2) var(--space-3);">BUD-005</td>
+              <td style="padding:var(--space-2) var(--space-3);">D&eacute;fense et s&eacute;curit&eacute;</td>
+              <td style="padding:var(--space-2) var(--space-3);text-align:right;">7 100 000 000</td>
+            </tr>
+            <tr>
+              <td style="padding:var(--space-2) var(--space-3);">BUD-006</td>
+              <td style="padding:var(--space-2) var(--space-3);">Num&eacute;rique et t&eacute;l&eacute;communications</td>
+              <td style="padding:var(--space-2) var(--space-3);text-align:right;">2 800 000 000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <pre class="code-block"><code>&lt;table class="table" style="font-size:var(--text-sm);"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style="padding:var(--space-2) var(--space-3);"&gt;Code&lt;/th&gt;
+      &lt;th style="padding:var(--space-2) var(--space-3);"&gt;D&eacute;signation&lt;/th&gt;
+      &lt;th style="padding:var(--space-2) var(--space-3);text-align:right;"&gt;Montant (CDF)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;...&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+      <!-- Section 4: Tableau responsive -->
+      <h2 class="section-title">Tableau responsive</h2>
+      <p class="subsection-desc">Enveloppez le tableau dans un conteneur avec <code>overflow-x: auto</code> pour permettre le d&eacute;filement horizontal sur les &eacute;crans &eacute;troits.</p>
+      <div class="demo-box">
+        <div style="overflow-x:auto;">
+          <table class="table" style="min-width:900px;">
+            <thead>
+              <tr>
+                <th>R&eacute;f&eacute;rence</th>
+                <th>B&eacute;n&eacute;ficiaire</th>
+                <th>Province</th>
+                <th>Minist&egrave;re</th>
+                <th>Type</th>
+                <th>Montant (CDF)</th>
+                <th>Date de soumission</th>
+                <th>Statut</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>GOV-2024-00421</td>
+                <td>Marcel Kabongo</td>
+                <td>Kinshasa</td>
+                <td>Finances</td>
+                <td>Subvention</td>
+                <td>3 200 000</td>
+                <td>15/01/2024</td>
+                <td><span class="badge badge-success">Approuv&eacute;</span></td>
+              </tr>
+              <tr>
+                <td>GOV-2024-00422</td>
+                <td>Th&eacute;r&egrave;se Mutombo</td>
+                <td>Haut-Katanga</td>
+                <td>&Eacute;ducation</td>
+                <td>Bourse</td>
+                <td>1 500 000</td>
+                <td>18/01/2024</td>
+                <td><span class="badge badge-warning">En attente</span></td>
+              </tr>
+              <tr>
+                <td>GOV-2024-00423</td>
+                <td>Ren&eacute; Kashala</td>
+                <td>Nord-Kivu</td>
+                <td>Sant&eacute;</td>
+                <td>Remboursement</td>
+                <td>850 000</td>
+                <td>20/01/2024</td>
+                <td><span class="badge badge-success">Approuv&eacute;</span></td>
+              </tr>
+              <tr>
+                <td>GOV-2024-00424</td>
+                <td>Bijoux Lumumba</td>
+                <td>Kasa&iuml; Central</td>
+                <td>Agriculture</td>
+                <td>Subvention</td>
+                <td>5 000 000</td>
+                <td>22/01/2024</td>
+                <td><span class="badge badge-danger">Rejet&eacute;</span></td>
+              </tr>
+              <tr>
+                <td>GOV-2024-00425</td>
+                <td>Solange Mbuyi</td>
+                <td>Sud-Kivu</td>
+                <td>Num&eacute;rique</td>
+                <td>March&eacute; public</td>
+                <td>12 000 000</td>
+                <td>25/01/2024</td>
+                <td><span class="badge badge-warning">En attente</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <pre class="code-block"><code>&lt;div style="overflow-x:auto;"&gt;
+  &lt;table class="table" style="min-width:900px;"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;R&eacute;f&eacute;rence&lt;/th&gt;
+        &lt;th&gt;B&eacute;n&eacute;ficiaire&lt;/th&gt;
+        &lt;th&gt;Province&lt;/th&gt;
+        &lt;th&gt;Minist&egrave;re&lt;/th&gt;
+        &lt;th&gt;Type&lt;/th&gt;
+        &lt;th&gt;Montant (CDF)&lt;/th&gt;
+        &lt;th&gt;Date de soumission&lt;/th&gt;
+        &lt;th&gt;Statut&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;...&lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+    </main>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

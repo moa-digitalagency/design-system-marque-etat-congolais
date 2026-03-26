@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Badges &amp; Alertes — Design System Marque État Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .code-block {
+      background: #1E293B;
+      color: #E2E8F0;
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      font-family: 'Fira Code', 'Consolas', monospace;
+      font-size: 13px;
+      line-height: 1.6;
+      overflow-x: auto;
+      margin-top: var(--space-3);
+    }
+    .demo-box {
+      background: var(--bg-white);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      margin-bottom: var(--space-2);
+    }
+    .section-title {
+      font-family: var(--font-principale);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--space-4);
+      margin-top: var(--space-8);
+    }
+    .section-title:first-of-type { margin-top: 0; }
+    .subsection-desc {
+      font-family: var(--font-complement);
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      margin-bottom: var(--space-4);
+    }
+    .toast-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      padding: var(--space-4);
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      border-left: 4px solid;
+      position: relative;
+    }
+    .toast-item--success { border-left-color: var(--status-success); }
+    .toast-item--error { border-left-color: var(--status-error); }
+    .toast-item--info { border-left-color: var(--status-info); }
+    .toast-dismiss {
+      position: absolute;
+      top: var(--space-2);
+      right: var(--space-2);
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-muted);
+      padding: var(--space-1);
+      line-height: 1;
+    }
+    .toast-dismiss:hover { color: var(--text-primary); }
+    .toast-title {
+      font-family: var(--font-complement);
+      font-weight: 600;
+      font-size: var(--text-sm);
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+    .toast-message {
+      font-family: var(--font-complement);
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+    }
+    .notif-panel {
+      background: var(--bg-white);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      max-width: 420px;
+    }
+    .notif-panel-header {
+      padding: var(--space-4) var(--space-5);
+      border-bottom: 1px solid var(--border-soft);
+      font-family: var(--font-principale);
+      font-weight: 700;
+      font-size: var(--text-base);
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .notif-item {
+      display: flex;
+      gap: var(--space-3);
+      padding: var(--space-4) var(--space-5);
+      border-bottom: 1px solid var(--border-soft);
+      position: relative;
+    }
+    .notif-item:last-child { border-bottom: none; }
+    .notif-item--unread { background: rgba(0, 91, 187, 0.04); }
+    .notif-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--rdc-bleu-inst);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: var(--font-complement);
+      font-weight: 600;
+      font-size: var(--text-sm);
+      flex-shrink: 0;
+    }
+    .notif-content { flex: 1; min-width: 0; }
+    .notif-title {
+      font-family: var(--font-complement);
+      font-weight: 600;
+      font-size: var(--text-sm);
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+    .notif-desc {
+      font-family: var(--font-complement);
+      font-size: var(--text-xs);
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+    }
+    .notif-time {
+      font-family: var(--font-complement);
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+    }
+    .notif-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--rdc-bleu-inst);
+      border-radius: 50%;
+      position: absolute;
+      top: var(--space-4);
+      right: var(--space-4);
+    }
+    .badge-dot {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .badge-dot::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .badge-dot--success::before { background: var(--status-success); }
+    .badge-dot--warning::before { background: var(--status-warning); }
+    .badge-dot--danger::before { background: var(--status-error); }
+    .badge-dot--info::before { background: var(--status-info); }
+    .badge-dot--neutral::before { background: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <div class="layout-sidebar">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" style="text-decoration:none;">
+          <div style="display:flex;align-items:center;gap:var(--space-3);">
+            <div style="width:32px;height:32px;background:var(--rdc-bleu-inst);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;">
+              <i data-lucide="shield" style="width:18px;height:18px;color:white;"></i>
+            </div>
+            <div>
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);">Design System RDC</div>
+              <div class="ligne-etat-h ligne-etat-h--sm" style="width:48px;margin-top:4px;border-radius:2px;"></div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <nav>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Tokens</div>
+          <a href="../tokens/couleurs.html" class="sidebar-link"><i data-lucide="palette" style="width:16px;height:16px;"></i> Couleurs</a>
+          <a href="../tokens/typographie.html" class="sidebar-link"><i data-lucide="type" style="width:16px;height:16px;"></i> Typographie</a>
+          <a href="../tokens/espacements.html" class="sidebar-link"><i data-lucide="ruler" style="width:16px;height:16px;"></i> Espacements</a>
+          <a href="../tokens/ombres-elevations.html" class="sidebar-link"><i data-lucide="layers" style="width:16px;height:16px;"></i> Ombres</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Composants</div>
+          <a href="boutons.html" class="sidebar-link"><i data-lucide="mouse-pointer-click" style="width:16px;height:16px;"></i> Boutons</a>
+          <a href="formulaires.html" class="sidebar-link"><i data-lucide="text-cursor-input" style="width:16px;height:16px;"></i> Formulaires</a>
+          <a href="cartes.html" class="sidebar-link"><i data-lucide="square" style="width:16px;height:16px;"></i> Cartes</a>
+          <a href="navigation.html" class="sidebar-link"><i data-lucide="compass" style="width:16px;height:16px;"></i> Navigation</a>
+          <a href="tableaux.html" class="sidebar-link"><i data-lucide="table" style="width:16px;height:16px;"></i> Tableaux</a>
+          <a href="badges-alertes.html" class="sidebar-link active"><i data-lucide="bell" style="width:16px;height:16px;"></i> Badges &amp; Alertes</a>
+          <a href="en-tete-officiel.html" class="sidebar-link"><i data-lucide="landmark" style="width:16px;height:16px;"></i> En-t&ecirc;te Officiel</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Marque</div>
+          <a href="../marque/logo.html" class="sidebar-link"><i data-lucide="image" style="width:16px;height:16px;"></i> Logo</a>
+          <a href="../marque/ligne-etat.html" class="sidebar-link"><i data-lucide="minus" style="width:16px;height:16px;"></i> Ligne d'&Eacute;tat</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Mod&egrave;les</div>
+          <a href="../modeles/page-accueil.html" class="sidebar-link"><i data-lucide="layout-dashboard" style="width:16px;height:16px;"></i> Page d'Accueil</a>
+          <a href="../modeles/page-interieure.html" class="sidebar-link"><i data-lucide="file-text" style="width:16px;height:16px;"></i> Page Int&eacute;rieure</a>
+          <a href="../modeles/page-service.html" class="sidebar-link"><i data-lucide="settings" style="width:16px;height:16px;"></i> Page Service</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="page-hero">
+        <h1 class="page-title">Badges &amp; Alertes</h1>
+        <p class="page-subtitle">Indicateurs visuels de statut, messages contextuels et notifications pour guider l'utilisateur.</p>
+      </div>
+
+      <!-- Section 1: Badges -->
+      <h2 class="section-title">Badges</h2>
+      <p class="subsection-desc">Indicateurs compacts pour afficher un statut, une cat&eacute;gorie ou un &eacute;tat.</p>
+      <div class="demo-box">
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);align-items:center;">
+          <span class="badge badge-success">Approuv&eacute;</span>
+          <span class="badge badge-warning">En attente</span>
+          <span class="badge badge-danger">Rejet&eacute;</span>
+          <span class="badge badge-info">Information</span>
+          <span class="badge badge-neutral">Brouillon</span>
+          <span class="badge badge-outline">Nouveau</span>
+        </div>
+      </div>
+      <pre class="code-block"><code>&lt;span class="badge badge-success"&gt;Approuv&eacute;&lt;/span&gt;
+&lt;span class="badge badge-warning"&gt;En attente&lt;/span&gt;
+&lt;span class="badge badge-danger"&gt;Rejet&eacute;&lt;/span&gt;
+&lt;span class="badge badge-info"&gt;Information&lt;/span&gt;
+&lt;span class="badge badge-neutral"&gt;Brouillon&lt;/span&gt;
+&lt;span class="badge badge-outline"&gt;Nouveau&lt;/span&gt;</code></pre>
+
+      <h3 style="font-family:var(--font-principale);font-size:var(--text-lg);font-weight:600;color:var(--text-primary);margin-top:var(--space-6);margin-bottom:var(--space-4);">Badges avec indicateur</h3>
+      <p class="subsection-desc">Ajoutez un point color&eacute; devant le texte pour renforcer la signalisation visuelle.</p>
+      <div class="demo-box">
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center;">
+          <span class="badge badge-success badge-dot badge-dot--success">Approuv&eacute;</span>
+          <span class="badge badge-warning badge-dot badge-dot--warning">En attente</span>
+          <span class="badge badge-danger badge-dot badge-dot--danger">Rejet&eacute;</span>
+          <span class="badge badge-info badge-dot badge-dot--info">Information</span>
+          <span class="badge badge-neutral badge-dot badge-dot--neutral">Brouillon</span>
+        </div>
+      </div>
+      <pre class="code-block"><code>&lt;span class="badge badge-success badge-dot badge-dot--success"&gt;Approuv&eacute;&lt;/span&gt;
+&lt;span class="badge badge-warning badge-dot badge-dot--warning"&gt;En attente&lt;/span&gt;
+&lt;span class="badge badge-danger badge-dot badge-dot--danger"&gt;Rejet&eacute;&lt;/span&gt;</code></pre>
+
+      <!-- Section 2: Alertes -->
+      <h2 class="section-title">Alertes</h2>
+      <p class="subsection-desc">Messages contextuels pour informer, confirmer, pr&eacute;venir ou signaler une erreur.</p>
+      <div class="demo-box" style="display:flex;flex-direction:column;gap:var(--space-4);">
+
+        <div class="alert alert-info">
+          <i data-lucide="info" style="width:20px;height:20px;flex-shrink:0;"></i>
+          <span>Ce service est disponible en ligne sur le portail num&eacute;rique du gouvernement.</span>
+        </div>
+
+        <div class="alert alert-success">
+          <i data-lucide="check-circle" style="width:20px;height:20px;flex-shrink:0;"></i>
+          <span>Votre demande a &eacute;t&eacute; trait&eacute;e avec succ&egrave;s. R&eacute;f&eacute;rence : GOV-2024-00142.</span>
+        </div>
+
+        <div class="alert alert-warning">
+          <i data-lucide="alert-triangle" style="width:20px;height:20px;flex-shrink:0;"></i>
+          <span>Attention : le d&eacute;lai de traitement peut prendre jusqu'&agrave; 15 jours ouvrables.</span>
+        </div>
+
+        <div class="alert alert-error">
+          <i data-lucide="x-circle" style="width:20px;height:20px;flex-shrink:0;"></i>
+          <span>Erreur : le document soumis ne correspond pas au format requis (PDF, max 5 Mo).</span>
+        </div>
+
+      </div>
+      <pre class="code-block"><code>&lt;div class="alert alert-info"&gt;
+  &lt;i data-lucide="info"&gt;&lt;/i&gt;
+  &lt;span&gt;Ce service est disponible en ligne...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-success"&gt;
+  &lt;i data-lucide="check-circle"&gt;&lt;/i&gt;
+  &lt;span&gt;Votre demande a &eacute;t&eacute; trait&eacute;e avec succ&egrave;s...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning"&gt;
+  &lt;i data-lucide="alert-triangle"&gt;&lt;/i&gt;
+  &lt;span&gt;Attention : le d&eacute;lai de traitement...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-error"&gt;
+  &lt;i data-lucide="x-circle"&gt;&lt;/i&gt;
+  &lt;span&gt;Erreur : le document soumis...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+      <!-- Section 3: Toasts -->
+      <h2 class="section-title">Toasts</h2>
+      <p class="subsection-desc">Notifications temporaires l&eacute;g&egrave;res, g&eacute;n&eacute;ralement positionn&eacute;es en bas ou en haut &agrave; droite de l'&eacute;cran.</p>
+      <div class="demo-box" style="display:flex;flex-direction:column;gap:var(--space-4);max-width:420px;">
+
+        <div class="toast-item toast-item--success">
+          <i data-lucide="check-circle" style="width:20px;height:20px;color:var(--status-success);flex-shrink:0;margin-top:2px;"></i>
+          <div>
+            <div class="toast-title">Succ&egrave;s</div>
+            <div class="toast-message">Le document a &eacute;t&eacute; enregistr&eacute; avec succ&egrave;s.</div>
+          </div>
+          <button class="toast-dismiss"><i data-lucide="x" style="width:16px;height:16px;"></i></button>
+        </div>
+
+        <div class="toast-item toast-item--error">
+          <i data-lucide="x-circle" style="width:20px;height:20px;color:var(--status-error);flex-shrink:0;margin-top:2px;"></i>
+          <div>
+            <div class="toast-title">Erreur</div>
+            <div class="toast-message">&Eacute;chec de la connexion au serveur. Veuillez r&eacute;essayer.</div>
+          </div>
+          <button class="toast-dismiss"><i data-lucide="x" style="width:16px;height:16px;"></i></button>
+        </div>
+
+        <div class="toast-item toast-item--info">
+          <i data-lucide="info" style="width:20px;height:20px;color:var(--status-info);flex-shrink:0;margin-top:2px;"></i>
+          <div>
+            <div class="toast-title">Information</div>
+            <div class="toast-message">Une mise &agrave; jour est disponible pour ce service.</div>
+          </div>
+          <button class="toast-dismiss"><i data-lucide="x" style="width:16px;height:16px;"></i></button>
+        </div>
+
+      </div>
+      <pre class="code-block"><code>&lt;div class="toast-item toast-item--success"&gt;
+  &lt;i data-lucide="check-circle"&gt;&lt;/i&gt;
+  &lt;div&gt;
+    &lt;div class="toast-title"&gt;Succ&egrave;s&lt;/div&gt;
+    &lt;div class="toast-message"&gt;Le document a &eacute;t&eacute; enregistr&eacute;...&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;button class="toast-dismiss"&gt;&lt;i data-lucide="x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+      <!-- Section 4: Notifications -->
+      <h2 class="section-title">Notifications</h2>
+      <p class="subsection-desc">Panneau de notifications avec indicateur de lecture pour les &eacute;l&eacute;ments non lus.</p>
+      <div class="demo-box">
+        <div class="notif-panel">
+          <div class="notif-panel-header">
+            <span>Notifications</span>
+            <span style="font-size:var(--text-xs);font-weight:400;color:var(--text-muted);">3 nouvelles</span>
+          </div>
+
+          <div class="notif-item notif-item--unread">
+            <div class="notif-dot"></div>
+            <div class="notif-avatar">JM</div>
+            <div class="notif-content">
+              <div class="notif-title">Jean-Pierre Mukendi</div>
+              <div class="notif-desc">A soumis une nouvelle demande de passeport pour validation.</div>
+              <div class="notif-time">Il y a 5 minutes</div>
+            </div>
+          </div>
+
+          <div class="notif-item">
+            <div class="notif-avatar" style="background:var(--rdc-jaune-or);color:var(--text-primary);">CL</div>
+            <div class="notif-content">
+              <div class="notif-title">Claire Lukusa</div>
+              <div class="notif-desc">Le rapport mensuel du d&eacute;partement Int&eacute;rieur est pr&ecirc;t.</div>
+              <div class="notif-time">Il y a 2 heures</div>
+            </div>
+          </div>
+
+          <div class="notif-item">
+            <div class="notif-avatar" style="background:var(--rdc-rouge-sang);color:white;">AM</div>
+            <div class="notif-content">
+              <div class="notif-title">Albert Mwamba</div>
+              <div class="notif-desc">Mise &agrave; jour du calendrier des services consulaires.</div>
+              <div class="notif-time">Hier, 14h30</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <pre class="code-block"><code>&lt;div class="notif-panel"&gt;
+  &lt;div class="notif-panel-header"&gt;
+    &lt;span&gt;Notifications&lt;/span&gt;
+    &lt;span&gt;3 nouvelles&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="notif-item notif-item--unread"&gt;
+    &lt;div class="notif-dot"&gt;&lt;/div&gt;
+    &lt;div class="notif-avatar"&gt;JM&lt;/div&gt;
+    &lt;div class="notif-content"&gt;
+      &lt;div class="notif-title"&gt;Jean-Pierre Mukendi&lt;/div&gt;
+      &lt;div class="notif-desc"&gt;A soumis une nouvelle demande...&lt;/div&gt;
+      &lt;div class="notif-time"&gt;Il y a 5 minutes&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+    </main>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

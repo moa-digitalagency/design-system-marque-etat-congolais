@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutons — Design System Marque État Congolais</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layouts.css">
+  <link rel="stylesheet" href="../css/marque.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .code-block {
+      background: #1E293B;
+      color: #E2E8F0;
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      font-family: 'Fira Code', 'Consolas', monospace;
+      font-size: 13px;
+      line-height: 1.6;
+      overflow-x: auto;
+      margin-top: var(--space-3);
+    }
+    .demo-box {
+      background: var(--bg-white);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      margin-bottom: var(--space-2);
+    }
+    .demo-box--dark {
+      background: var(--bg-dark);
+    }
+    .section-title {
+      font-family: var(--font-principale);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--space-4);
+      margin-top: var(--space-8);
+    }
+    .section-title:first-of-type { margin-top: 0; }
+    .subsection-desc {
+      font-family: var(--font-complement);
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      margin-bottom: var(--space-4);
+    }
+  </style>
+</head>
+<body>
+  <div class="layout-sidebar">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" style="text-decoration:none;">
+          <div style="display:flex;align-items:center;gap:var(--space-3);">
+            <div style="width:32px;height:32px;background:var(--rdc-bleu-inst);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;">
+              <i data-lucide="shield" style="width:18px;height:18px;color:white;"></i>
+            </div>
+            <div>
+              <div style="font-family:var(--font-principale);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);">Design System RDC</div>
+              <div class="ligne-etat-h ligne-etat-h--sm" style="width:48px;margin-top:4px;border-radius:2px;"></div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <nav>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Accueil</div>
+          <a href="../index.html" class="sidebar-link"><i data-lucide="home" style="width:16px;height:16px;"></i> Home</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Tokens</div>
+          <a href="../tokens/couleurs.html" class="sidebar-link"><i data-lucide="palette" style="width:16px;height:16px;"></i> Couleurs</a>
+          <a href="../tokens/typographie.html" class="sidebar-link"><i data-lucide="type" style="width:16px;height:16px;"></i> Typographie</a>
+          <a href="../tokens/espacements.html" class="sidebar-link"><i data-lucide="ruler" style="width:16px;height:16px;"></i> Espacements</a>
+          <a href="../tokens/ombres-elevations.html" class="sidebar-link"><i data-lucide="layers" style="width:16px;height:16px;"></i> Ombres</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Composants</div>
+          <a href="boutons.html" class="sidebar-link active"><i data-lucide="mouse-pointer-click" style="width:16px;height:16px;"></i> Boutons</a>
+          <a href="formulaires.html" class="sidebar-link"><i data-lucide="text-cursor-input" style="width:16px;height:16px;"></i> Formulaires</a>
+          <a href="cartes.html" class="sidebar-link"><i data-lucide="square" style="width:16px;height:16px;"></i> Cartes</a>
+          <a href="navigation.html" class="sidebar-link"><i data-lucide="compass" style="width:16px;height:16px;"></i> Navigation</a>
+          <a href="tableaux.html" class="sidebar-link"><i data-lucide="table" style="width:16px;height:16px;"></i> Tableaux</a>
+          <a href="badges-alertes.html" class="sidebar-link"><i data-lucide="bell" style="width:16px;height:16px;"></i> Badges &amp; Alertes</a>
+          <a href="en-tete-officiel.html" class="sidebar-link"><i data-lucide="landmark" style="width:16px;height:16px;"></i> En-t&ecirc;te Officiel</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Mod&egrave;les</div>
+          <a href="../modeles/page-accueil.html" class="sidebar-link"><i data-lucide="layout-dashboard" style="width:16px;height:16px;"></i> Page d'Accueil</a>
+          <a href="../modeles/page-interieure.html" class="sidebar-link"><i data-lucide="file-text" style="width:16px;height:16px;"></i> Page Int&eacute;rieure</a>
+          <a href="../modeles/page-service.html" class="sidebar-link"><i data-lucide="settings" style="width:16px;height:16px;"></i> Page Service</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Marque</div>
+          <a href="../marque/logo.html" class="sidebar-link"><i data-lucide="image" style="width:16px;height:16px;"></i> Logo</a>
+          <a href="../marque/ligne-etat.html" class="sidebar-link"><i data-lucide="minus" style="width:16px;height:16px;"></i> Ligne d'&Eacute;tat</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="page-hero">
+        <h1 class="page-title">Boutons</h1>
+        <p class="page-subtitle">Composants interactifs pour les actions principales, secondaires et contextuelles.</p>
+      </div>
+
+      <!-- Primary buttons - sizes -->
+      <h2 class="section-title">Bouton Principal (Primary) &mdash; Tailles</h2>
+      <p class="subsection-desc">Le bouton principal utilise le d&eacute;grad&eacute; bleu institutionnel. Disponible en 3 tailles : small, default et large.</p>
+      <div class="demo-box" style="display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap;">
+        <button class="btn btn-primary btn-sm">Petit bouton</button>
+        <button class="btn btn-primary">Bouton par d&eacute;faut</button>
+        <button class="btn btn-primary btn-lg">Grand bouton</button>
+      </div>
+      <pre class="code-block"><code>&lt;button class="btn btn-primary btn-sm"&gt;Petit bouton&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Bouton par d&eacute;faut&lt;/button&gt;
+&lt;button class="btn btn-primary btn-lg"&gt;Grand bouton&lt;/button&gt;</code></pre>
+
+      <!-- Secondary -->
+      <h2 class="section-title">Bouton Secondaire</h2>
+      <p class="subsection-desc">Pour les actions secondaires. Fond l&eacute;ger avec bordure bleue.</p>
+      <div class="demo-box" style="display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap;">
+        <button class="btn btn-secondary btn-sm">Petit</button>
+        <button class="btn btn-secondary">Secondaire</button>
+        <button class="btn btn-secondary btn-lg">Grand</button>
+      </div>
+      <pre class="code-block"><code>&lt;button class="btn btn-secondary"&gt;Secondaire&lt;/button&gt;</code></pre>
+
+      <!-- Outline -->
+      <h2 class="section-title">Bouton Outline</h2>
+      <p class="subsection-desc">Bouton avec bordure uniquement, fond transparent.</p>
+      <div class="demo-box" style="display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap;">
+        <button class="btn btn-outline btn-sm">Petit</button>
+        <button class="btn btn-outline">Outline</button>
+        <button class="btn btn-outline btn-lg">Grand</button>
+      </div>
+      <pre class="code-block"><code>&lt;button class="btn btn-outline"&gt;Outline&lt;/button&gt;</code></pre>
+
+      <!-- Ghost -->
+      <h2 class="section-title">Bouton Ghost</h2>
+      <p class="subsection-desc">Bouton discret sans bordure ni fond, id&eacute;al pour les actions tertiaires.</p>
+      <div class="demo-box" style="display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap;">
+        <button class="btn btn-ghost btn-sm">Petit</button>
+        <button class="btn btn-ghost">Ghost</button>
+        <button class="btn btn-ghost btn-lg">Grand</button>
+      </div>
+      <pre class="code-block"><code>&lt;button class="btn btn-ghost"&gt;Ghost&lt;/button&gt;</code></pre>
+
+      <!-- Danger -->
+      <h2 class="section-title">Bouton Danger</h2>
+      <p class="subsection-desc">Pour les actions destructives ou irr&eacute;versibles. Utilise le rouge du drapeau.</p>
+      <div class="demo-box" style="display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap;">
+        <button class="btn btn-danger btn-sm">Petit</button>
+        <button class="btn btn-danger">Supprimer</button>
+        <button class="btn btn-danger btn-lg">Grand</button>
+      </div>
+      <pre class="code-block"><code>&lt;button class="btn btn-danger"&gt;Supprimer&lt;/button&gt;</code></pre>
+
+      <!-- Icon buttons -->
+      <h2 class="section-title">Boutons Ic&ocirc;ne</h2>
+      <p class="subsection-desc">Boutons carr&eacute;s contenant uniquement une ic&ocirc;ne. Combinables avec toutes les variantes.</p>
+      <div class="demo-box" style="display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap;">
+        <button class="btn btn-primary btn-icon btn-sm"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+        <button class="btn btn-primary btn-icon"><i data-lucide="plus" style="width:16px;height:16px;"></i></button>
+        <button class="btn btn-primary btn-icon btn-lg"><i data-lucide="plus" style="width:20px;height:20px;"></i></button>
+        <button class="btn btn-secondary btn-icon"><i data-lucide="search" style="width:16px;height:16px;"></i></button>
+        <button class="btn btn-outline btn-icon"><i data-lucide="settings" style="width:16px;height:16px;"></i></button>
+        <button class="btn btn-ghost btn-icon"><i data-lucide="x" style="width:16px;height:16px;"></i></button>
+        <button class="btn btn-danger btn-icon"><i data-lucide="trash-2" style="width:16px;height:16px;"></i></button>
+      </div>
+      <pre class="code-block"><code>&lt;button class="btn btn-primary btn-icon"&gt;
+  &lt;i data-lucide="plus"&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class="btn btn-secondary btn-icon"&gt;
+  &lt;i data-lucide="search"&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class="btn btn-outline btn-icon"&gt;
+  &lt;i data-lucide="settings"&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class="btn btn-ghost btn-icon"&gt;
+  &lt;i data-lucide="x"&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class="btn btn-danger btn-icon"&gt;
+  &lt;i data-lucide="trash-2"&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
+
+      <!-- Disabled -->
+      <h2 class="section-title">&Eacute;tat D&eacute;sactiv&eacute;</h2>
+      <p class="subsection-desc">L'attribut <code>disabled</code> r&eacute;duit l'opacit&eacute; et d&eacute;sactive les interactions.</p>
+      <div class="demo-box" style="display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap;">
+        <button class="btn btn-primary" disabled>Primary d&eacute;sactiv&eacute;</button>
+        <button class="btn btn-secondary" disabled>Secondary d&eacute;sactiv&eacute;</button>
+        <button class="btn btn-outline" disabled>Outline d&eacute;sactiv&eacute;</button>
+        <button class="btn btn-danger" disabled>Danger d&eacute;sactiv&eacute;</button>
+      </div>
+      <pre class="code-block"><code>&lt;button class="btn btn-primary" disabled&gt;Primary d&eacute;sactiv&eacute;&lt;/button&gt;
+&lt;button class="btn btn-secondary" disabled&gt;Secondary d&eacute;sactiv&eacute;&lt;/button&gt;</code></pre>
+
+      <!-- Loading -->
+      <h2 class="section-title">&Eacute;tat Chargement</h2>
+      <p class="subsection-desc">La classe <code>btn-loading</code> masque le texte et affiche un spinner centr&eacute;.</p>
+      <div class="demo-box" style="display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap;">
+        <button class="btn btn-primary btn-loading">Chargement</button>
+        <button class="btn btn-secondary btn-loading">Chargement</button>
+        <button class="btn btn-danger btn-loading">Chargement</button>
+      </div>
+      <pre class="code-block"><code>&lt;button class="btn btn-primary btn-loading"&gt;Chargement&lt;/button&gt;</code></pre>
+
+      <!-- Button with icon + text -->
+      <h2 class="section-title">Bouton avec Ic&ocirc;ne et Texte</h2>
+      <p class="subsection-desc">Combinez texte et ic&ocirc;ne dans un bouton standard gr&acirc;ce au gap int&eacute;gr&eacute;.</p>
+      <div class="demo-box" style="display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap;">
+        <button class="btn btn-primary"><i data-lucide="download" style="width:16px;height:16px;"></i> T&eacute;l&eacute;charger</button>
+        <button class="btn btn-secondary"><i data-lucide="upload" style="width:16px;height:16px;"></i> Importer</button>
+        <button class="btn btn-outline"><i data-lucide="external-link" style="width:16px;height:16px;"></i> Ouvrir</button>
+        <button class="btn btn-danger"><i data-lucide="trash-2" style="width:16px;height:16px;"></i> Supprimer</button>
+      </div>
+      <pre class="code-block"><code>&lt;button class="btn btn-primary"&gt;
+  &lt;i data-lucide="download"&gt;&lt;/i&gt; T&eacute;l&eacute;charger
+&lt;/button&gt;</code></pre>
+
+      <!-- Button Group -->
+      <h2 class="section-title">Groupe de Boutons</h2>
+      <p class="subsection-desc">Alignez plusieurs boutons dans un groupe horizontal pour les actions li&eacute;es.</p>
+      <div class="demo-box">
+        <div style="display:flex;gap:0;">
+          <button class="btn btn-outline" style="border-radius:var(--radius-lg) 0 0 var(--radius-lg);border-right:none;">Jour</button>
+          <button class="btn btn-primary" style="border-radius:0;">Semaine</button>
+          <button class="btn btn-outline" style="border-radius:0 var(--radius-lg) var(--radius-lg) 0;border-left:none;">Mois</button>
+        </div>
+        <div style="display:flex;gap:var(--space-3);margin-top:var(--space-4);">
+          <button class="btn btn-primary">Enregistrer</button>
+          <button class="btn btn-secondary">Annuler</button>
+          <button class="btn btn-ghost">R&eacute;initialiser</button>
+        </div>
+      </div>
+      <pre class="code-block"><code>&lt;!-- Groupe connect&eacute; --&gt;
+&lt;div style="display:flex;gap:0;"&gt;
+  &lt;button class="btn btn-outline" style="border-radius:12px 0 0 12px;border-right:none;"&gt;Jour&lt;/button&gt;
+  &lt;button class="btn btn-primary" style="border-radius:0;"&gt;Semaine&lt;/button&gt;
+  &lt;button class="btn btn-outline" style="border-radius:0 12px 12px 0;border-left:none;"&gt;Mois&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Groupe espac&eacute; --&gt;
+&lt;div style="display:flex;gap:12px;"&gt;
+  &lt;button class="btn btn-primary"&gt;Enregistrer&lt;/button&gt;
+  &lt;button class="btn btn-secondary"&gt;Annuler&lt;/button&gt;
+  &lt;button class="btn btn-ghost"&gt;R&eacute;initialiser&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+    </main>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
